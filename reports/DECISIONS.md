@@ -107,3 +107,7 @@ Format: `tanggal | keputusan | alasan`
 2026-10-20 | Penanda format PES didefinisikan sebagai {berkaitan, ditandai, disebabkan} dan diukur, bukan diasumsikan | Ketiganya adalah konektor baku pernyataan PES. Hasil ukur: penanda muncul di 98,3% chunk gold tipe `pes` tetapi juga di 16,6% chunk mana pun pada laporan yang sama - nyaris selalu benar, hampir tidak membedakan.
 
 2026-10-20 | Laporan Tahap 5 di `reports/04_test.md`, Tahap 6 di `reports/05_analisis.md` | Melanjutkan penomoran menurut urutan penulisan.
+
+## Verifikasi determinisme
+
+2026-10-20 | Seluruh pipeline dijalankan ulang dan keluarannya dibandingkan per-bita: semua berkas di `results/` identik kecuali satu field, `runtime_seconds`, yang memang mengukur waktu dan bukan hasil | Aturan tetap no. 6. Jadi determinisme berlaku untuk setiap angka hasil; pemeriksaan ulang sebaiknya mengabaikan `runtime_seconds` (mis. `jq 'del(.runtime_seconds)'`) sebelum membandingkan hash.
