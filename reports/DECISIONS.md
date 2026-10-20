@@ -121,3 +121,19 @@ Format: `tanggal | keputusan | alasan`
 2026-10-20 | Gagasan selective query expansion lahir dari analisis pada partisi test (Tahap 6), meskipun pengembangan dan pengujiannya dilakukan sepenuhnya di dev | Dicatat demi transparansi: arah eksplorasi dipengaruhi pengamatan di test, jadi hasil negatifnya tidak boleh diperlakukan sebagai uji yang sepenuhnya pre-registered.
 
 2026-10-20 | Klaim "ekspansi khusus mengatasi variasi parafrasa" diturunkan menjadi "ekspansi menolong sama baiknya pada parafrasa maupun template" | Di dev celah TPL-PARA tampak menyempit tajam, tetapi di test penyempitannya hanya 0,0642 -> 0,0612. Keuntungan relatif memang lebih besar pada parafrasa (+14,7% vs +10,6%), namun terlalu tipis untuk menopang klaim yang lebih kuat. Berpengaruh pada pemilihan judul skripsi.
+
+## Penulisan Bab 4 (Perancangan)
+
+2026-10-20 | Angka pada subbab Perhitungan Manual dihasilkan `scripts/manual_trace_bab4.py` ke `results/manual_trace_bab4.json`, memakai modul `src/qe/` yang sama dengan pipeline | Aturan tetap no. 4 menuntut setiap angka di laporan berasal dari `results/`. Menghitung ulang dengan tangan berisiko meleset dari implementasi, sedangkan menelusuri lewat modul yang sama menjamin rumus di bab itu memang rumus yang dijalankan.
+
+2026-10-20 | Korpus pada Perhitungan Manual dikarang sendiri (10 chunk koleksi, 6 chunk laporan sasaran) dan bukan cuplikan laporan pasien | Aturan tetap no. 5 melarang pengutipan teks klinis pasien. Korpus ilustratif juga membuat setiap langkah dapat diperiksa pembaca, yang tidak mungkin dilakukan pada chunk asli berisi ratusan token.
+
+2026-10-20 | Parameter pada Perhitungan Manual diperkecil menjadi k=3, n=3, 2 chunk feedback, 3 term RM3; gamma=2,0, lambda=0,5, dan seluruh parameter BM25 tetap memakai nilai sistem | k=300 mustahil pada korpus 10 dokumen (rank maksimum 10), dan tabel untuk n=10 tidak muat di halaman. Perbedaan ini dinyatakan terbuka di awal subbab agar tidak dikira nilai yang dipakai saat pengujian.
+
+2026-10-20 | Alasan pemilihan centroid vektor term (bukan folding-in), cosine (bukan dot product atau jarak Euclidean), dan penyaringan cosine > 0 ditulis di Subbab 4.5 | Ketiganya sebelumnya hanya ada sebagai perilaku kode tanpa pembenaran tertulis di mana pun. Pertanyaan penguji yang paling mungkin menyasar tepat ketiga titik itu.
+
+2026-10-20 | Kolom LaTeX `M{}` (lebar tetap, rata tengah) ditambahkan ke preamble `skripsi.tex` | `SKILL.md` dan `tools/latex_to_docx.py` sudah mengenali `L{}`/`M{}`/`P{}`, tetapi hanya `L`, `N`, dan `P` yang terdefinisi di preamble sehingga `M` memicu galat `Illegal pream-token`. Definisinya disamakan dengan yang diharapkan konverter: `>{\centering\arraybackslash}p{#1}`.
+
+2026-10-20 | Empat rujukan metode inti ditambahkan lengkap ke `daftar-pustaka.bib`: Deerwester et al. (1990), Lavrenko & Croft (2001), Xu & Croft (1996), Robertson & Zaragoza (2009) | Keempatnya dirujuk Bab 4 tetapi belum ada di daftar pustaka. Ditulis lengkap, bukan sebagai placeholder `[LENGKAPI]`.
+
+2026-10-20 | Subbab terakhir Bab 4 dinamai "Perancangan Pengujian", bukan "Skenario Pengujian" seperti pada kerangka draft | Isinya bukan sekadar daftar skenario melainkan rancangan empat pengujian beserta matriks hasil kosong, mengikuti pola skripsi pembanding. Nama lama dapat dikembalikan tanpa mengubah isi.

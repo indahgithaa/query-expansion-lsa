@@ -1,0 +1,875 @@
+{
+  "catatan": "Korpus ilustratif, bukan teks laporan pasien.",
+  "parameter": {
+    "k_latent": 3,
+    "n_expansion": 3,
+    "gamma": 2.0,
+    "rm3_n_feedback": 2,
+    "rm3_n_terms": 3,
+    "rm3_lambda": 0.5,
+    "bm25": {
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25
+    }
+  },
+  "praproses": {
+    "query_asli": "Apa tujuan diet pada pasien ini?",
+    "query_ternormalisasi": "Apa tujuan diet pada pasien ini?",
+    "query_token_mentah": [
+      "apa",
+      "tujuan",
+      "diet",
+      "pada",
+      "pasien",
+      "ini"
+    ],
+    "query_token_akhir": [
+      "tujuan",
+      "diet"
+    ],
+    "target": [
+      {
+        "id": "C1",
+        "teks": "Prinsip pemberian makanan dalam bentuk lunak dengan porsi kecil.",
+        "token": [
+          "prinsip",
+          "pemberian",
+          "makanan",
+          "dalam",
+          "bentuk",
+          "lunak",
+          "dengan",
+          "porsi",
+          "kecil"
+        ],
+        "panjang": 9
+      },
+      {
+        "id": "C2",
+        "teks": "Tujuan diet pasien ditetapkan berdasarkan hasil pengkajian.",
+        "token": [
+          "tujuan",
+          "diet",
+          "pasien",
+          "ditetapkan",
+          "berdasarkan",
+          "hasil",
+          "pengkajian"
+        ],
+        "panjang": 7
+      },
+      {
+        "id": "C3",
+        "teks": "Diet memberikan energi dan protein sesuai kebutuhan harian.",
+        "token": [
+          "diet",
+          "memberikan",
+          "energi",
+          "dan",
+          "protein",
+          "sesuai",
+          "kebutuhan",
+          "harian"
+        ],
+        "panjang": 8
+      },
+      {
+        "id": "C4",
+        "teks": "Syarat pemberian cairan disesuaikan dengan kondisi saluran cerna.",
+        "token": [
+          "syarat",
+          "pemberian",
+          "cairan",
+          "disesuaikan",
+          "dengan",
+          "kondisi",
+          "saluran",
+          "cerna"
+        ],
+        "panjang": 8
+      },
+      {
+        "id": "C5",
+        "teks": "Pemantauan asupan energi dilakukan setiap hari dan energi dicatat.",
+        "token": [
+          "pemantauan",
+          "asupan",
+          "energi",
+          "dilakukan",
+          "setiap",
+          "hari",
+          "dan",
+          "energi",
+          "dicatat"
+        ],
+        "panjang": 9
+      },
+      {
+        "id": "C6",
+        "teks": "Status gizi ditentukan berdasarkan indeks massa tubuh.",
+        "token": [
+          "status",
+          "gizi",
+          "ditentukan",
+          "berdasarkan",
+          "indeks",
+          "massa",
+          "tubuh"
+        ],
+        "panjang": 7
+      }
+    ],
+    "koleksi": [
+      {
+        "id": "K1",
+        "teks": "Tujuan diet adalah memberikan energi dan protein sesuai kebutuhan.",
+        "token_tanpa_stopword": [
+          "tujuan",
+          "diet",
+          "energi",
+          "protein",
+          "sesuai",
+          "kebutuhan"
+        ]
+      },
+      {
+        "id": "K2",
+        "teks": "Tujuan diet adalah memenuhi kebutuhan energi pasien.",
+        "token_tanpa_stopword": [
+          "tujuan",
+          "diet",
+          "memenuhi",
+          "kebutuhan",
+          "energi"
+        ]
+      },
+      {
+        "id": "K3",
+        "teks": "Diet protein tinggi diberikan dengan protein nabati dan energi cukup.",
+        "token_tanpa_stopword": [
+          "diet",
+          "protein",
+          "tinggi",
+          "protein",
+          "nabati",
+          "energi"
+        ]
+      },
+      {
+        "id": "K4",
+        "teks": "Tujuan pemberian diet adalah memperbaiki asupan protein.",
+        "token_tanpa_stopword": [
+          "tujuan",
+          "pemberian",
+          "diet",
+          "memperbaiki",
+          "asupan",
+          "protein"
+        ]
+      },
+      {
+        "id": "K5",
+        "teks": "Prinsip diet dilakukan dalam bentuk makanan lunak.",
+        "token_tanpa_stopword": [
+          "prinsip",
+          "diet",
+          "bentuk",
+          "makanan",
+          "lunak"
+        ]
+      },
+      {
+        "id": "K6",
+        "teks": "Prinsip pemberian makanan lunak dengan porsi kecil.",
+        "token_tanpa_stopword": [
+          "prinsip",
+          "pemberian",
+          "makanan",
+          "lunak",
+          "porsi"
+        ]
+      },
+      {
+        "id": "K7",
+        "teks": "Makanan diberikan dalam porsi kecil dan sering.",
+        "token_tanpa_stopword": [
+          "makanan",
+          "porsi"
+        ]
+      },
+      {
+        "id": "K8",
+        "teks": "Status gizi ditentukan berdasarkan indeks massa tubuh.",
+        "token_tanpa_stopword": [
+          "status",
+          "gizi",
+          "ditentukan",
+          "berdasarkan",
+          "indeks",
+          "massa",
+          "tubuh"
+        ]
+      },
+      {
+        "id": "K9",
+        "teks": "Status gizi dinilai dengan indeks massa tubuh dan antropometri.",
+        "token_tanpa_stopword": [
+          "status",
+          "gizi",
+          "dinilai",
+          "indeks",
+          "massa",
+          "tubuh",
+          "antropometri"
+        ]
+      },
+      {
+        "id": "K10",
+        "teks": "Penilaian status gizi memakai pengukuran antropometri.",
+        "token_tanpa_stopword": [
+          "penilaian",
+          "status",
+          "gizi",
+          "memakai",
+          "pengukuran",
+          "antropometri"
+        ]
+      }
+    ]
+  },
+  "bm25": {
+    "N": 6,
+    "panjang_dokumen": {
+      "C1": 9,
+      "C2": 7,
+      "C3": 8,
+      "C4": 8,
+      "C5": 9,
+      "C6": 7
+    },
+    "avgdl": 8.0,
+    "average_idf": 1.1952,
+    "penyebut_normalisasi": {
+      "C1": 1.6406,
+      "C2": 1.3594,
+      "C3": 1.5,
+      "C4": 1.5,
+      "C5": 1.6406,
+      "C6": 1.3594
+    },
+    "per_term": [
+      {
+        "term": "tujuan",
+        "df": 1,
+        "idf": 1.2993,
+        "tf": {
+          "C1": 0,
+          "C2": 1,
+          "C3": 0,
+          "C4": 0,
+          "C5": 0,
+          "C6": 0
+        },
+        "bm25": {
+          "C1": 0.0,
+          "C2": 1.3767,
+          "C3": 0.0,
+          "C4": 0.0,
+          "C5": 0.0,
+          "C6": 0.0
+        }
+      },
+      {
+        "term": "diet",
+        "df": 2,
+        "idf": 0.5878,
+        "tf": {
+          "C1": 0,
+          "C2": 1,
+          "C3": 1,
+          "C4": 0,
+          "C5": 0,
+          "C6": 0
+        },
+        "bm25": {
+          "C1": 0.0,
+          "C2": 0.6228,
+          "C3": 0.5878,
+          "C4": 0.0,
+          "C5": 0.0,
+          "C6": 0.0
+        }
+      }
+    ]
+  },
+  "b1": {
+    "bobot": {
+      "tujuan": 1.0,
+      "diet": 1.0
+    },
+    "skor": {
+      "C1": 0.0,
+      "C2": 1.9995,
+      "C3": 0.5878,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.0
+    },
+    "peringkat": [
+      "C2",
+      "C3",
+      "C1",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "peringkat_gold": 2
+  },
+  "lsa": {
+    "n_dokumen_koleksi": 10,
+    "vocab": [
+      "antropometri",
+      "diet",
+      "energi",
+      "gizi",
+      "indeks",
+      "kebutuhan",
+      "lunak",
+      "makanan",
+      "massa",
+      "pemberian",
+      "porsi",
+      "prinsip",
+      "protein",
+      "status",
+      "tubuh",
+      "tujuan"
+    ],
+    "df": {
+      "antropometri": 2,
+      "diet": 5,
+      "energi": 3,
+      "gizi": 3,
+      "indeks": 2,
+      "kebutuhan": 2,
+      "lunak": 2,
+      "makanan": 3,
+      "massa": 2,
+      "pemberian": 2,
+      "porsi": 2,
+      "prinsip": 2,
+      "protein": 3,
+      "status": 3,
+      "tubuh": 2,
+      "tujuan": 3
+    },
+    "idf": {
+      "antropometri": 1.6094,
+      "diet": 0.6931,
+      "energi": 1.204,
+      "gizi": 1.204,
+      "indeks": 1.6094,
+      "kebutuhan": 1.6094,
+      "lunak": 1.6094,
+      "makanan": 1.204,
+      "massa": 1.6094,
+      "pemberian": 1.6094,
+      "porsi": 1.6094,
+      "prinsip": 1.6094,
+      "protein": 1.204,
+      "status": 1.204,
+      "tubuh": 1.6094,
+      "tujuan": 1.204
+    },
+    "matriks": [
+      {
+        "dokumen": "K1",
+        "sel": {
+          "diet": 0.6931,
+          "energi": 1.204,
+          "kebutuhan": 1.6094,
+          "protein": 1.204,
+          "tujuan": 1.204
+        }
+      },
+      {
+        "dokumen": "K2",
+        "sel": {
+          "diet": 0.6931,
+          "energi": 1.204,
+          "kebutuhan": 1.6094,
+          "tujuan": 1.204
+        }
+      },
+      {
+        "dokumen": "K3",
+        "sel": {
+          "diet": 0.6931,
+          "energi": 1.204,
+          "protein": 2.0385
+        }
+      },
+      {
+        "dokumen": "K4",
+        "sel": {
+          "diet": 0.6931,
+          "pemberian": 1.6094,
+          "protein": 1.204,
+          "tujuan": 1.204
+        }
+      },
+      {
+        "dokumen": "K5",
+        "sel": {
+          "diet": 0.6931,
+          "lunak": 1.6094,
+          "makanan": 1.204,
+          "prinsip": 1.6094
+        }
+      },
+      {
+        "dokumen": "K6",
+        "sel": {
+          "lunak": 1.6094,
+          "makanan": 1.204,
+          "pemberian": 1.6094,
+          "porsi": 1.6094,
+          "prinsip": 1.6094
+        }
+      },
+      {
+        "dokumen": "K7",
+        "sel": {
+          "makanan": 1.204,
+          "porsi": 1.6094
+        }
+      },
+      {
+        "dokumen": "K8",
+        "sel": {
+          "gizi": 1.204,
+          "indeks": 1.6094,
+          "massa": 1.6094,
+          "status": 1.204,
+          "tubuh": 1.6094
+        }
+      },
+      {
+        "dokumen": "K9",
+        "sel": {
+          "antropometri": 1.6094,
+          "gizi": 1.204,
+          "indeks": 1.6094,
+          "massa": 1.6094,
+          "status": 1.204,
+          "tubuh": 1.6094
+        }
+      },
+      {
+        "dokumen": "K10",
+        "sel": {
+          "antropometri": 1.6094,
+          "gizi": 1.204,
+          "status": 1.204
+        }
+      }
+    ],
+    "nilai_singular": [
+      4.9622,
+      4.3539,
+      4.0251
+    ],
+    "rasio_varians": [
+      0.3053,
+      0.1264,
+      0.2643
+    ],
+    "vektor_term_mentah": {
+      "antropometri": [
+        1.6543,
+        -0.0,
+        -0.0
+      ],
+      "diet": [
+        0.0,
+        1.1123,
+        0.8943
+      ],
+      "energi": [
+        0.0,
+        1.0152,
+        1.6119
+      ],
+      "gizi": [
+        1.9815,
+        -0.0,
+        -0.0
+      ],
+      "indeks": [
+        2.1629,
+        -0.0,
+        -0.0
+      ],
+      "kebutuhan": [
+        0.0,
+        0.9623,
+        1.556
+      ],
+      "lunak": [
+        -0.0,
+        1.7362,
+        -1.2032
+      ],
+      "makanan": [
+        -0.0,
+        1.5597,
+        -1.1261
+      ],
+      "massa": [
+        2.1629,
+        -0.0,
+        -0.0
+      ],
+      "pemberian": [
+        -0.0,
+        1.5629,
+        -0.3657
+      ],
+      "porsi": [
+        -0.0,
+        1.3856,
+        -1.0475
+      ],
+      "prinsip": [
+        -0.0,
+        1.7362,
+        -1.2032
+      ],
+      "protein": [
+        0.0,
+        1.3034,
+        1.7004
+      ],
+      "status": [
+        1.9815,
+        -0.0,
+        -0.0
+      ],
+      "tubuh": [
+        2.1629,
+        -0.0,
+        -0.0
+      ],
+      "tujuan": [
+        0.0,
+        1.1134,
+        1.448
+      ]
+    },
+    "vektor_term_ternormalisasi": {
+      "antropometri": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "diet": [
+        0.0,
+        0.7793,
+        0.6266
+      ],
+      "energi": [
+        0.0,
+        0.533,
+        0.8461
+      ],
+      "gizi": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "indeks": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "kebutuhan": [
+        0.0,
+        0.526,
+        0.8505
+      ],
+      "lunak": [
+        -0.0,
+        0.8219,
+        -0.5696
+      ],
+      "makanan": [
+        -0.0,
+        0.8108,
+        -0.5854
+      ],
+      "massa": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "pemberian": [
+        -0.0,
+        0.9737,
+        -0.2278
+      ],
+      "porsi": [
+        -0.0,
+        0.7977,
+        -0.6031
+      ],
+      "prinsip": [
+        -0.0,
+        0.8219,
+        -0.5696
+      ],
+      "protein": [
+        0.0,
+        0.6084,
+        0.7937
+      ],
+      "status": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "tubuh": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "tujuan": [
+        0.0,
+        0.6096,
+        0.7927
+      ]
+    },
+    "term_query_di_vocab": [
+      "tujuan",
+      "diet"
+    ],
+    "centroid_mentah": [
+      0.0,
+      0.6944,
+      0.7097
+    ],
+    "norma_centroid": 0.9929,
+    "centroid_ternormalisasi": [
+      0.0,
+      0.6994,
+      0.7147
+    ],
+    "cosine": {
+      "antropometri": 0.0,
+      "diet": 0.9929,
+      "energi": 0.9775,
+      "gizi": 0.0,
+      "indeks": 0.0,
+      "kebutuhan": 0.9758,
+      "lunak": 0.1677,
+      "makanan": 0.1487,
+      "massa": 0.0,
+      "pemberian": 0.5182,
+      "porsi": 0.1269,
+      "prinsip": 0.1677,
+      "protein": 0.9927,
+      "status": 0.0,
+      "tubuh": 0.0,
+      "tujuan": 0.9929
+    },
+    "kandidat_terpilih": [
+      [
+        "protein",
+        0.9927
+      ],
+      [
+        "energi",
+        0.9775
+      ],
+      [
+        "kebutuhan",
+        0.9758
+      ]
+    ],
+    "bobot_ekspansi": {
+      "protein": 0.337,
+      "energi": 0.3318,
+      "kebutuhan": 0.3312
+    }
+  },
+  "lsa_qe": {
+    "skala": 4.0,
+    "bobot": {
+      "diet": 1.0,
+      "energi": 1.3272,
+      "kebutuhan": 1.3248,
+      "protein": 1.3479,
+      "tujuan": 1.0
+    },
+    "bm25_term_ekspansi": {
+      "protein": {
+        "df": 1,
+        "idf": 1.2993,
+        "bm25": {
+          "C1": 0.0,
+          "C2": 0.0,
+          "C3": 1.2993,
+          "C4": 0.0,
+          "C5": 0.0,
+          "C6": 0.0
+        }
+      },
+      "energi": {
+        "df": 2,
+        "idf": 0.5878,
+        "bm25": {
+          "C1": 0.0,
+          "C2": 0.0,
+          "C3": 0.5878,
+          "C4": 0.0,
+          "C5": 0.8073,
+          "C6": 0.0
+        }
+      },
+      "kebutuhan": {
+        "df": 1,
+        "idf": 1.2993,
+        "bm25": {
+          "C1": 0.0,
+          "C2": 0.0,
+          "C3": 1.2993,
+          "C4": 0.0,
+          "C5": 0.0,
+          "C6": 0.0
+        }
+      }
+    },
+    "skor": {
+      "C1": 0.0,
+      "C2": 1.9995,
+      "C3": 4.8406,
+      "C4": 0.0,
+      "C5": 1.0714,
+      "C6": 0.0
+    },
+    "peringkat": [
+      "C3",
+      "C2",
+      "C5",
+      "C1",
+      "C4",
+      "C6"
+    ],
+    "peringkat_gold": 1
+  },
+  "rm3": {
+    "dokumen_feedback": [
+      "C2",
+      "C3"
+    ],
+    "skor_feedback": [
+      1.9995,
+      0.5878
+    ],
+    "bobot_softmax": [
+      0.804,
+      0.196
+    ],
+    "model_relevansi": {
+      "diet": 0.3834,
+      "berdasarkan": 0.3083,
+      "ditetapkan": 0.3083
+    },
+    "bobot": {
+      "berdasarkan": 0.1541,
+      "diet": 0.4417,
+      "ditetapkan": 0.1541,
+      "tujuan": 0.25
+    },
+    "skor": {
+      "C1": 0.0,
+      "C2": 0.9275,
+      "C3": 0.2596,
+      "C4": 0.0,
+      "C5": 0.0,
+      "C6": 0.096
+    },
+    "peringkat": [
+      "C2",
+      "C3",
+      "C6",
+      "C1",
+      "C4",
+      "C5"
+    ],
+    "peringkat_gold": 2
+  },
+  "rm3_lsa": {
+    "skala": 1.0,
+    "bobot": {
+      "berdasarkan": 0.1541,
+      "diet": 0.4417,
+      "ditetapkan": 0.1541,
+      "energi": 0.3318,
+      "kebutuhan": 0.3312,
+      "protein": 0.337,
+      "tujuan": 0.25
+    },
+    "skor": {
+      "C1": 0.0,
+      "C2": 0.9275,
+      "C3": 1.3228,
+      "C4": 0.0,
+      "C5": 0.2679,
+      "C6": 0.096
+    },
+    "peringkat": [
+      "C3",
+      "C2",
+      "C5",
+      "C6",
+      "C1",
+      "C4"
+    ],
+    "peringkat_gold": 1
+  },
+  "metrik": {
+    "B1": {
+      "peringkat_gold": 2,
+      "RR": 0.5,
+      "Recall@1": 0,
+      "Recall@3": 1,
+      "Recall@5": 1,
+      "nDCG@10": 0.6309
+    },
+    "RM3": {
+      "peringkat_gold": 2,
+      "RR": 0.5,
+      "Recall@1": 0,
+      "Recall@3": 1,
+      "Recall@5": 1,
+      "nDCG@10": 0.6309
+    },
+    "LSA-QE": {
+      "peringkat_gold": 1,
+      "RR": 1.0,
+      "Recall@1": 1,
+      "Recall@3": 1,
+      "Recall@5": 1,
+      "nDCG@10": 1.0
+    },
+    "RM3+LSA": {
+      "peringkat_gold": 1,
+      "RR": 1.0,
+      "Recall@1": 1,
+      "Recall@3": 1,
+      "Recall@5": 1,
+      "nDCG@10": 1.0
+    }
+  }
+}

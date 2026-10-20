@@ -37,6 +37,7 @@ python scripts/05_analysis.py        # Tahap 6: ablasi dan analisis kegagalan (~
 python scripts/05_analysis_report.py # Tahap 6: laporan analisis
 python scripts/06_explorations.py    # eksplorasi arah lanjutan, dev-only (~30 detik)
 python scripts/06_final_report.py    # ringkasan akhir
+python scripts/manual_trace_bab4.py  # penelusuran manual untuk Bab 4 (<1 detik)
 python -m pytest                     # 94 tes
 ```
 
@@ -82,6 +83,11 @@ Setiap keputusan yang tidak ditentukan spesifikasi dicatat di
 | [`reports/04_test.md`](reports/04_test.md) | Tahap 5 - hasil test dan signifikansi |
 | [`reports/05_analisis.md`](reports/05_analisis.md) | Tahap 6 - ablasi dan analisis kegagalan |
 | [`reports/DECISIONS.md`](reports/DECISIONS.md) | Semua keputusan beserta alasannya |
+
+`results/manual_trace_bab4.json` memuat seluruh nilai antara yang dipakai pada
+subbab Perhitungan Manual di Bab 4 skripsi. Korpusnya ilustratif (bukan teks
+laporan pasien) dan parameternya diperkecil agar tabelnya muat di halaman, tetapi
+perhitungannya memakai modul `src/qe/` yang sama dengan pipeline.
 
 ## Hasil ringkas (test, seed 1-10, 3.444 unit)
 
