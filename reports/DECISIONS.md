@@ -77,3 +77,33 @@ Format: `tanggal | keputusan | alasan`
 2026-10-20 | Penomoran berkas laporan mengikuti urutan penulisan, bukan nomor tahap: `00_preprocessing.md` (Tahap 0), `01_split_scenario.md` (Tahap 1), `02_dev_selection.md` (Tahap 4), `03_metode.md` (Tahap 2-3), nanti `04_test.md` (Tahap 5) dan `05_analisis.md` (Tahap 6) | Nama `reports/02_dev_selection.md` untuk Tahap 4 sudah ditetapkan spesifikasi, sehingga penomoran tidak bisa sekaligus sejajar dengan nomor tahap.
 
 2026-10-20 | `scripts/04_test.py` menerima `--partition dev --out-dir <dir>` dan divalidasi lebih dulu pada dev sebelum dijalankan pada test | Aturan tetap no. 3 menuntut test dibuka sekali. Men-debug skrip di atas data test akan melanggar semangat aturan itu; dry run pada dev (seed 1-3) menghasilkan MRR yang identik dengan `scripts/02_dev_grid.py` (B1 0,2635; RM3 0,2736; LSA-QE 0,3281; RM3+LSA 0,3207), sehingga kedua jalur kode saling memverifikasi. Keluaran dry run ditulis ke direktori sementara, bukan `results/`.
+
+## Penguncian config (sebelum test dibuka)
+
+2026-10-20 | Atas keputusan pengguna, `gamma = 2` dipakai untuk **kedua** metode berparameter, bukan `gamma = 4` yang menang di dev untuk RM3+LSA | Dengan gamma yang sama, perbandingan RM3+LSA vs LSA-QE hanya menyisakan perbedaan basis (RM3 vs B1) dan tidak tercampur perbedaan bobot komponen LSA; sekaligus tidak ada parameter terpilih yang jatuh di batas grid. Biayanya: kriteria dev RM3+LSA turun dari 0,3207 (gamma=4) ke 0,3113 (gamma=2), jadi angka test RM3+LSA adalah batas bawah yang konservatif.
+
+2026-10-20 | Atas keputusan pengguna, normalisasi ulang `P(t|R)` dipertahankan (`rm3_renormalize = true`) | Lihat alasan di bagian Tahap 3.
+
+2026-10-20 | Config dikunci di `configs/locked_config.json`, SHA-256 `cf1e14b2d9c967cffc4283b30b63eea67139aaf9957c507d224e021087667ab3` | Aturan tetap no. 3. Test dibuka sekali setelah baris ini dicatat.
+
+## Tahap 5 - test
+
+2026-10-20 | Test dibuka satu kali pada seed 1-10 (3.444 unit) dengan config SHA-256 `cf1e14b2...`; tidak ada parameter yang disetel setelah itu | Aturan tetap no. 3.
+
+2026-10-20 | Wilcoxon memakai `zero_method="wilcox"` (selisih nol dibuang) dan dua sisi | Default scipy dan praktik standar. Dari 3.444 unit, 2.276 berubah peringkat pada perbandingan RM3+LSA vs LSA-QE.
+
+2026-10-20 | "Rata-rata" antar skenario dilaporkan sebagai rata-rata makro MRR(TPL) dan MRR(PARA), konsisten dengan kriteria dev | Kedua skenario punya jumlah unit hampir sama sehingga nilainya praktis sama dengan rata-rata mikro; disimpan sebagai `macro_MRR` di `results/04_test.json`.
+
+2026-10-20 | CI bootstrap untuk RM3+LSA vs LSA-QE tidak memuat nol sementara Wilcoxon tidak signifikan; keduanya dilaporkan dan ditafsirkan sebagai "setara pada MRR" | Kedua uji menanyakan hal berbeda (selisih rata-rata vs arah perubahan). Mengambil hanya yang mendukung satu kesimpulan akan menyesatkan.
+
+## Tahap 6 - analisis
+
+2026-10-20 | Pasangan simetris dari "diselamatkan hanya oleh gabungan" didefinisikan sebagai "kedua komponen berhasil, gabungan gagal" (24 vs 12) | Perhitungan pertama memakai "salah satu komponen berhasil, gabungan gagal" (190) yang syaratnya jauh lebih longgar; membandingkan 24 dengan 190 akan menyesatkan. Angka 190 tetap dilaporkan tetapi diberi label eksplisit.
+
+2026-10-20 | Contoh term ekspansi dipilih dengan aturan yang tidak bergantung metrik: tipe pada indeks 0, 2, 4, 6, 7 dari TYPE_ORDER; tiap tipe diwakili unit seed 1 dengan qid terkecil; skenario PARA untuk contoh ke-2 dan ke-4 | Memenuhi syarat "deterministik, dicatat caranya, minimal 2 parafrasa" tanpa membuka peluang memilih contoh yang menguntungkan.
+
+2026-10-20 | Porsi term ekspansi RM3 yang berupa angka murni diukur (16,7% term, 16,7% massa probabilitas) alih-alih disimpulkan dari beberapa contoh | Klaim mekanisme harus punya angka pendukung; sekarang ada di `results/05_analysis.json`.
+
+2026-10-20 | Penanda format PES didefinisikan sebagai {berkaitan, ditandai, disebabkan} dan diukur, bukan diasumsikan | Ketiganya adalah konektor baku pernyataan PES. Hasil ukur: penanda muncul di 98,3% chunk gold tipe `pes` tetapi juga di 16,6% chunk mana pun pada laporan yang sama - nyaris selalu benar, hampir tidak membedakan.
+
+2026-10-20 | Laporan Tahap 5 di `reports/04_test.md`, Tahap 6 di `reports/05_analisis.md` | Melanjutkan penomoran menurut urutan penulisan.
