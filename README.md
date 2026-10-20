@@ -1,8 +1,12 @@
-# Query expansion LSA + PRF (RM3) untuk retrieval chunk laporan asuhan gizi
+# Ekspansi query berbasis LSA untuk retrieval chunk laporan asuhan gizi
 
-Apakah menggabungkan ekspansi **global** (LSA; Deerwester et al., 1990) dengan
-ekspansi **lokal** (PRF/RM3; Lavrenko & Croft, 2001) lebih baik daripada tanpa QE,
-RM3 saja, dan LSA saja? Kerangka teori: analisis lokal vs global (Xu & Croft, 1996).
+**Metode yang diusulkan: ekspansi query berbasis Latent Semantic Analysis**
+(LSA; Deerwester et al., 1990). Ekspansi lokal (PRF/RM3; Lavrenko & Croft, 2001)
+dan gabungannya diukur sebagai **pembanding**. Kerangka teori: analisis lokal vs
+global (Xu & Croft, 1996).
+
+Hasil akhir dan alasan memilih LSA saja ada di
+[`reports/06_ringkasan_akhir.md`](reports/06_ringkasan_akhir.md).
 
 Tugasnya adalah menemukan satu chunk jawaban di dalam satu laporan asuhan gizi
 berbahasa Indonesia. Tanpa LLM, tanpa reranker, tanpa dense retrieval.
@@ -31,6 +35,8 @@ python scripts/04_test.py            # Tahap 5: test seed 1-10, SEKALI (~2 menit
 python scripts/04_test_report.py     # Tahap 5: laporan hasil test
 python scripts/05_analysis.py        # Tahap 6: ablasi dan analisis kegagalan (~1,5 menit)
 python scripts/05_analysis_report.py # Tahap 6: laporan analisis
+python scripts/06_explorations.py    # eksplorasi arah lanjutan, dev-only (~30 detik)
+python scripts/06_final_report.py    # ringkasan akhir
 python -m pytest                     # 94 tes
 ```
 
@@ -82,14 +88,15 @@ Setiap keputusan yang tidak ditentukan spesifikasi dicatat di
 | Metode | MRR | Recall@10 | nDCG@10 | Gagal (>10) | Robustness Index |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | B1 (tanpa QE) | 0,2763 | 0,575 | 0,3334 | 0,425 | - |
-| RM3 (lokal) | 0,2807 | 0,615 | 0,3468 | 0,385 | +0,076 |
-| LSA-QE (global) | **0,3106** | 0,631 | **0,3739** | 0,369 | +0,106 |
-| RM3+LSA (gabungan) | 0,3031 | **0,650** | 0,3729 | **0,350** | **+0,164** |
+| **LSA-QE (diusulkan)** | **0,3106** | 0,631 | **0,3739** | 0,369 | +0,106 |
+| RM3 (pembanding) | 0,2807 | 0,615 | 0,3468 | 0,385 | +0,076 |
+| RM3+LSA (pembanding) | 0,3031 | **0,650** | 0,3729 | **0,350** | **+0,164** |
 
-Metode gabungan mengungguli tanpa-QE dan RM3 saja secara signifikan, tetapi
-**setara dengan LSA saja pada MRR**. Keunggulannya ada pada recall dalam, tingkat
-kegagalan, dan kestabilan (penurunan besar 53 vs 107). Rinciannya di
-[`reports/04_test.md`](reports/04_test.md) dan [`reports/05_analisis.md`](reports/05_analisis.md).
+LSA-QE menaikkan MRR +0,0343 (+12,4%) dan menurunkan angka kegagalan 13,2% secara
+relatif, keduanya signifikan. Empat arah lanjutan diuji di dev untuk mencari
+sesuatu yang dapat digabungkan dengan LSA - ekspansi morfologis, selective query
+expansion, rank fusion, dan ekspansi lokal - **tidak satu pun terbukti layak
+dipromosikan**; alasannya di [`reports/06_ringkasan_akhir.md`](reports/06_ringkasan_akhir.md).
 
 Penomoran berkas laporan mengikuti urutan penulisan, bukan nomor tahap, karena
 nama `02_dev_selection.md` untuk Tahap 4 sudah ditetapkan spesifikasi.

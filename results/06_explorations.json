@@ -1,0 +1,227 @@
+{
+  "partition": "dev",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "n_units": 1026,
+  "note": "Seluruh eksplorasi di berkas ini dihitung pada partisi dev. Tidak ada kandidat yang mengalahkan acuan, sehingga tidak ada yang dipromosikan ke test dan config terkunci tetap utuh.",
+  "config_sha256": "cf1e14b2d9c967cffc4283b30b63eea67139aaf9957c507d224e021087667ab3",
+  "baselines": {
+    "B1": {
+      "MRR": 0.2635026234556681,
+      "Recall@5": 0.43762183235867447,
+      "Recall@10": 0.5789473684210527,
+      "fail_rate": 0.42105263157894735
+    },
+    "RM3": {
+      "MRR": 0.2735579980082704,
+      "Recall@5": 0.44346978557504874,
+      "Recall@10": 0.6052631578947368,
+      "fail_rate": 0.39473684210526316
+    },
+    "LSA-QE": {
+      "MRR": 0.32810346824081976,
+      "Recall@5": 0.49902534113060426,
+      "Recall@10": 0.6345029239766082,
+      "fail_rate": 0.36549707602339176
+    },
+    "RM3+LSA": {
+      "MRR": 0.31134612918422855,
+      "Recall@5": 0.47953216374269003,
+      "Recall@10": 0.6608187134502924,
+      "fail_rate": 0.3391812865497076
+    },
+    "LM500": {
+      "MRR": 0.332307582609915,
+      "Recall@5": 0.49610136452241715,
+      "Recall@10": 0.6384015594541911,
+      "fail_rate": 0.3615984405458089
+    },
+    "LM2000": {
+      "MRR": 0.32359674481964273,
+      "Recall@5": 0.5019493177387915,
+      "Recall@10": 0.6364522417153996,
+      "fail_rate": 0.3635477582846004
+    },
+    "oracle_QE": {
+      "MRR": 0.3972901768370266,
+      "Recall@5": 0.5857699805068226,
+      "Recall@10": 0.7339181286549707,
+      "fail_rate": 0.26608187134502925
+    },
+    "oracle_all": {
+      "MRR": 0.41721174622318336,
+      "Recall@5": 0.6062378167641326,
+      "Recall@10": 0.7485380116959064,
+      "fail_rate": 0.2514619883040936
+    }
+  },
+  "morphology": {
+    "all": {
+      "n": 1026,
+      "both": 0.12183235867446393,
+      "morph_only": 0.012670565302144249,
+      "lsa_only": 0.7290448343079922,
+      "neither": 0.1364522417153996,
+      "morph_only_count": 13
+    },
+    "hard": {
+      "n": 202,
+      "both": 0.10396039603960396,
+      "morph_only": 0.019801980198019802,
+      "lsa_only": 0.6584158415841584,
+      "neither": 0.21782178217821782,
+      "morph_only_count": 4
+    }
+  },
+  "selective_expansion": {
+    "n": 1026,
+    "never_expand_MRR": 0.2635026234556681,
+    "always_expand_MRR": 0.32810346824081976,
+    "oracle_MRR": 0.37603545474205063,
+    "oracle_headroom": 0.04793198650123087,
+    "helped": 503,
+    "hurt": 344,
+    "per_feature": {
+      "centroid_norm": {
+        "spearman_with_delta": 0.11437392616737038,
+        "best_in_sample_MRR": 0.3284812162238295,
+        "threshold": 0.5434658527374268,
+        "direction": ">="
+      },
+      "vocab_cov": {
+        "spearman_with_delta": 0.042991447396708085,
+        "best_in_sample_MRR": 0.32810346824081976,
+        "threshold": 1.0,
+        "direction": "<="
+      },
+      "cos_mean": {
+        "spearman_with_delta": -0.019162914104623802,
+        "best_in_sample_MRR": 0.3302866690906013,
+        "threshold": 0.6090501487255097,
+        "direction": "<="
+      },
+      "cos_max": {
+        "spearman_with_delta": -0.003204646822604931,
+        "best_in_sample_MRR": 0.32975641677705414,
+        "threshold": 0.5140253901481628,
+        "direction": ">="
+      },
+      "nqc": {
+        "spearman_with_delta": -0.13661988993058805,
+        "best_in_sample_MRR": 0.33008573610472325,
+        "threshold": 3.6609994863099176,
+        "direction": "<="
+      },
+      "wig": {
+        "spearman_with_delta": -0.04541418252818805,
+        "best_in_sample_MRR": 0.3307461780304287,
+        "threshold": 4.315529720368826,
+        "direction": "<="
+      },
+      "gap12": {
+        "spearman_with_delta": -0.10620743766628364,
+        "best_in_sample_MRR": 0.32797517927217357,
+        "threshold": 0.42891259936726045,
+        "direction": "<="
+      },
+      "clarity": {
+        "spearman_with_delta": 0.09800994564564156,
+        "best_in_sample_MRR": 0.3267447015812714,
+        "threshold": 1.5754271798234614,
+        "direction": ">="
+      },
+      "qlen": {
+        "spearman_with_delta": -0.14195198304679696,
+        "best_in_sample_MRR": 0.32862644010152353,
+        "threshold": 5.0,
+        "direction": "<="
+      },
+      "mean_idf": {
+        "spearman_with_delta": 0.0647262552976136,
+        "best_in_sample_MRR": 0.3265148401026667,
+        "threshold": 0.3620987822641751,
+        "direction": ">="
+      }
+    },
+    "models": {
+      "logistic": {
+        "in_sample_MRR": 0.33356121630638996,
+        "held_out_MRR": 0.3277055029141691,
+        "always_expand_MRR": 0.32829093807218973,
+        "gain_vs_always": -0.0005854351580206196
+      },
+      "ridge": {
+        "in_sample_MRR": 0.3325609854285969,
+        "held_out_MRR": 0.3230824714272902,
+        "always_expand_MRR": 0.32829093807218973,
+        "gain_vs_always": -0.005208466644899545
+      }
+    }
+  },
+  "rank_fusion": {
+    "RRF(LSA-QE+RM3+LSA)": {
+      "MRR": 0.32276698454726005,
+      "Recall@5": 0.4951267056530214,
+      "Recall@10": 0.6530214424951267,
+      "fail_rate": 0.3469785575048733
+    },
+    "RRF(B1+LSA-QE)": {
+      "MRR": 0.31409183226162174,
+      "Recall@5": 0.47855750487329435,
+      "Recall@10": 0.6081871345029239,
+      "fail_rate": 0.39181286549707606
+    },
+    "RRF(all four)": {
+      "MRR": 0.30517230901316117,
+      "Recall@5": 0.4834307992202729,
+      "Recall@10": 0.6247563352826511,
+      "fail_rate": 0.37524366471734893
+    },
+    "RRF(weighted 3:3:1:1)": {
+      "MRR": 0.31806673404973484,
+      "Recall@5": 0.4902534113060429,
+      "Recall@10": 0.6530214424951267,
+      "fail_rate": 0.3469785575048733
+    },
+    "RRF(LSA-QE:3,RM3+LSA:1)": {
+      "MRR": 0.3283965126990615,
+      "Recall@5": 0.5,
+      "Recall@10": 0.6432748538011696,
+      "fail_rate": 0.35672514619883045
+    },
+    "RRF(LSA-QE+LM500)": {
+      "MRR": 0.3337765304023753,
+      "Recall@5": 0.4980506822612086,
+      "Recall@10": 0.6354775828460039,
+      "fail_rate": 0.36452241715399614
+    },
+    "RRF(LSA-QE+RM3+LSA+LM500)": {
+      "MRR": 0.3306243921009655,
+      "Recall@5": 0.4951267056530214,
+      "Recall@10": 0.6510721247563352,
+      "fail_rate": 0.34892787524366475
+    },
+    "RRF(all four, k0=10)": {
+      "MRR": 0.30565581794238866,
+      "Recall@5": 0.4853801169590643,
+      "Recall@10": 0.6354775828460039,
+      "fail_rate": 0.36452241715399614
+    },
+    "RRF(all four, k0=20)": {
+      "MRR": 0.30308488320404275,
+      "Recall@5": 0.4853801169590643,
+      "Recall@10": 0.631578947368421,
+      "fail_rate": 0.368421052631579
+    },
+    "RRF(all four, k0=100)": {
+      "MRR": 0.3041312397272363,
+      "Recall@5": 0.47953216374269003,
+      "Recall@10": 0.6247563352826511,
+      "fail_rate": 0.37524366471734893
+    }
+  },
+  "runtime_seconds": 28.1
+}

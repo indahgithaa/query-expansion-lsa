@@ -111,3 +111,13 @@ Format: `tanggal | keputusan | alasan`
 ## Verifikasi determinisme
 
 2026-10-20 | Seluruh pipeline dijalankan ulang dan keluarannya dibandingkan per-bita: semua berkas di `results/` identik kecuali satu field, `runtime_seconds`, yang memang mengukur waktu dan bukan hasil | Aturan tetap no. 6. Jadi determinisme berlaku untuk setiap angka hasil; pemeriksaan ulang sebaiknya mengabaikan `runtime_seconds` (mis. `jq 'del(.runtime_seconds)'`) sebelum membandingkan hash.
+
+## Perubahan lingkup: metode yang diusulkan menjadi LSA saja
+
+2026-10-20 | Atas keputusan pengguna, metode yang diusulkan dipersempit menjadi **LSA-QE saja**; RM3 dan RM3+LSA tetap diukur dan dilaporkan sebagai pembanding, bukan sebagai metode yang diusulkan | Alasan pengguna: kesederhanaan. Tidak ada angka yang berubah dan tidak ada yang dijalankan ulang - hanya penekanan laporan yang bergeser. B1 tetap wajib sebagai baseline. Keputusan ini didukung bukti: LSA-QE menanggung bagian terbesar penurunan kegagalan (0,425 -> 0,369), sedangkan RM3 hanya menambah 0,369 -> 0,350.
+
+2026-10-20 | Empat arah lanjutan diuji dan semuanya gugur: ekspansi morfologis (kontribusi unik 1,3% unit), selective query expansion (held-out -0,0006 logistic / -0,0052 ridge), rank fusion RRF/CombSUM termasuk dengan LM Dirichlet (kegagalan terbaik 0,347 vs 0,339 RM3+LSA), dan penggabungan ekspansi lokal | Seluruhnya dihitung **hanya di dev** (`scripts/06_explorations.py` -> `results/06_explorations.json`). Karena tidak ada kandidat yang mengalahkan acuan, tidak ada yang dipromosikan ke test; config terkunci dan hasil test Tahap 5 tetap utuh dan sah.
+
+2026-10-20 | Gagasan selective query expansion lahir dari analisis pada partisi test (Tahap 6), meskipun pengembangan dan pengujiannya dilakukan sepenuhnya di dev | Dicatat demi transparansi: arah eksplorasi dipengaruhi pengamatan di test, jadi hasil negatifnya tidak boleh diperlakukan sebagai uji yang sepenuhnya pre-registered.
+
+2026-10-20 | Klaim "ekspansi khusus mengatasi variasi parafrasa" diturunkan menjadi "ekspansi menolong sama baiknya pada parafrasa maupun template" | Di dev celah TPL-PARA tampak menyempit tajam, tetapi di test penyempitannya hanya 0,0642 -> 0,0612. Keuntungan relatif memang lebih besar pada parafrasa (+14,7% vs +10,6%), namun terlalu tipis untuk menopang klaim yang lebih kuat. Berpengaruh pada pemilihan judul skripsi.
