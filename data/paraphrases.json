@@ -1,0 +1,146 @@
+{
+  "skrining": {
+    "dev": [
+      "Alat skrining gizi apa yang disarankan untuk pasien ini?",
+      "Metode penapisan risiko malnutrisi mana yang dianjurkan?",
+      "Skrining gizi seperti apa yang sebaiknya digunakan?",
+      "Instrumen apa yang dipakai untuk menapis status gizi?",
+      "Bagaimana cara melakukan skrining gizi yang direkomendasikan?",
+      "Rekomendasi alat skrining gizi untuk kasus ini apa?"
+    ],
+    "test": [
+      "Penapisan gizi dengan metode apa yang dianjurkan di sini?",
+      "Tools skrining malnutrisi apa yang direkomendasikan?",
+      "Instrumen skrining risiko gizi mana yang tepat dipakai?",
+      "Metode skrining mana yang sesuai untuk menilai risiko malnutrisi?",
+      "Skrining awal status gizi memakai alat apa?",
+      "Alat penapis status gizi apa yang disarankan dipakai?"
+    ]
+  },
+  "status_gizi": {
+    "dev": [
+      "Seperti apa kondisi status gizi pasien?",
+      "Bagaimana hasil penilaian antropometri dan status gizinya?",
+      "Pasien termasuk kategori status gizi apa?",
+      "Jelaskan status gizi pasien berdasarkan data antropometri.",
+      "Bagaimana keadaan gizi pasien saat dikaji?",
+      "Apa kesimpulan penilaian status gizi pasien?"
+    ],
+    "test": [
+      "Bagaimana gambaran status gizi pasien berdasarkan pengukuran?",
+      "Status gizi pasien tergolong apa?",
+      "Apa hasil interpretasi antropometri untuk status gizi pasien?",
+      "Bagaimana kondisi gizi pasien menurut data pengukuran tubuh?",
+      "Berapa z-score dan bagaimana status gizi pasien?",
+      "Bagaimana penilaian status gizi pada kasus ini?"
+    ]
+  },
+  "biokimia": {
+    "dev": [
+      "Hasil laboratorium mana saja yang tidak normal pada pasien?",
+      "Bagaimana data biokimia pasien yang menyimpang dari nilai rujukan?",
+      "Parameter lab apa saja yang abnormal?",
+      "Jelaskan hasil pemeriksaan laboratorium yang bermakna.",
+      "Nilai biokimia apa yang berada di luar rentang normal?",
+      "Bagaimana gambaran data lab pasien saat ini?"
+    ],
+    "test": [
+      "Pemeriksaan laboratorium pasien menunjukkan kelainan apa?",
+      "Data biokimia mana yang di luar nilai normal?",
+      "Bagaimana hasil lab abnormal pada pasien ini?",
+      "Sebutkan parameter laboratorium yang menyimpang.",
+      "Apa saja temuan abnormal dari data biokimia pasien?",
+      "Bagaimana kondisi hasil lab pasien dibanding nilai rujukan?"
+    ]
+  },
+  "pes": {
+    "dev": [
+      "Bagaimana rumusan diagnosis gizi problem-etiologi-sign pada pasien?",
+      "Tuliskan diagnosis gizi pasien dalam format PES.",
+      "Apa problem, etiologi, dan tanda gejala diagnosis gizi pasien?",
+      "Bagaimana cara merumuskan diagnosa gizi untuk kasus ini?",
+      "Diagnosis gizi PES pasien ini seperti apa?",
+      "Susun pernyataan diagnosis gizi berdasarkan hasil asesmen."
+    ],
+    "test": [
+      "Bagaimana penulisan diagnosis gizi dengan struktur PES?",
+      "Apa diagnosa gizi pasien beserta etiologi dan tandanya?",
+      "Rumuskan problem gizi pasien lengkap dengan penyebab dan gejalanya.",
+      "Bagaimana bentuk pernyataan PES untuk pasien ini?",
+      "Apa masalah gizi yang didiagnosis dan apa penyebabnya?",
+      "Bagaimana menetapkan diagnosis gizi berdasarkan data asesmen?"
+    ]
+  },
+  "tujuan_diet": {
+    "dev": [
+      "Apa sasaran pemberian diet untuk pasien?",
+      "Tujuan intervensi diet pada kasus ini apa saja?",
+      "Diet yang diberikan bertujuan untuk apa?",
+      "Apa target yang ingin dicapai dari terapi diet?",
+      "Sebutkan maksud pemberian diet pada pasien ini.",
+      "Apa tujuan terapi gizi yang direncanakan?"
+    ],
+    "test": [
+      "Apa saja tujuan dari pemberian terapi diet pasien?",
+      "Intervensi diet ini diarahkan untuk mencapai apa?",
+      "Apa maksud dan sasaran diet pada pasien tersebut?",
+      "Tujuan pengaturan makan pasien ini apa?",
+      "Hasil apa yang diharapkan dari diet yang diberikan?",
+      "Apa tujuan preskripsi diet pada kasus ini?"
+    ]
+  },
+  "prinsip_diet": {
+    "dev": [
+      "Apa prinsip pengaturan diet yang sesuai kondisi pasien?",
+      "Bagaimana dasar penyusunan diet untuk pasien ini?",
+      "Prinsip terapi gizi apa yang diterapkan?",
+      "Bagaimana prinsip pemberian makan pada pasien ini?",
+      "Apa landasan prinsip diet yang dipilih?",
+      "Jelaskan prinsip diet yang cocok untuk kasus ini."
+    ],
+    "test": [
+      "Prinsip diet seperti apa yang tepat untuk kondisi pasien?",
+      "Apa prinsip utama dalam pengaturan makan pasien ini?",
+      "Bagaimana prinsip intervensi gizi pada kasus tersebut?",
+      "Diet pasien disusun dengan prinsip apa?",
+      "Apa pokok-pokok prinsip diet yang digunakan?",
+      "Bagaimana prinsip diet disesuaikan dengan penyakit pasien?"
+    ]
+  },
+  "syarat_diet": {
+    "dev": [
+      "Apa saja syarat diet yang harus dipenuhi untuk pasien?",
+      "Ketentuan apa yang harus dipenuhi dalam menyusun diet ini?",
+      "Bagaimana persyaratan diet pada pasien tersebut?",
+      "Sebutkan syarat pengaturan diet yang berlaku.",
+      "Apa kriteria yang harus dipenuhi dalam diet pasien?",
+      "Bagaimana ketentuan energi dan zat gizi dalam diet ini?"
+    ],
+    "test": [
+      "Syarat apa saja yang harus dipenuhi pada diet pasien ini?",
+      "Apa persyaratan pemberian zat gizi untuk pasien tersebut?",
+      "Bagaimana syarat penyusunan menu dan diet pasien?",
+      "Bagaimana ketentuan pemberian energi, protein, lemak, dan karbohidrat?",
+      "Apa saja ketentuan yang mendasari pengaturan diet ini?",
+      "Bagaimana syarat diet yang ditetapkan untuk kasus ini?"
+    ]
+  },
+  "pedoman": {
+    "dev": [
+      "Pedoman apa yang dipakai untuk merencanakan diet pasien?",
+      "Acuan diet mana yang digunakan dalam perencanaan ini?",
+      "Apa panduan yang menjadi rujukan penyusunan diet?",
+      "Perencanaan diet mengacu pada pedoman apa?",
+      "Apa standar atau pedoman diet yang diterapkan?",
+      "Rujukan pedoman diet untuk kasus ini apa?"
+    ],
+    "test": [
+      "Diet pasien direncanakan berdasarkan pedoman apa?",
+      "Apa acuan atau panduan diet yang dipakai di sini?",
+      "Pedoman gizi mana yang menjadi dasar perencanaan diet?",
+      "Apa referensi pedoman diet dalam kasus ini?",
+      "Penyusunan diet pasien berpedoman pada apa?",
+      "Apa pedoman yang digunakan untuk menentukan preskripsi diet?"
+    ]
+  }
+}
