@@ -1,0 +1,1144 @@
+{
+  "config_sha256": "cf1e14b2d9c967cffc4283b30b63eea67139aaf9957c507d224e021087667ab3",
+  "n_units": 3444,
+  "ablation": {
+    "mrr": {
+      "B1": 0.2762729570962553,
+      "RM3": 0.2806599830940806,
+      "LSA-QE": 0.31057671538112575,
+      "RM3+LSA": 0.30305205869881197
+    },
+    "lokal_saja_atas_B1": 0.004387025997825256,
+    "global_saja_atas_B1": 0.03430375828487042,
+    "gabungan_atas_B1": 0.026779101602556643,
+    "jumlah_kontribusi_terpisah": 0.03869078428269568,
+    "lsa_ditambahkan_ke_rm3": 0.022392075604731387,
+    "rm3_ditambahkan_ke_lsa": -0.0075246566823137795,
+    "recall10": {
+      "B1": 0.5749128919860628,
+      "RM3": 0.6146922183507549,
+      "LSA-QE": 0.6309523809523809,
+      "RM3+LSA": 0.6495354239256679
+    },
+    "rm3_ditambahkan_ke_lsa_recall10": 0.018583042973286945,
+    "fail_rate": {
+      "B1": 0.4250871080139373,
+      "RM3": 0.38530778164924506,
+      "LSA-QE": 0.36904761904761907,
+      "RM3+LSA": 0.3504645760743322
+    }
+  },
+  "jaccard": {
+    "overall": {
+      "n": 3444,
+      "mean": 0.0930726237675418,
+      "median": 0.08108108108108109,
+      "pct_zero": 0.11556329849012775,
+      "mean_shared": 3.295876887340302,
+      "mean_rm3_digit_share": 0.16654084397986837,
+      "mean_rm3_digit_mass": 0.16726862135416282
+    },
+    "by_scenario": {
+      "TPL": {
+        "n": 1722,
+        "mean": 0.09290724346804753,
+        "median": 0.08108108108108109,
+        "pct_zero": 0.1527293844367015,
+        "mean_shared": 3.2851335656213707,
+        "mean_rm3_digit_share": 0.16666666666666666,
+        "mean_rm3_digit_mass": 0.1663059866538626
+      },
+      "PARA": {
+        "n": 1722,
+        "mean": 0.09323800406703608,
+        "median": 0.08108108108108109,
+        "pct_zero": 0.078397212543554,
+        "mean_shared": 3.3066202090592336,
+        "mean_rm3_digit_share": 0.16641502129307006,
+        "mean_rm3_digit_mass": 0.168231256054463
+      }
+    },
+    "by_type": {
+      "skrining": {
+        "n": 480,
+        "mean": 0.09097380845639359,
+        "median": 0.08108108108108109,
+        "pct_zero": 0.0375,
+        "mean_shared": 3.25,
+        "mean_rm3_digit_share": 0.12513888888888888,
+        "mean_rm3_digit_mass": 0.12366705326884046
+      },
+      "status_gizi": {
+        "n": 480,
+        "mean": 0.11740677990225452,
+        "median": 0.1111111111111111,
+        "pct_zero": 0.0020833333333333333,
+        "mean_shared": 4.11875,
+        "mean_rm3_digit_share": 0.17270833333333335,
+        "mean_rm3_digit_mass": 0.16807775329083272
+      },
+      "biokimia": {
+        "n": 474,
+        "mean": 0.08415429871224048,
+        "median": 0.08108108108108109,
+        "pct_zero": 0.06540084388185655,
+        "mean_shared": 3.0253164556962027,
+        "mean_rm3_digit_share": 0.2291139240506329,
+        "mean_rm3_digit_mass": 0.24690723402669293
+      },
+      "pes": {
+        "n": 480,
+        "mean": 0.019092358527343044,
+        "median": 0.0,
+        "pct_zero": 0.6416666666666667,
+        "mean_shared": 0.7125,
+        "mean_rm3_digit_share": 0.1646527777777778,
+        "mean_rm3_digit_mass": 0.16364471379850387
+      },
+      "tujuan_diet": {
+        "n": 480,
+        "mean": 0.09907843779747805,
+        "median": 0.08108108108108109,
+        "pct_zero": 0.03333333333333333,
+        "mean_shared": 3.53125,
+        "mean_rm3_digit_share": 0.14847222222222223,
+        "mean_rm3_digit_mass": 0.15476952886547268
+      },
+      "prinsip_diet": {
+        "n": 476,
+        "mean": 0.12986545799540167,
+        "median": 0.14285714285714285,
+        "pct_zero": 0.008403361344537815,
+        "mean_shared": 4.527310924369748,
+        "mean_rm3_digit_share": 0.15798319327731092,
+        "mean_rm3_digit_mass": 0.15564792311291367
+      },
+      "syarat_diet": {
+        "n": 480,
+        "mean": 0.11766505977047897,
+        "median": 0.1111111111111111,
+        "pct_zero": 0.004166666666666667,
+        "mean_shared": 4.135416666666667,
+        "mean_rm3_digit_share": 0.17381944444444444,
+        "mean_rm3_digit_mass": 0.1654451249325199
+      },
+      "pedoman": {
+        "n": 94,
+        "mean": 0.05971412044793245,
+        "median": 0.05263157894736842,
+        "pct_zero": 0.19148936170212766,
+        "mean_shared": 2.1595744680851063,
+        "mean_rm3_digit_share": 0.13900709219858157,
+        "mean_rm3_digit_mass": 0.1346881704082549
+      }
+    },
+    "max_possible": 0.3333333333333333,
+    "most_shared_terms": [
+      {
+        "term": "makanan",
+        "count": 1042
+      },
+      {
+        "term": "gizi",
+        "count": 734
+      },
+      {
+        "term": "energi",
+        "count": 673
+      },
+      {
+        "term": "hasil",
+        "count": 671
+      },
+      {
+        "term": "protein",
+        "count": 578
+      },
+      {
+        "term": "anak",
+        "count": 418
+      },
+      {
+        "term": "tujuan",
+        "count": 403
+      },
+      {
+        "term": "pemberian",
+        "count": 356
+      },
+      {
+        "term": "kebutuhan",
+        "count": 350
+      },
+      {
+        "term": "terkait",
+        "count": 332
+      },
+      {
+        "term": "kondisi",
+        "count": 313
+      },
+      {
+        "term": "berat",
+        "count": 297
+      },
+      {
+        "term": "berdasarkan",
+        "count": 290
+      },
+      {
+        "term": "sesuai",
+        "count": 279
+      },
+      {
+        "term": "badan",
+        "count": 272
+      },
+      {
+        "term": "malnutrisi",
+        "count": 270
+      },
+      {
+        "term": "edukasi",
+        "count": 231
+      },
+      {
+        "term": "pemeriksaan",
+        "count": 228
+      },
+      {
+        "term": "bb",
+        "count": 216
+      },
+      {
+        "term": "asupan",
+        "count": 207
+      }
+    ]
+  },
+  "rescue": {
+    "rescued_by_combination_only": {
+      "count": 24,
+      "pct_of_units": 0.006968641114982578,
+      "definition": "RM3+LSA <= 10 sementara RM3 > 10 DAN LSA-QE > 10 (sinergi)",
+      "by_type": {
+        "skrining": 1,
+        "syarat_diet": 14,
+        "biokimia": 2,
+        "status_gizi": 5,
+        "prinsip_diet": 1,
+        "pes": 1
+      },
+      "by_scenario": {
+        "TPL": 12,
+        "PARA": 12
+      }
+    },
+    "harmed_by_combination_only": {
+      "count": 12,
+      "pct_of_units": 0.003484320557491289,
+      "definition": "RM3 <= 10 DAN LSA-QE <= 10 sementara RM3+LSA > 10 (pasangan simetris)",
+      "by_type": {
+        "pes": 2,
+        "tujuan_diet": 4,
+        "status_gizi": 4,
+        "pedoman": 1,
+        "skrining": 1
+      },
+      "by_scenario": {
+        "TPL": 1,
+        "PARA": 11
+      }
+    },
+    "lost_if_either_component_succeeded": {
+      "count": 190,
+      "pct_of_units": 0.05516840882694541,
+      "definition": "RM3 <= 10 ATAU LSA-QE <= 10 sementara RM3+LSA > 10 (bukan pasangan simetris dari sinergi; dicantumkan agar tidak disalahbaca)",
+      "by_type": {
+        "syarat_diet": 30,
+        "pes": 47,
+        "biokimia": 37,
+        "tujuan_diet": 36,
+        "prinsip_diet": 6,
+        "skrining": 7,
+        "status_gizi": 24,
+        "pedoman": 3
+      },
+      "by_scenario": {
+        "TPL": 71,
+        "PARA": 119
+      }
+    },
+    "net_symmetric": 12,
+    "units_in_top10": {
+      "B1": 1980,
+      "RM3": 2117,
+      "LSA-QE": 2173,
+      "RM3+LSA": 2237
+    }
+  },
+  "failure_by_type": {
+    "skrining": {
+      "n": 480,
+      "mrr": {
+        "B1": 0.3137351509257117,
+        "RM3": 0.34067031332046693,
+        "LSA-QE": 0.4190528648812065,
+        "RM3+LSA": 0.40036918255409826
+      },
+      "delta_vs_B1": {
+        "RM3": 0.02693516239475524,
+        "LSA-QE": 0.10531771395549483,
+        "RM3+LSA": 0.08663403162838657
+      },
+      "fail_rate": {
+        "B1": 0.29791666666666666,
+        "RM3": 0.24375,
+        "LSA-QE": 0.21041666666666667,
+        "RM3+LSA": 0.2
+      },
+      "robustness_index": {
+        "RM3": 0.15625,
+        "LSA-QE": 0.1625,
+        "RM3+LSA": 0.23333333333333334
+      },
+      "big_drops": {
+        "RM3": 3,
+        "LSA-QE": 10,
+        "RM3+LSA": 2
+      },
+      "mean_jaccard": 0.09097380845639359,
+      "mean_query_len": 5.0375,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.08333333333333333,
+        "mean_share_of_chunks_containing": 0.16631864001933977
+      }
+    },
+    "status_gizi": {
+      "n": 480,
+      "mrr": {
+        "B1": 0.35325943944902904,
+        "RM3": 0.34839319529045415,
+        "LSA-QE": 0.3505424676272616,
+        "RM3+LSA": 0.35876113693631506
+      },
+      "delta_vs_B1": {
+        "RM3": -0.004866244158574895,
+        "LSA-QE": -0.0027169718217674443,
+        "RM3+LSA": 0.005501697487286017
+      },
+      "fail_rate": {
+        "B1": 0.23333333333333334,
+        "RM3": 0.2125,
+        "LSA-QE": 0.17916666666666667,
+        "RM3+LSA": 0.14375
+      },
+      "robustness_index": {
+        "RM3": 0.10833333333333334,
+        "LSA-QE": 0.15625,
+        "RM3+LSA": 0.15833333333333333
+      },
+      "big_drops": {
+        "RM3": 9,
+        "LSA-QE": 39,
+        "RM3+LSA": 23
+      },
+      "mean_jaccard": 0.11740677990225452,
+      "mean_query_len": 3.033333333333333,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.31666666666666665,
+        "mean_share_of_chunks_containing": 0.16631864001933977
+      }
+    },
+    "biokimia": {
+      "n": 474,
+      "mrr": {
+        "B1": 0.11885231800649704,
+        "RM3": 0.13658053057875624,
+        "LSA-QE": 0.1433351909299465,
+        "RM3+LSA": 0.14070436671995715
+      },
+      "delta_vs_B1": {
+        "RM3": 0.017728212572259205,
+        "LSA-QE": 0.024482872923449472,
+        "RM3+LSA": 0.02185204871346011
+      },
+      "fail_rate": {
+        "B1": 0.7616033755274262,
+        "RM3": 0.6624472573839663,
+        "LSA-QE": 0.6075949367088608,
+        "RM3+LSA": 0.5991561181434599
+      },
+      "robustness_index": {
+        "RM3": 0.05907172995780591,
+        "LSA-QE": 0.15611814345991562,
+        "RM3+LSA": 0.2320675105485232
+      },
+      "big_drops": {
+        "RM3": 1,
+        "LSA-QE": 8,
+        "RM3+LSA": 2
+      },
+      "mean_jaccard": 0.08415429871224048,
+      "mean_query_len": 4.9451476793248945,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.6470588235294118,
+        "mean_share_of_chunks_containing": 0.16658899546938957
+      }
+    },
+    "pes": {
+      "n": 480,
+      "mrr": {
+        "B1": 0.12700387957668652,
+        "RM3": 0.12333290575799999,
+        "LSA-QE": 0.11452883275588824,
+        "RM3+LSA": 0.1165412326497439
+      },
+      "delta_vs_B1": {
+        "RM3": -0.0036709738186865293,
+        "LSA-QE": -0.01247504682079828,
+        "RM3+LSA": -0.010462646926942612
+      },
+      "fail_rate": {
+        "B1": 0.5979166666666667,
+        "RM3": 0.5895833333333333,
+        "LSA-QE": 0.6395833333333333,
+        "RM3+LSA": 0.6041666666666666
+      },
+      "robustness_index": {
+        "RM3": -0.07916666666666666,
+        "LSA-QE": -0.33125,
+        "RM3+LSA": -0.14166666666666666
+      },
+      "big_drops": {
+        "RM3": 0,
+        "LSA-QE": 1,
+        "RM3+LSA": 1
+      },
+      "mean_jaccard": 0.019092358527343044,
+      "mean_query_len": 4.8,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.9833333333333333,
+        "mean_share_of_chunks_containing": 0.16631864001933977
+      }
+    },
+    "tujuan_diet": {
+      "n": 480,
+      "mrr": {
+        "B1": 0.3585546214160116,
+        "RM3": 0.34323172466831214,
+        "LSA-QE": 0.38568680733674066,
+        "RM3+LSA": 0.37326690706609156
+      },
+      "delta_vs_B1": {
+        "RM3": -0.015322896747699433,
+        "LSA-QE": 0.02713218592072908,
+        "RM3+LSA": 0.014712285650079981
+      },
+      "fail_rate": {
+        "B1": 0.17916666666666667,
+        "RM3": 0.16458333333333333,
+        "LSA-QE": 0.14375,
+        "RM3+LSA": 0.16875
+      },
+      "robustness_index": {
+        "RM3": -0.10625,
+        "LSA-QE": 0.14375,
+        "RM3+LSA": 0.12916666666666668
+      },
+      "big_drops": {
+        "RM3": 4,
+        "LSA-QE": 25,
+        "RM3+LSA": 9
+      },
+      "mean_jaccard": 0.09907843779747805,
+      "mean_query_len": 2.5729166666666665,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.3333333333333333,
+        "mean_share_of_chunks_containing": 0.16631864001933977
+      }
+    },
+    "prinsip_diet": {
+      "n": 476,
+      "mrr": {
+        "B1": 0.44359050008774414,
+        "RM3": 0.4518040525454179,
+        "LSA-QE": 0.5233544575345076,
+        "RM3+LSA": 0.49867441693728864
+      },
+      "delta_vs_B1": {
+        "RM3": 0.008213552457673745,
+        "LSA-QE": 0.07976395744676346,
+        "RM3+LSA": 0.0550839168495445
+      },
+      "fail_rate": {
+        "B1": 0.2605042016806723,
+        "RM3": 0.22899159663865545,
+        "LSA-QE": 0.22478991596638656,
+        "RM3+LSA": 0.20588235294117646
+      },
+      "robustness_index": {
+        "RM3": 0.15126050420168066,
+        "LSA-QE": 0.21638655462184875,
+        "RM3+LSA": 0.2184873949579832
+      },
+      "big_drops": {
+        "RM3": 1,
+        "LSA-QE": 5,
+        "RM3+LSA": 4
+      },
+      "mean_jaccard": 0.12986545799540167,
+      "mean_query_len": 3.7626050420168067,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.2184873949579832,
+        "mean_share_of_chunks_containing": 0.16638240876966903
+      }
+    },
+    "syarat_diet": {
+      "n": 480,
+      "mrr": {
+        "B1": 0.2435388458863209,
+        "RM3": 0.2538347673128771,
+        "LSA-QE": 0.2703085465363521,
+        "RM3+LSA": 0.2665729861502587
+      },
+      "delta_vs_B1": {
+        "RM3": 0.010295921426556165,
+        "LSA-QE": 0.026769700650031203,
+        "RM3+LSA": 0.023034140263937797
+      },
+      "fail_rate": {
+        "B1": 0.6104166666666667,
+        "RM3": 0.5541666666666667,
+        "LSA-QE": 0.5395833333333333,
+        "RM3+LSA": 0.49166666666666664
+      },
+      "robustness_index": {
+        "RM3": 0.26666666666666666,
+        "LSA-QE": 0.3145833333333333,
+        "RM3+LSA": 0.37916666666666665
+      },
+      "big_drops": {
+        "RM3": 4,
+        "LSA-QE": 14,
+        "RM3+LSA": 6
+      },
+      "mean_jaccard": 0.11766505977047897,
+      "mean_query_len": 4.516666666666667,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.12605042016806722,
+        "mean_share_of_chunks_containing": 0.16633986301573525
+      }
+    },
+    "pedoman": {
+      "n": 94,
+      "mrr": {
+        "B1": 0.14760486788141344,
+        "RM3": 0.10907325768097005,
+        "LSA-QE": 0.14160889680214042,
+        "RM3+LSA": 0.12981812872527382
+      },
+      "delta_vs_B1": {
+        "RM3": -0.03853161020044339,
+        "LSA-QE": -0.005995971079273021,
+        "RM3+LSA": -0.017786739156139625
+      },
+      "fail_rate": {
+        "B1": 0.6170212765957447,
+        "RM3": 0.6063829787234043,
+        "LSA-QE": 0.574468085106383,
+        "RM3+LSA": 0.5638297872340425
+      },
+      "robustness_index": {
+        "RM3": -0.0425531914893617,
+        "LSA-QE": -0.2765957446808511,
+        "RM3+LSA": -0.13829787234042554
+      },
+      "big_drops": {
+        "RM3": 7,
+        "LSA-QE": 5,
+        "RM3+LSA": 6
+      },
+      "mean_jaccard": 0.05971412044793245,
+      "mean_query_len": 3.872340425531915,
+      "pes_markers": {
+        "terms": [
+          "berkaitan",
+          "ditandai",
+          "disebabkan"
+        ],
+        "share_of_gold_containing": 0.047619047619047616,
+        "mean_share_of_chunks_containing": 0.15571720240165604
+      }
+    }
+  },
+  "types_worse_than_B1": [
+    "pedoman",
+    "pes"
+  ],
+  "example_selection_rule": "Tipe pada indeks genap TYPE_ORDER (0,2,4,6) ditambah indeks 7; tiap tipe diwakili unit seed 1 dengan qid terkecil; skenario PARA untuk contoh ke-2 dan ke-4, TPL untuk sisanya. Aturan ditetapkan tanpa melihat metrik.",
+  "examples": [
+    {
+      "slot": 0,
+      "qid": 77,
+      "qtype": "skrining",
+      "scenario": "TPL",
+      "query": "Apa metode skrining status gizi yang direkomendasikan?",
+      "query_tokens": [
+        "metode",
+        "skrining",
+        "status",
+        "gizi",
+        "direkomendasikan"
+      ],
+      "rm3_top": [
+        {
+          "term": "gizi",
+          "weight": 0.09207338168055759
+        },
+        {
+          "term": "tanggal",
+          "weight": 0.08922419545015821
+        },
+        {
+          "term": "skrining",
+          "weight": 0.07359562393790092
+        },
+        {
+          "term": "tgl",
+          "weight": 0.07275074763879041
+        },
+        {
+          "term": "kebutuhan",
+          "weight": 0.0712024026467506
+        },
+        {
+          "term": "antropometri",
+          "weight": 0.0541555608376798
+        },
+        {
+          "term": "formulir",
+          "weight": 0.053567651165131035
+        },
+        {
+          "term": "strongkids",
+          "weight": 0.03685706253029484
+        },
+        {
+          "term": "ruang",
+          "weight": 0.03626477774853522
+        },
+        {
+          "term": "rumah",
+          "weight": 0.03618567090574991
+        }
+      ],
+      "lsa_top": [
+        {
+          "term": "malnutrisi",
+          "cosine": 0.5797661542892456
+        },
+        {
+          "term": "alat",
+          "cosine": 0.5585911273956299
+        },
+        {
+          "term": "anak",
+          "cosine": 0.5334977507591248
+        },
+        {
+          "term": "strongkids",
+          "cosine": 0.5023805499076843
+        },
+        {
+          "term": "pyms",
+          "cosine": 0.4945399761199951
+        },
+        {
+          "term": "berdasarkan",
+          "cosine": 0.4926374554634094
+        },
+        {
+          "term": "kondisi",
+          "cosine": 0.48691704869270325
+        },
+        {
+          "term": "pembanding",
+          "cosine": 0.48367050290107727
+        },
+        {
+          "term": "hasil",
+          "cosine": 0.478542685508728
+        },
+        {
+          "term": "divalidasi",
+          "cosine": 0.4551393389701843
+        }
+      ],
+      "shared": [
+        "strongkids"
+      ],
+      "ranks": {
+        "B1": 3,
+        "RM3": 3,
+        "LSA-QE": 2,
+        "RM3+LSA": 3
+      }
+    },
+    {
+      "slot": 1,
+      "qid": 79,
+      "qtype": "biokimia",
+      "scenario": "PARA",
+      "query": "Data biokimia mana yang di luar nilai normal?",
+      "query_tokens": [
+        "data",
+        "biokimia",
+        "nilai",
+        "normal"
+      ],
+      "rm3_top": [
+        {
+          "term": "normal",
+          "weight": 0.088462241491316
+        },
+        {
+          "term": "5",
+          "weight": 0.08256191446310175
+        },
+        {
+          "term": "dl",
+          "weight": 0.07929174998779033
+        },
+        {
+          "term": "3",
+          "weight": 0.06981460744341485
+        },
+        {
+          "term": "mg",
+          "weight": 0.06081552342905633
+        },
+        {
+          "term": "7",
+          "weight": 0.056450851873691095
+        },
+        {
+          "term": "0",
+          "weight": 0.04703906517164125
+        },
+        {
+          "term": "2",
+          "weight": 0.04536025460975501
+        },
+        {
+          "term": "4",
+          "weight": 0.04500264904701172
+        },
+        {
+          "term": "mmol",
+          "weight": 0.043439659592183086
+        }
+      ],
+      "lsa_top": [
+        {
+          "term": "pemeriksaan",
+          "cosine": 0.6986414790153503
+        },
+        {
+          "term": "hasil",
+          "cosine": 0.6489733457565308
+        },
+        {
+          "term": "lab",
+          "cosine": 0.6453983783721924
+        },
+        {
+          "term": "laboratorium",
+          "cosine": 0.5913392901420593
+        },
+        {
+          "term": "hematologi",
+          "cosine": 0.5616760849952698
+        },
+        {
+          "term": "terbaru",
+          "cosine": 0.5440813302993774
+        },
+        {
+          "term": "fisik",
+          "cosine": 0.5179764628410339
+        },
+        {
+          "term": "diambil",
+          "cosine": 0.5152260661125183
+        },
+        {
+          "term": "klinis",
+          "cosine": 0.5060234069824219
+        },
+        {
+          "term": "leukosit",
+          "cosine": 0.4980444312095642
+        }
+      ],
+      "shared": [],
+      "ranks": {
+        "B1": 9,
+        "RM3": 7,
+        "LSA-QE": 7,
+        "RM3+LSA": 8
+      }
+    },
+    {
+      "slot": 2,
+      "qid": 81,
+      "qtype": "tujuan_diet",
+      "scenario": "TPL",
+      "query": "Apa tujuan diet pada pasien ini?",
+      "query_tokens": [
+        "tujuan",
+        "diet"
+      ],
+      "rm3_top": [
+        {
+          "term": "gizi",
+          "weight": 0.10921163721709971
+        },
+        {
+          "term": "makanan",
+          "weight": 0.10367368106367467
+        },
+        {
+          "term": "1",
+          "weight": 0.06697970728090519
+        },
+        {
+          "term": "buruk",
+          "weight": 0.06116946845702731
+        },
+        {
+          "term": "2",
+          "weight": 0.05386582813862014
+        },
+        {
+          "term": "pemberian",
+          "weight": 0.053616038683598946
+        },
+        {
+          "term": "bb",
+          "weight": 0.04549917753442947
+        },
+        {
+          "term": "terkait",
+          "weight": 0.036395459319759516
+        },
+        {
+          "term": "anak",
+          "weight": 0.03444383816545489
+        },
+        {
+          "term": "diet",
+          "weight": 0.03180948080916713
+        }
+      ],
+      "lsa_top": [
+        {
+          "term": "prinsip",
+          "cosine": 0.679560661315918
+        },
+        {
+          "term": "syarat",
+          "cosine": 0.6698516011238098
+        },
+        {
+          "term": "sasaran",
+          "cosine": 0.5479955077171326
+        },
+        {
+          "term": "makanan",
+          "cosine": 0.5295465588569641
+        },
+        {
+          "term": "edukasi",
+          "cosine": 0.516919732093811
+        },
+        {
+          "term": "materi",
+          "cosine": 0.5146633982658386
+        },
+        {
+          "term": "dianjurkan",
+          "cosine": 0.5129343271255493
+        },
+        {
+          "term": "terkait",
+          "cosine": 0.5128588080406189
+        },
+        {
+          "term": "konten",
+          "cosine": 0.5105165243148804
+        },
+        {
+          "term": "pemberian",
+          "cosine": 0.5082945823669434
+        }
+      ],
+      "shared": [
+        "makanan",
+        "pemberian",
+        "terkait"
+      ],
+      "ranks": {
+        "B1": 1,
+        "RM3": 1,
+        "LSA-QE": 3,
+        "RM3+LSA": 2
+      }
+    },
+    {
+      "slot": 3,
+      "qid": 82,
+      "qtype": "syarat_diet",
+      "scenario": "PARA",
+      "query": "Syarat apa saja yang harus dipenuhi pada diet pasien ini?",
+      "query_tokens": [
+        "syarat",
+        "dipenuhi",
+        "diet"
+      ],
+      "rm3_top": [
+        {
+          "term": "1",
+          "weight": 0.08458238781070297
+        },
+        {
+          "term": "gizi",
+          "weight": 0.0837827888170211
+        },
+        {
+          "term": "2",
+          "weight": 0.08221127210968528
+        },
+        {
+          "term": "makanan",
+          "weight": 0.0505505041433624
+        },
+        {
+          "term": "berkaitan",
+          "weight": 0.04048113506688082
+        },
+        {
+          "term": "ditandai",
+          "weight": 0.04048113506688082
+        },
+        {
+          "term": "kgbba",
+          "weight": 0.04048113506688082
+        },
+        {
+          "term": "diet",
+          "weight": 0.034838911953288
+        },
+        {
+          "term": "terkait",
+          "weight": 0.03366143503810551
+        },
+        {
+          "term": "5",
+          "weight": 0.03185654303078549
+        }
+      ],
+      "lsa_top": [
+        {
+          "term": "prinsip",
+          "cosine": 0.7149736881256104
+        },
+        {
+          "term": "preskripsi",
+          "cosine": 0.5901660323143005
+        },
+        {
+          "term": "energi",
+          "cosine": 0.5677560567855835
+        },
+        {
+          "term": "tujuan",
+          "cosine": 0.5628484487533569
+        },
+        {
+          "term": "makanan",
+          "cosine": 0.5371559858322144
+        },
+        {
+          "term": "sesuai",
+          "cosine": 0.5271413326263428
+        },
+        {
+          "term": "kebutuhan",
+          "cosine": 0.5164303779602051
+        },
+        {
+          "term": "protein",
+          "cosine": 0.509151041507721
+        },
+        {
+          "term": "dihitung",
+          "cosine": 0.4910748600959778
+        },
+        {
+          "term": "pemberian",
+          "cosine": 0.4770965874195099
+        }
+      ],
+      "shared": [
+        "makanan"
+      ],
+      "ranks": {
+        "B1": 7,
+        "RM3": 2,
+        "LSA-QE": 7,
+        "RM3+LSA": 5
+      }
+    },
+    {
+      "slot": 4,
+      "qid": 153,
+      "qtype": "pedoman",
+      "scenario": "TPL",
+      "query": "Apa pedoman diet yang digunakan dalam perencanaan diet pasien ini?",
+      "query_tokens": [
+        "pedoman",
+        "diet",
+        "perencanaan",
+        "diet"
+      ],
+      "rm3_top": [
+        {
+          "term": "lemak",
+          "weight": 0.06344565253252715
+        },
+        {
+          "term": "1",
+          "weight": 0.06214703018303247
+        },
+        {
+          "term": "4",
+          "weight": 0.0516837445733203
+        },
+        {
+          "term": "diet",
+          "weight": 0.0494896061230225
+        },
+        {
+          "term": "berat",
+          "weight": 0.0449051800272295
+        },
+        {
+          "term": "protein",
+          "weight": 0.04449306194548835
+        },
+        {
+          "term": "kebutuhan",
+          "weight": 0.04400910960774286
+        },
+        {
+          "term": "badan",
+          "weight": 0.043720584294729484
+        },
+        {
+          "term": "kondisi",
+          "weight": 0.042909307672335285
+        },
+        {
+          "term": "tinggi",
+          "weight": 0.041067224299866374
+        }
+      ],
+      "lsa_top": [
+        {
+          "term": "tujuan",
+          "cosine": 0.5813347101211548
+        },
+        {
+          "term": "prinsip",
+          "cosine": 0.5409656167030334
+        },
+        {
+          "term": "makanan",
+          "cosine": 0.5017480850219727
+        },
+        {
+          "term": "gizi",
+          "cosine": 0.49884703755378723
+        },
+        {
+          "term": "syarat",
+          "cosine": 0.4915860593318939
+        },
+        {
+          "term": "edukasi",
+          "cosine": 0.4706783890724182
+        },
+        {
+          "term": "dianjurkan",
+          "cosine": 0.46276912093162537
+        },
+        {
+          "term": "motivasi",
+          "cosine": 0.4626438021659851
+        },
+        {
+          "term": "mencoba",
+          "cosine": 0.45716631412506104
+        },
+        {
+          "term": "rekomendasi",
+          "cosine": 0.4470498859882355
+        }
+      ],
+      "shared": [],
+      "ranks": {
+        "B1": 7,
+        "RM3": 9,
+        "LSA-QE": 2,
+        "RM3+LSA": 5
+      }
+    }
+  ],
+  "runtime_seconds": 89.1
+}

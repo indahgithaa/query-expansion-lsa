@@ -27,8 +27,10 @@ python scripts/01_splits.py          # Tahap 1: split per dokumen + skenario
 python scripts/02_dev_grid.py        # Tahap 2-4: grid 64 konfigurasi di dev (~2,5 menit)
 python scripts/02_dev_report.py      # Tahap 4: laporan seleksi dev
 python scripts/03_lock_config.py     # kunci config (hanya setelah disetujui)
-python scripts/04_test.py            # Tahap 5: test seed 1-10, SEKALI
-python scripts/05_analysis.py        # Tahap 6: ablasi dan analisis kegagalan
+python scripts/04_test.py            # Tahap 5: test seed 1-10, SEKALI (~2 menit)
+python scripts/04_test_report.py     # Tahap 5: laporan hasil test
+python scripts/05_analysis.py        # Tahap 6: ablasi dan analisis kegagalan (~1,5 menit)
+python scripts/05_analysis_report.py # Tahap 6: laporan analisis
 python -m pytest                     # 94 tes
 ```
 
@@ -71,7 +73,23 @@ Setiap keputusan yang tidak ditentukan spesifikasi dicatat di
 | [`reports/01_split_scenario.md`](reports/01_split_scenario.md) | Tahap 1 - split dan skenario |
 | [`reports/03_metode.md`](reports/03_metode.md) | Tahap 2-3 - retrieval dasar dan keempat metode |
 | [`reports/02_dev_selection.md`](reports/02_dev_selection.md) | Tahap 4 - seleksi parameter di dev |
+| [`reports/04_test.md`](reports/04_test.md) | Tahap 5 - hasil test dan signifikansi |
+| [`reports/05_analisis.md`](reports/05_analisis.md) | Tahap 6 - ablasi dan analisis kegagalan |
 | [`reports/DECISIONS.md`](reports/DECISIONS.md) | Semua keputusan beserta alasannya |
+
+## Hasil ringkas (test, seed 1-10, 3.444 unit)
+
+| Metode | MRR | Recall@10 | nDCG@10 | Gagal (>10) | Robustness Index |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| B1 (tanpa QE) | 0,2763 | 0,575 | 0,3334 | 0,425 | - |
+| RM3 (lokal) | 0,2807 | 0,615 | 0,3468 | 0,385 | +0,076 |
+| LSA-QE (global) | **0,3106** | 0,631 | **0,3739** | 0,369 | +0,106 |
+| RM3+LSA (gabungan) | 0,3031 | **0,650** | 0,3729 | **0,350** | **+0,164** |
+
+Metode gabungan mengungguli tanpa-QE dan RM3 saja secara signifikan, tetapi
+**setara dengan LSA saja pada MRR**. Keunggulannya ada pada recall dalam, tingkat
+kegagalan, dan kestabilan (penurunan besar 53 vs 107). Rinciannya di
+[`reports/04_test.md`](reports/04_test.md) dan [`reports/05_analisis.md`](reports/05_analisis.md).
 
 Penomoran berkas laporan mengikuti urutan penulisan, bukan nomor tahap, karena
 nama `02_dev_selection.md` untuk Tahap 4 sudah ditetapkan spesifikasi.
