@@ -12,8 +12,9 @@ Tugasnya adalah menemukan satu chunk jawaban di dalam satu laporan asuhan gizi
 berbahasa Indonesia. Tanpa LLM, tanpa reranker, tanpa dense retrieval.
 
 > Repo ini memuat data klinis pasien yang sudah dianonimkan. **Jangan di-push ke
-> remote publik.** Laporan di `reports/` sengaja tidak mengutip teks klinis dan
-> merujuk dokumen dengan `doc_id`, bukan nama berkas.
+> remote publik.** Laporan di `reports/` merujuk dokumen dengan `doc_id`, bukan
+> nama berkas. Bab 4 skripsi mengutip satu chunk nyata sebagai contoh perhitungan
+> manual, atas keputusan pengguna (lihat `reports/DECISIONS.md`).
 
 ## Pemasangan
 
@@ -37,6 +38,7 @@ python scripts/05_analysis.py        # Tahap 6: ablasi dan analisis kegagalan (~
 python scripts/05_analysis_report.py # Tahap 6: laporan analisis
 python scripts/06_explorations.py    # eksplorasi arah lanjutan, dev-only (~30 detik)
 python scripts/06_final_report.py    # ringkasan akhir
+python scripts/07_tiga_metode.py     # agregasi ulang tiga metode (Baseline, RM3, LSA-QE)
 python scripts/manual_trace_bab4.py  # penelusuran manual untuk Bab 4 (<1 detik)
 python -m pytest                     # 94 tes
 ```
@@ -85,9 +87,10 @@ Setiap keputusan yang tidak ditentukan spesifikasi dicatat di
 | [`reports/DECISIONS.md`](reports/DECISIONS.md) | Semua keputusan beserta alasannya |
 
 `results/manual_trace_bab4.json` memuat seluruh nilai antara yang dipakai pada
-subbab Perhitungan Manual di Bab 4 skripsi. Korpusnya ilustratif (bukan teks
-laporan pasien) dan parameternya diperkecil agar tabelnya muat di halaman, tetapi
-perhitungannya memakai modul `src/qe/` yang sama dengan pipeline.
+subbab Perhitungan Manual di Bab 4 skripsi. Unit yang ditelusuri adalah data
+nyata, yaitu qid 63 pada dokumen D029 (partisi dev, seed 1), dengan parameter
+terkunci `k=300`, `n=10`, `gamma=2`. Perhitungannya memakai modul `src/qe/` yang
+sama dengan pipeline, sehingga rumus di bab itu dijamin rumus yang dijalankan.
 
 ## Hasil ringkas (test, seed 1-10, 3.444 unit)
 

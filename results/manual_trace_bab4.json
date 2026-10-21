@@ -1,875 +1,3602 @@
 {
-  "catatan": "Korpus ilustratif, bukan teks laporan pasien.",
+  "unit": {
+    "qid": 63,
+    "seed": 1,
+    "partisi": "dev",
+    "skenario": "TPL",
+    "tipe_pertanyaan": "skrining",
+    "doc_id": "D029",
+    "chunk_acuan": "D029:P0008:C000",
+    "indeks_chunk_acuan": 8
+  },
   "parameter": {
-    "k_latent": 3,
-    "n_expansion": 3,
+    "k": 300,
+    "n": 10,
     "gamma": 2.0,
-    "rm3_n_feedback": 2,
-    "rm3_n_terms": 3,
-    "rm3_lambda": 0.5,
     "bm25": {
       "k1": 1.5,
       "b": 0.75,
       "epsilon": 0.25
+    },
+    "rm3": {
+      "n_feedback": 5,
+      "n_terms": 30,
+      "lambda": 0.5
     }
   },
+  "korpus": {
+    "dokumen_koleksi": 72,
+    "chunk_koleksi": 8128,
+    "chunk_laporan_sasaran": 115,
+    "panjang_chunk_acuan": 120,
+    "avgdl": 111.2261
+  },
   "praproses": {
-    "query_asli": "Apa tujuan diet pada pasien ini?",
-    "query_ternormalisasi": "Apa tujuan diet pada pasien ini?",
-    "query_token_mentah": [
+    "pertanyaan": "Apa metode skrining status gizi yang direkomendasikan?",
+    "token_sebelum_stopword": [
       "apa",
-      "tujuan",
-      "diet",
-      "pada",
-      "pasien",
-      "ini"
+      "metode",
+      "skrining",
+      "status",
+      "gizi",
+      "yang",
+      "direkomendasikan"
     ],
-    "query_token_akhir": [
-      "tujuan",
-      "diet"
+    "token_query": [
+      "metode",
+      "skrining",
+      "status",
+      "gizi",
+      "direkomendasikan"
     ],
-    "target": [
-      {
-        "id": "C1",
-        "teks": "Prinsip pemberian makanan dalam bentuk lunak dengan porsi kecil.",
-        "token": [
-          "prinsip",
-          "pemberian",
-          "makanan",
-          "dalam",
-          "bentuk",
-          "lunak",
-          "dengan",
-          "porsi",
-          "kecil"
-        ],
-        "panjang": 9
-      },
-      {
-        "id": "C2",
-        "teks": "Tujuan diet pasien ditetapkan berdasarkan hasil pengkajian.",
-        "token": [
-          "tujuan",
-          "diet",
-          "pasien",
-          "ditetapkan",
-          "berdasarkan",
-          "hasil",
-          "pengkajian"
-        ],
-        "panjang": 7
-      },
-      {
-        "id": "C3",
-        "teks": "Diet memberikan energi dan protein sesuai kebutuhan harian.",
-        "token": [
-          "diet",
-          "memberikan",
-          "energi",
-          "dan",
-          "protein",
-          "sesuai",
-          "kebutuhan",
-          "harian"
-        ],
-        "panjang": 8
-      },
-      {
-        "id": "C4",
-        "teks": "Syarat pemberian cairan disesuaikan dengan kondisi saluran cerna.",
-        "token": [
-          "syarat",
-          "pemberian",
-          "cairan",
-          "disesuaikan",
-          "dengan",
-          "kondisi",
-          "saluran",
-          "cerna"
-        ],
-        "panjang": 8
-      },
-      {
-        "id": "C5",
-        "teks": "Pemantauan asupan energi dilakukan setiap hari dan energi dicatat.",
-        "token": [
-          "pemantauan",
-          "asupan",
-          "energi",
-          "dilakukan",
-          "setiap",
-          "hari",
-          "dan",
-          "energi",
-          "dicatat"
-        ],
-        "panjang": 9
-      },
-      {
-        "id": "C6",
-        "teks": "Status gizi ditentukan berdasarkan indeks massa tubuh.",
-        "token": [
-          "status",
-          "gizi",
-          "ditentukan",
-          "berdasarkan",
-          "indeks",
-          "massa",
-          "tubuh"
-        ],
-        "panjang": 7
-      }
+    "panjang_query": 5,
+    "teks_chunk_acuan": "2.2.2. PYMS (Pediatric Yorkhill Malnutrition Score)\nGambar 2.2 Form PYMS\nKesimpulan:\nPada tahap screening, dilakukan screening menggunakan 2 screening tools,\nyaitu StrongKidz yang merupakan screening tools yang digunakan untuk anak di rumah\nsakit dan Paediatrics Yorkhill Malnutrition Score (PYMS) sebagai pembanding. Dengan\nform StrongKidz, didapatkan hasil bahwa pasien berisiko tinggi malnutrisi. Hasil\nscreening menggunakan PYMS, pasien mendapatkan skor >1 yang berarti pasien\nberisiko tinggi malnutrisi. Kelebihan dari skrining tools PYMS dinilai mempunyai\nsensitivitas 95.32% dengan spesifisitas 76.92% dan termasuk praktis untuk digunakan.\nSedangkan Strong-kids mempunyai sensitivitas 100% dan spesifisitas hanya sebesar\n7.7%. Pada kedua hasil Strong-Kids dan PYMS dari hasil screening yang telah\ndilakukan, pasien termasuk berisiko tinggi malnutrisi (Wonoputri dkk, 2014).",
+    "stopword_terbuang": [
+      "apa",
+      "yang"
     ],
-    "koleksi": [
+    "jumlah_stopword": 810,
+    "langkah": [
       {
-        "id": "K1",
-        "teks": "Tujuan diet adalah memberikan energi dan protein sesuai kebutuhan.",
-        "token_tanpa_stopword": [
-          "tujuan",
-          "diet",
-          "energi",
-          "protein",
-          "sesuai",
-          "kebutuhan"
-        ]
+        "no": 1,
+        "langkah": "Teks pertanyaan asli",
+        "hasil": "Apa metode skrining status gizi yang direkomendasikan?"
       },
       {
-        "id": "K2",
-        "teks": "Tujuan diet adalah memenuhi kebutuhan energi pasien.",
-        "token_tanpa_stopword": [
-          "tujuan",
-          "diet",
-          "memenuhi",
-          "kebutuhan",
-          "energi"
-        ]
+        "no": 2,
+        "langkah": "Normalisasi NFKC, dekode #Uxxxx, buang U+2060",
+        "hasil": "Apa metode skrining status gizi yang direkomendasikan?",
+        "berubah": false
       },
       {
-        "id": "K3",
-        "teks": "Diet protein tinggi diberikan dengan protein nabati dan energi cukup.",
-        "token_tanpa_stopword": [
-          "diet",
-          "protein",
-          "tinggi",
-          "protein",
-          "nabati",
-          "energi"
-        ]
+        "no": 3,
+        "langkah": "Konversi ke huruf kecil",
+        "hasil": "apa metode skrining status gizi yang direkomendasikan?",
+        "berubah": true
       },
       {
-        "id": "K4",
-        "teks": "Tujuan pemberian diet adalah memperbaiki asupan protein.",
-        "token_tanpa_stopword": [
-          "tujuan",
-          "pemberian",
-          "diet",
-          "memperbaiki",
-          "asupan",
-          "protein"
-        ]
+        "no": 4,
+        "langkah": "Tokenisasi dengan pola \\w+",
+        "hasil": "apa | metode | skrining | status | gizi | yang | direkomendasikan",
+        "berubah": true
       },
       {
-        "id": "K5",
-        "teks": "Prinsip diet dilakukan dalam bentuk makanan lunak.",
-        "token_tanpa_stopword": [
-          "prinsip",
-          "diet",
-          "bentuk",
-          "makanan",
-          "lunak"
-        ]
-      },
-      {
-        "id": "K6",
-        "teks": "Prinsip pemberian makanan lunak dengan porsi kecil.",
-        "token_tanpa_stopword": [
-          "prinsip",
-          "pemberian",
-          "makanan",
-          "lunak",
-          "porsi"
-        ]
-      },
-      {
-        "id": "K7",
-        "teks": "Makanan diberikan dalam porsi kecil dan sering.",
-        "token_tanpa_stopword": [
-          "makanan",
-          "porsi"
-        ]
-      },
-      {
-        "id": "K8",
-        "teks": "Status gizi ditentukan berdasarkan indeks massa tubuh.",
-        "token_tanpa_stopword": [
-          "status",
-          "gizi",
-          "ditentukan",
-          "berdasarkan",
-          "indeks",
-          "massa",
-          "tubuh"
-        ]
-      },
-      {
-        "id": "K9",
-        "teks": "Status gizi dinilai dengan indeks massa tubuh dan antropometri.",
-        "token_tanpa_stopword": [
-          "status",
-          "gizi",
-          "dinilai",
-          "indeks",
-          "massa",
-          "tubuh",
-          "antropometri"
-        ]
-      },
-      {
-        "id": "K10",
-        "teks": "Penilaian status gizi memakai pengukuran antropometri.",
-        "token_tanpa_stopword": [
-          "penilaian",
-          "status",
-          "gizi",
-          "memakai",
-          "pengukuran",
-          "antropometri"
-        ]
+        "no": 5,
+        "langkah": "Penghapusan stopword",
+        "hasil": "metode | skrining | status | gizi | direkomendasikan",
+        "berubah": true
       }
     ]
   },
   "bm25": {
-    "N": 6,
-    "panjang_dokumen": {
-      "C1": 9,
-      "C2": 7,
-      "C3": 8,
-      "C4": 8,
-      "C5": 9,
-      "C6": 7
-    },
-    "avgdl": 8.0,
-    "average_idf": 1.1952,
-    "penyebut_normalisasi": {
-      "C1": 1.6406,
-      "C2": 1.3594,
-      "C3": 1.5,
-      "C4": 1.5,
-      "C5": 1.6406,
-      "C6": 1.3594
-    },
+    "N": 115,
+    "average_idf": 3.5494,
+    "penyebut_normalisasi_gold": 1.5887,
     "per_term": [
       {
-        "term": "tujuan",
-        "df": 1,
-        "idf": 1.2993,
-        "tf": {
-          "C1": 0,
-          "C2": 1,
-          "C3": 0,
-          "C4": 0,
-          "C5": 0,
-          "C6": 0
-        },
-        "bm25": {
-          "C1": 0.0,
-          "C2": 1.3767,
-          "C3": 0.0,
-          "C4": 0.0,
-          "C5": 0.0,
-          "C6": 0.0
-        }
+        "term": "metode",
+        "df": 6,
+        "idf": 2.8241,
+        "tf_gold": 0,
+        "bm25_gold": 0.0
       },
       {
-        "term": "diet",
-        "df": 2,
-        "idf": 0.5878,
-        "tf": {
-          "C1": 0,
-          "C2": 1,
-          "C3": 1,
-          "C4": 0,
-          "C5": 0,
-          "C6": 0
-        },
-        "bm25": {
-          "C1": 0.0,
-          "C2": 0.6228,
-          "C3": 0.5878,
-          "C4": 0.0,
-          "C5": 0.0,
-          "C6": 0.0
-        }
+        "term": "skrining",
+        "df": 8,
+        "idf": 2.5374,
+        "tf_gold": 1,
+        "bm25_gold": 2.4504
+      },
+      {
+        "term": "status",
+        "df": 7,
+        "idf": 2.6718,
+        "tf_gold": 0,
+        "bm25_gold": 0.0
+      },
+      {
+        "term": "gizi",
+        "df": 37,
+        "idf": 0.7388,
+        "tf_gold": 0,
+        "bm25_gold": 0.0
+      },
+      {
+        "term": "direkomendasikan",
+        "df": 0,
+        "idf": 0.0,
+        "tf_gold": 0,
+        "bm25_gold": 0.0
       }
     ]
   },
   "b1": {
-    "bobot": {
-      "tujuan": 1.0,
-      "diet": 1.0
-    },
-    "skor": {
-      "C1": 0.0,
-      "C2": 1.9995,
-      "C3": 0.5878,
-      "C4": 0.0,
-      "C5": 0.0,
-      "C6": 0.0
-    },
-    "peringkat": [
-      "C2",
-      "C3",
-      "C1",
-      "C4",
-      "C5",
-      "C6"
-    ],
-    "peringkat_gold": 2
-  },
-  "lsa": {
-    "n_dokumen_koleksi": 10,
-    "vocab": [
-      "antropometri",
-      "diet",
-      "energi",
-      "gizi",
-      "indeks",
-      "kebutuhan",
-      "lunak",
-      "makanan",
-      "massa",
-      "pemberian",
-      "porsi",
-      "prinsip",
-      "protein",
-      "status",
-      "tubuh",
-      "tujuan"
-    ],
-    "df": {
-      "antropometri": 2,
-      "diet": 5,
-      "energi": 3,
-      "gizi": 3,
-      "indeks": 2,
-      "kebutuhan": 2,
-      "lunak": 2,
-      "makanan": 3,
-      "massa": 2,
-      "pemberian": 2,
-      "porsi": 2,
-      "prinsip": 2,
-      "protein": 3,
-      "status": 3,
-      "tubuh": 2,
-      "tujuan": 3
-    },
-    "idf": {
-      "antropometri": 1.6094,
-      "diet": 0.6931,
-      "energi": 1.204,
-      "gizi": 1.204,
-      "indeks": 1.6094,
-      "kebutuhan": 1.6094,
-      "lunak": 1.6094,
-      "makanan": 1.204,
-      "massa": 1.6094,
-      "pemberian": 1.6094,
-      "porsi": 1.6094,
-      "prinsip": 1.6094,
-      "protein": 1.204,
-      "status": 1.204,
-      "tubuh": 1.6094,
-      "tujuan": 1.204
-    },
-    "matriks": [
+    "skor_gold": 2.4504,
+    "peringkat_gold": 20,
+    "teratas": [
       {
-        "dokumen": "K1",
-        "sel": {
-          "diet": 0.6931,
-          "energi": 1.204,
-          "kebutuhan": 1.6094,
-          "protein": 1.204,
-          "tujuan": 1.204
+        "peringkat": 1,
+        "chunk_id": "D029:P0007:C000",
+        "panjang": 20,
+        "skor": 6.0936,
+        "teks": "2.2. Skrining Gizi\n2.2.1. Skrining Tools dari Rumah Sakit (StrongKidz untuk Anak)\nGambar 2.1 Form StrongKidz",
+        "tf": {
+          "metode": 0,
+          "skrining": 2,
+          "status": 0,
+          "gizi": 1,
+          "direkomendasikan": 0
         }
       },
       {
-        "dokumen": "K2",
-        "sel": {
-          "diet": 0.6931,
-          "energi": 1.204,
-          "kebutuhan": 1.6094,
-          "tujuan": 1.204
+        "peringkat": 2,
+        "chunk_id": "D029:P0031:C002",
+        "panjang": 131,
+        "skor": 6.0301,
+        "teks": " baik karena dapat menduga kejadian gizi kurang pada balita dengan diare\nsebesar 96%, hal ini sejalan dengan penelitian yang dilakukan oleh Gerasidimis\n(2011), bahwa PYMS tidak banyak menghasilkan positif palsu. Semakin tinggi nilai\nNDP maka semakin tinggi kemampuan alat skrining menduga kejadian gizi kurang\ndengan benar.\nStrongKidz merupakan alat skrining yang valid untuk skrining risiko gizi pada\nanak-anak yang dirawat di rumah sakit. Sedangkan menurut penelitian dari Lestari\n(2017) bahwa nilai sensitivitas dan spesifisitas StrongKidz lebih kecil dibandingkan\nPYMS, dikarenakan pada StrongKidz tidak terdapat penghitungan antropometri\nsebelum dan sesudah sakit sehingga skrining ini mendapatkan nilai false negative\nyang tinggi yang berakibat pada nilai sensitivitas dan spesifisitas. Namun, nilai NDP\npada skrining StrongKidz tergolong baik karena dapat menduga kejadian gizi kurang\npada balita dengan diare sebesar 68,42% (Hapsari dkk, 2020)",
+        "tf": {
+          "metode": 0,
+          "skrining": 5,
+          "status": 0,
+          "gizi": 4,
+          "direkomendasikan": 0
         }
       },
       {
-        "dokumen": "K3",
-        "sel": {
-          "diet": 0.6931,
-          "energi": 1.204,
-          "protein": 2.0385
-        }
-      },
-      {
-        "dokumen": "K4",
-        "sel": {
-          "diet": 0.6931,
-          "pemberian": 1.6094,
-          "protein": 1.204,
-          "tujuan": 1.204
-        }
-      },
-      {
-        "dokumen": "K5",
-        "sel": {
-          "diet": 0.6931,
-          "lunak": 1.6094,
-          "makanan": 1.204,
-          "prinsip": 1.6094
-        }
-      },
-      {
-        "dokumen": "K6",
-        "sel": {
-          "lunak": 1.6094,
-          "makanan": 1.204,
-          "pemberian": 1.6094,
-          "porsi": 1.6094,
-          "prinsip": 1.6094
-        }
-      },
-      {
-        "dokumen": "K7",
-        "sel": {
-          "makanan": 1.204,
-          "porsi": 1.6094
-        }
-      },
-      {
-        "dokumen": "K8",
-        "sel": {
-          "gizi": 1.204,
-          "indeks": 1.6094,
-          "massa": 1.6094,
-          "status": 1.204,
-          "tubuh": 1.6094
-        }
-      },
-      {
-        "dokumen": "K9",
-        "sel": {
-          "antropometri": 1.6094,
-          "gizi": 1.204,
-          "indeks": 1.6094,
-          "massa": 1.6094,
-          "status": 1.204,
-          "tubuh": 1.6094
-        }
-      },
-      {
-        "dokumen": "K10",
-        "sel": {
-          "antropometri": 1.6094,
-          "gizi": 1.204,
-          "status": 1.204
+        "peringkat": 3,
+        "chunk_id": "D029:P0032:C000",
+        "panjang": 153,
+        "skor": 5.4696,
+        "teks": "4.2. Antropometri\nPemeriksaan antropometri pasien tidak dilakukan setiap hari karena indikator\nantropometri seperti LiLA dan tinggi badan tidak dapat berubah dalam jangka waktu\nyang pendek (Harjatmo, dkk., 2017). Menurut keterangan pengasuh pasien, berat\nbadan pasien pada terakhir kali ditimbang adalah 40 Kg. Namun pada saat dilakukan\npengkajian, berat badan pasien adalah 38 Kg dengan tinggi badan 158,5 cm. Hasil\npengukuran antropometri pasien yang lain yaitu untuk LiLA pasien didapatkan sebesar\n18,5 cm. Status gizi pasien ditentukan dengan grafik CDC dengan IMT/U, dan\ndidapatkan hasil IMT/U pasien <3rd percentile, yang berarti status gizi pasien adalah\ngizi kurang. Selain IMT/U, status gizi pasien juga dilihat melalui %BBI. Berdasarkan\ntinggi badan dan usia pasien, berat badan ideal pasien adalah 46 Kg, sehingga %BBI\npasien didapatkan sebesar 82,6% yang berarti pasien tergolong dalam gizi kurang.\nSelain itu, %LiLA pasien juga termasuk ke dalam golongan gizi kurang. Pada hari\nketiga pe",
+        "tf": {
+          "metode": 0,
+          "skrining": 0,
+          "status": 3,
+          "gizi": 6,
+          "direkomendasikan": 0
         }
       }
-    ],
-    "nilai_singular": [
-      4.9622,
-      4.3539,
-      4.0251
-    ],
-    "rasio_varians": [
-      0.3053,
-      0.1264,
-      0.2643
-    ],
-    "vektor_term_mentah": {
-      "antropometri": [
-        1.6543,
-        -0.0,
-        -0.0
+    ]
+  },
+  "lsa": {
+    "dokumen": 8128,
+    "term": 12725,
+    "nonzero": 350401,
+    "kepadatan": 0.003388,
+    "contoh_sel": {
+      "term": "malnutrisi",
+      "dokumen_ke": 4133,
+      "tf": 7,
+      "df": 795,
+      "idf": 2.3247,
+      "bobot": 6.8484
+    },
+    "nilai_singular": {
+      "sigma_1": 476.001,
+      "sigma_2": 307.2192,
+      "sigma_3": 284.4383,
+      "sigma_300": 71.0811
+    },
+    "vektor_term": {
+      "metode": [
+        0.3574,
+        -0.0263,
+        -0.1111
       ],
-      "diet": [
-        0.0,
-        1.1123,
-        0.8943
-      ],
-      "energi": [
-        0.0,
-        1.0152,
-        1.6119
-      ],
-      "gizi": [
-        1.9815,
-        -0.0,
-        -0.0
-      ],
-      "indeks": [
-        2.1629,
-        -0.0,
-        -0.0
-      ],
-      "kebutuhan": [
-        0.0,
-        0.9623,
-        1.556
-      ],
-      "lunak": [
-        -0.0,
-        1.7362,
-        -1.2032
-      ],
-      "makanan": [
-        -0.0,
-        1.5597,
-        -1.1261
-      ],
-      "massa": [
-        2.1629,
-        -0.0,
-        -0.0
-      ],
-      "pemberian": [
-        -0.0,
-        1.5629,
-        -0.3657
-      ],
-      "porsi": [
-        -0.0,
-        1.3856,
-        -1.0475
-      ],
-      "prinsip": [
-        -0.0,
-        1.7362,
-        -1.2032
-      ],
-      "protein": [
-        0.0,
-        1.3034,
-        1.7004
+      "skrining": [
+        0.2922,
+        -0.4126,
+        0.2357
       ],
       "status": [
-        1.9815,
-        -0.0,
-        -0.0
-      ],
-      "tubuh": [
-        2.1629,
-        -0.0,
-        -0.0
-      ],
-      "tujuan": [
-        0.0,
-        1.1134,
-        1.448
-      ]
-    },
-    "vektor_term_ternormalisasi": {
-      "antropometri": [
-        1.0,
-        -0.0,
-        -0.0
-      ],
-      "diet": [
-        0.0,
-        0.7793,
-        0.6266
-      ],
-      "energi": [
-        0.0,
-        0.533,
-        0.8461
+        0.4835,
+        -0.3106,
+        0.0465
       ],
       "gizi": [
-        1.0,
-        -0.0,
-        -0.0
+        0.7784,
+        -0.234,
+        0.0912
       ],
-      "indeks": [
-        1.0,
-        -0.0,
-        -0.0
+      "direkomendasikan": [
+        0.2798,
+        -0.1281,
+        0.0873
       ],
-      "kebutuhan": [
-        0.0,
-        0.526,
-        0.8505
+      "malnutrisi": [
+        0.354,
+        -0.3476,
+        0.1466
       ],
-      "lunak": [
-        -0.0,
-        0.8219,
-        -0.5696
+      "alat": [
+        0.2316,
+        -0.2859,
+        0.1526
       ],
-      "makanan": [
-        -0.0,
-        0.8108,
-        -0.5854
+      "anak": [
+        0.5263,
+        -0.2387,
+        0.2373
       ],
-      "massa": [
-        1.0,
-        -0.0,
-        -0.0
+      "strongkids": [
+        0.2004,
+        -0.3222,
+        0.2152
       ],
-      "pemberian": [
-        -0.0,
-        0.9737,
-        -0.2278
+      "pyms": [
+        0.2221,
+        -0.3352,
+        0.2068
       ],
-      "porsi": [
-        -0.0,
-        0.7977,
-        -0.6031
+      "berdasarkan": [
+        0.5584,
+        -0.0912,
+        -0.0309
       ],
-      "prinsip": [
-        -0.0,
-        0.8219,
-        -0.5696
+      "kondisi": [
+        0.6253,
+        -0.1058,
+        -0.1592
       ],
-      "protein": [
-        0.0,
-        0.6084,
-        0.7937
+      "pembanding": [
+        0.2029,
+        -0.3029,
+        0.1668
       ],
-      "status": [
-        1.0,
-        -0.0,
-        -0.0
+      "hasil": [
+        0.6933,
+        -0.0645,
+        -0.2162
       ],
-      "tubuh": [
-        1.0,
-        -0.0,
-        -0.0
-      ],
-      "tujuan": [
-        0.0,
-        0.6096,
-        0.7927
+      "divalidasi": [
+        0.1528,
+        -0.239,
+        0.1469
       ]
     },
-    "term_query_di_vocab": [
-      "tujuan",
-      "diet"
+    "centroid": [
+      0.4382,
+      -0.2223,
+      0.0699
     ],
-    "centroid_mentah": [
-      0.0,
-      0.6944,
-      0.7097
-    ],
-    "norma_centroid": 0.9929,
+    "norma_centroid": 0.6627,
     "centroid_ternormalisasi": [
-      0.0,
-      0.6994,
-      0.7147
+      0.6613,
+      -0.3354,
+      0.1055
     ],
-    "cosine": {
-      "antropometri": 0.0,
-      "diet": 0.9929,
-      "energi": 0.9775,
-      "gizi": 0.0,
-      "indeks": 0.0,
-      "kebutuhan": 0.9758,
-      "lunak": 0.1677,
-      "makanan": 0.1487,
-      "massa": 0.0,
-      "pemberian": 0.5182,
-      "porsi": 0.1269,
-      "prinsip": 0.1677,
-      "protein": 0.9927,
-      "status": 0.0,
-      "tubuh": 0.0,
-      "tujuan": 0.9929
+    "cosine_term_query": {
+      "metode": 0.4937,
+      "skrining": 0.6777,
+      "status": 0.6978,
+      "gizi": 0.8278,
+      "direkomendasikan": 0.6167
     },
-    "kandidat_terpilih": [
-      [
-        "protein",
-        0.9927
-      ],
-      [
-        "energi",
-        0.9775
-      ],
-      [
-        "kebutuhan",
-        0.9758
-      ]
+    "jumlah_kandidat_positif": 11394,
+    "kandidat": [
+      {
+        "peringkat": 1,
+        "term": "malnutrisi",
+        "cosine": 0.5798,
+        "df_laporan": 8,
+        "tf_gold": 3
+      },
+      {
+        "peringkat": 2,
+        "term": "alat",
+        "cosine": 0.5586,
+        "df_laporan": 2,
+        "tf_gold": 0
+      },
+      {
+        "peringkat": 3,
+        "term": "anak",
+        "cosine": 0.5335,
+        "df_laporan": 17,
+        "tf_gold": 1
+      },
+      {
+        "peringkat": 4,
+        "term": "strongkids",
+        "cosine": 0.5024,
+        "df_laporan": 0,
+        "tf_gold": 0
+      },
+      {
+        "peringkat": 5,
+        "term": "pyms",
+        "cosine": 0.4945,
+        "df_laporan": 4,
+        "tf_gold": 6
+      },
+      {
+        "peringkat": 6,
+        "term": "berdasarkan",
+        "cosine": 0.4926,
+        "df_laporan": 8,
+        "tf_gold": 0
+      },
+      {
+        "peringkat": 7,
+        "term": "kondisi",
+        "cosine": 0.4869,
+        "df_laporan": 11,
+        "tf_gold": 0
+      },
+      {
+        "peringkat": 8,
+        "term": "pembanding",
+        "cosine": 0.4837,
+        "df_laporan": 1,
+        "tf_gold": 1
+      },
+      {
+        "peringkat": 9,
+        "term": "hasil",
+        "cosine": 0.4785,
+        "df_laporan": 30,
+        "tf_gold": 4
+      },
+      {
+        "peringkat": 10,
+        "term": "divalidasi",
+        "cosine": 0.4551,
+        "df_laporan": 0,
+        "tf_gold": 0
+      }
     ],
+    "jumlah_cosine": 5.0657,
     "bobot_ekspansi": {
-      "protein": 0.337,
-      "energi": 0.3318,
-      "kebutuhan": 0.3312
+      "malnutrisi": 0.1144,
+      "alat": 0.1103,
+      "anak": 0.1053,
+      "strongkids": 0.0992,
+      "pyms": 0.0976,
+      "berdasarkan": 0.0972,
+      "kondisi": 0.0961,
+      "pembanding": 0.0955,
+      "hasil": 0.0945,
+      "divalidasi": 0.0898
     }
   },
   "lsa_qe": {
-    "skala": 4.0,
-    "bobot": {
-      "diet": 1.0,
-      "energi": 1.3272,
-      "kebutuhan": 1.3248,
-      "protein": 1.3479,
-      "tujuan": 1.0
-    },
-    "bm25_term_ekspansi": {
-      "protein": {
-        "df": 1,
-        "idf": 1.2993,
-        "bm25": {
-          "C1": 0.0,
-          "C2": 0.0,
-          "C3": 1.2993,
-          "C4": 0.0,
-          "C5": 0.0,
-          "C6": 0.0
-        }
+    "skala": 10.0,
+    "rincian_skor_gold": [
+      {
+        "term": "malnutrisi",
+        "bobot": 1.1445,
+        "tf_gold": 3,
+        "df": 8,
+        "bm25_gold": 4.1473,
+        "kontribusi": 4.7465
       },
-      "energi": {
+      {
+        "term": "alat",
+        "bobot": 1.1027,
+        "tf_gold": 0,
         "df": 2,
-        "idf": 0.5878,
-        "bm25": {
-          "C1": 0.0,
-          "C2": 0.0,
-          "C3": 0.5878,
-          "C4": 0.0,
-          "C5": 0.8073,
-          "C6": 0.0
-        }
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
       },
-      "kebutuhan": {
+      {
+        "term": "anak",
+        "bobot": 1.0532,
+        "tf_gold": 1,
+        "df": 17,
+        "bm25_gold": 1.6686,
+        "kontribusi": 1.7573
+      },
+      {
+        "term": "metode",
+        "bobot": 1.0,
+        "tf_gold": 0,
+        "df": 6,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "skrining",
+        "bobot": 1.0,
+        "tf_gold": 1,
+        "df": 8,
+        "bm25_gold": 2.4504,
+        "kontribusi": 2.4504
+      },
+      {
+        "term": "status",
+        "bobot": 1.0,
+        "tf_gold": 0,
+        "df": 7,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "gizi",
+        "bobot": 1.0,
+        "tf_gold": 0,
+        "df": 37,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "direkomendasikan",
+        "bobot": 1.0,
+        "tf_gold": 0,
+        "df": 0,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "strongkids",
+        "bobot": 0.9917,
+        "tf_gold": 0,
+        "df": 0,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "pyms",
+        "bobot": 0.9763,
+        "tf_gold": 6,
+        "df": 4,
+        "bm25_gold": 6.3448,
+        "kontribusi": 6.1942
+      },
+      {
+        "term": "berdasarkan",
+        "bobot": 0.9725,
+        "tf_gold": 0,
+        "df": 8,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "kondisi",
+        "bobot": 0.9612,
+        "tf_gold": 0,
+        "df": 11,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
+      },
+      {
+        "term": "pembanding",
+        "bobot": 0.9548,
+        "tf_gold": 1,
         "df": 1,
-        "idf": 1.2993,
-        "bm25": {
-          "C1": 0.0,
-          "C2": 0.0,
-          "C3": 1.2993,
-          "C4": 0.0,
-          "C5": 0.0,
-          "C6": 0.0
-        }
+        "bm25_gold": 4.1865,
+        "kontribusi": 3.9973
+      },
+      {
+        "term": "hasil",
+        "bobot": 0.9447,
+        "tf_gold": 4,
+        "df": 30,
+        "bm25_gold": 1.8444,
+        "kontribusi": 1.7424
+      },
+      {
+        "term": "divalidasi",
+        "bobot": 0.8985,
+        "tf_gold": 0,
+        "df": 0,
+        "bm25_gold": 0.0,
+        "kontribusi": 0.0
       }
-    },
-    "skor": {
-      "C1": 0.0,
-      "C2": 1.9995,
-      "C3": 4.8406,
-      "C4": 0.0,
-      "C5": 1.0714,
-      "C6": 0.0
-    },
-    "peringkat": [
-      "C3",
-      "C2",
-      "C5",
-      "C1",
-      "C4",
-      "C6"
     ],
-    "peringkat_gold": 1
+    "skor_gold": 20.8881,
+    "peringkat_gold": 1,
+    "teratas": [
+      {
+        "peringkat": 1,
+        "chunk_id": "D029:P0008:C000",
+        "skor": 20.8881
+      },
+      {
+        "peringkat": 2,
+        "chunk_id": "D029:P0031:C002",
+        "skor": 18.4095
+      },
+      {
+        "peringkat": 3,
+        "chunk_id": "D029:P0031:C001",
+        "skor": 17.0723
+      },
+      {
+        "peringkat": 4,
+        "chunk_id": "D029:P0055:C000",
+        "skor": 9.8687
+      },
+      {
+        "peringkat": 5,
+        "chunk_id": "D029:P0031:C000",
+        "skor": 9.5086
+      }
+    ]
   },
   "rm3": {
-    "dokumen_feedback": [
-      "C2",
-      "C3"
+    "feedback": [
+      {
+        "chunk_id": "D029:P0007:C000",
+        "skor_b1": 6.0936,
+        "alpha": 0.3077
+      },
+      {
+        "chunk_id": "D029:P0031:C002",
+        "skor_b1": 6.0301,
+        "alpha": 0.2888
+      },
+      {
+        "chunk_id": "D029:P0032:C000",
+        "skor_b1": 5.4696,
+        "alpha": 0.1649
+      },
+      {
+        "chunk_id": "D029:P0031:C001",
+        "skor_b1": 5.2585,
+        "alpha": 0.1335
+      },
+      {
+        "chunk_id": "D029:P0045:C001",
+        "skor_b1": 5.02,
+        "alpha": 0.1052
+      }
     ],
-    "skor_feedback": [
-      1.9995,
-      0.5878
+    "model_relevansi": [
+      {
+        "term": "2",
+        "p": 0.1341
+      },
+      {
+        "term": "gizi",
+        "p": 0.0923
+      },
+      {
+        "term": "skrining",
+        "p": 0.0901
+      },
+      {
+        "term": "strongkidz",
+        "p": 0.0766
+      },
+      {
+        "term": "1",
+        "p": 0.0611
+      },
+      {
+        "term": "nilai",
+        "p": 0.0525
+      },
+      {
+        "term": "sakit",
+        "p": 0.0457
+      },
+      {
+        "term": "anak",
+        "p": 0.0383
+      },
+      {
+        "term": "rumah",
+        "p": 0.0347
+      },
+      {
+        "term": "tinggi",
+        "p": 0.0301
+      }
     ],
-    "bobot_softmax": [
-      0.804,
-      0.196
-    ],
-    "model_relevansi": {
-      "diet": 0.3834,
-      "berdasarkan": 0.3083,
-      "ditetapkan": 0.3083
-    },
-    "bobot": {
-      "berdasarkan": 0.1541,
-      "diet": 0.4417,
-      "ditetapkan": 0.1541,
-      "tujuan": 0.25
-    },
-    "skor": {
-      "C1": 0.0,
-      "C2": 0.9275,
-      "C3": 0.2596,
-      "C4": 0.0,
-      "C5": 0.0,
-      "C6": 0.096
-    },
-    "peringkat": [
-      "C2",
-      "C3",
-      "C6",
-      "C1",
-      "C4",
-      "C5"
-    ],
-    "peringkat_gold": 2
-  },
-  "rm3_lsa": {
-    "skala": 1.0,
-    "bobot": {
-      "berdasarkan": 0.1541,
-      "diet": 0.4417,
-      "ditetapkan": 0.1541,
-      "energi": 0.3318,
-      "kebutuhan": 0.3312,
-      "protein": 0.337,
-      "tujuan": 0.25
-    },
-    "skor": {
-      "C1": 0.0,
-      "C2": 0.9275,
-      "C3": 1.3228,
-      "C4": 0.0,
-      "C5": 0.2679,
-      "C6": 0.096
-    },
-    "peringkat": [
-      "C3",
-      "C2",
-      "C5",
-      "C6",
-      "C1",
-      "C4"
-    ],
-    "peringkat_gold": 1
+    "skor_gold": 1.1921,
+    "peringkat_gold": 4
   },
   "metrik": {
-    "B1": {
-      "peringkat_gold": 2,
-      "RR": 0.5,
+    "Baseline": {
+      "peringkat_gold": 20,
+      "RR": 0.05,
       "Recall@1": 0,
-      "Recall@3": 1,
-      "Recall@5": 1,
-      "nDCG@10": 0.6309
+      "Recall@5": 0,
+      "Recall@10": 0,
+      "nDCG@10": 0.0
     },
     "RM3": {
-      "peringkat_gold": 2,
-      "RR": 0.5,
+      "peringkat_gold": 4,
+      "RR": 0.25,
       "Recall@1": 0,
-      "Recall@3": 1,
       "Recall@5": 1,
-      "nDCG@10": 0.6309
+      "Recall@10": 1,
+      "nDCG@10": 0.4307
     },
     "LSA-QE": {
       "peringkat_gold": 1,
       "RR": 1.0,
       "Recall@1": 1,
-      "Recall@3": 1,
       "Recall@5": 1,
+      "Recall@10": 1,
       "nDCG@10": 1.0
+    }
+  },
+  "jawaban": {
+    "n_konteks": 5,
+    "template_prompt": "Jawab pertanyaan hanya berdasarkan konteks di bawah ini. Apabila konteks tidak memuat informasi yang ditanyakan, nyatakan bahwa informasi tersebut tidak tersedia.\n\nKonteks:\n{konteks}\n\nPertanyaan: {pertanyaan}\nJawaban:",
+    "konteks": [
+      {
+        "urutan": 1,
+        "chunk_id": "D029:P0008:C000",
+        "skor": 20.8881,
+        "acuan": true,
+        "panjang": 120,
+        "teks": "2.2.2. PYMS (Pediatric Yorkhill Malnutrition Score)\nGambar 2.2 Form PYMS\nKesimpulan:\nPada tahap screening, dilakukan screening menggunakan 2 screening tools,\nyaitu StrongKidz yang merupakan screening tools yang digunakan untuk anak di rumah\nsakit dan Paediatrics Yorkhill Malnutrition Score (PYMS) sebagai pembanding. Dengan\nform StrongKidz, didapatkan hasil bahwa pasien berisiko tinggi malnutrisi. Hasil\nscreening menggunakan PYMS, pasien mendapatkan skor >1 yang berarti pasien\nberisiko tinggi malnutrisi. Kelebihan dari skrining tools PYMS dinilai mempunyai\nsensitivitas 95.32% dengan spesifisitas 76.92% dan termasuk praktis untuk digunakan.\nSedangkan Strong-kids mempunyai sensitivitas 100% dan spesifisitas hanya sebesar\n7.7%. Pada kedua hasil Strong-Kids dan PYMS dari hasil screening yang telah\ndilakukan, pasien termasuk berisiko tinggi malnutrisi (Wonoputri dkk, 2014)."
+      },
+      {
+        "urutan": 2,
+        "chunk_id": "D029:P0031:C002",
+        "skor": 18.4095,
+        "acuan": false,
+        "panjang": 131,
+        "teks": " baik karena dapat menduga kejadian gizi kurang pada balita dengan diare\nsebesar 96%, hal ini sejalan dengan penelitian yang dilakukan oleh Gerasidimis\n(2011), bahwa PYMS tidak banyak menghasilkan positif palsu. Semakin tinggi nilai\nNDP maka semakin tinggi kemampuan alat skrining menduga kejadian gizi kurang\ndengan benar.\nStrongKidz merupakan alat skrining yang valid untuk skrining risiko gizi pada\nanak-anak yang dirawat di rumah sakit. Sedangkan menurut penelitian dari Lestari\n(2017) bahwa nilai sensitivitas dan spesifisitas StrongKidz lebih kecil dibandingkan\nPYMS, dikarenakan pada StrongKidz tidak terdapat penghitungan antropometri\nsebelum dan sesudah sakit sehingga skrining ini mendapatkan nilai false negative\nyang tinggi yang berakibat pada nilai sensitivitas dan spesifisitas. Namun, nilai NDP\npada skrining StrongKidz tergolong baik karena dapat menduga kejadian gizi kurang\npada balita dengan diare sebesar 68,42% (Hapsari dkk, 2020)"
+      },
+      {
+        "urutan": 3,
+        "chunk_id": "D029:P0031:C001",
+        "skor": 17.0723,
+        "acuan": false,
+        "panjang": 139,
+        "teks": "an formulir skrining dari rumah sakit dan formulir Paediatrics Yorkhill\nMalnutrition Score (PYMS) sebagai pembandingnya, dapat disimpulkan bahwa pasien\ntermasuk ke dalam gizi kurang dan risiko tinggi malnutrisi. PYMS sendiri memiliki\nsensitivitas 95,32% dan spesifisitas 76,92% (Wonoputri, 2014). Nilai sensitivitas\nmemberikan gambaran positif pada responden yang benar-benar sakit (gizi\nkurang), sedangkan nilai spesifisitas memberikan gambaran negatif pada\nresponden yang benar-benar tidak sakit (tidak gizi kurang). Kemampuan suatu\nalat skrining dikatakan baik bila nilai sensitivitas dan spesivisitas mendekati nilai 100%\n(Hapsari dkk, 2020). Nilai Duga Positif (NDP) dan Nilai Duga Negatif (NDN) dikatakan\nbaik bila nilai mendekati nilai 100%, yang artinya pada skrining PYMS nilai NDP\ntergolong baik karena dapat menduga kejadian gizi kurang pada balita dengan diare\nsebesar 96%, hal ini sejalan dengan penelitian yang dilakukan oleh Gerasidimis\n(2011), bahwa PYMS tidak banyak menghasilkan pos"
+      },
+      {
+        "urutan": 4,
+        "chunk_id": "D029:P0055:C000",
+        "skor": 9.8687,
+        "acuan": false,
+        "panjang": 109,
+        "teks": "Lampiran 6. Dokumentasi Skrining Gizi\n\n[TABLE 0]\nTanggal | Nama Pasien | No.\nRegistrasi | Hasil Skrining Gizi |  | Tindakan Lanjut\n--------------------------------------------------------------------------------\n |  |  | Tidak\nberisiko\nmalnutrisi | Berisiko\nmalnutrisi | \n<TGL> | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet"
+      },
+      {
+        "urutan": 5,
+        "chunk_id": "D029:P0031:C000",
+        "skor": 9.5086,
+        "acuan": false,
+        "panjang": 145,
+        "teks": "BAB 4\nPEMBAHASAN\nPasien merupakan pasien tumor angiofibroma selama kurang lebih 1 tahun yang telah\ndilakukan eksisi luas dan maxilectomy kanan pada tanggal <TGL>, dan telah dipasang\nNGT sejak saat itu. Pasien datang ke IGD untuk rekonstruksi dengan bedah plastik. Pada hari\nRabu, <TGL>, dilakukan pemasangan NGT guide wire, dan pasien tidak ada keluhan\nnyeri saat pemasangan. Satu hari setelah pemasangan, pasien megeluhkan nyeri perut yang\nberulang di bagian ulu hati sehingga diduga adanya gastritis dd ulkus gaster. Pada waktu\ndilakukan pengkajian awal, pasien sudah tidak merasakan sakit di ulu hati dan tidak ada mual\nmuntah. Cairan NGT yang diberikan juga dapat masuk semua melalui selang NGT.\n4.1. Skrining\nBerdasarkan skrining yang telah dilakukan pada pengkajian awal\nmenggunakan formulir skrining dari rumah sakit dan formulir Paediatrics Yorkhill\nMalnutrition Score (PYMS) sebagai pembandingnya, dapat disimpulkan bahwa pasien\ntermasuk ke dalam gizi kurang dan risiko tinggi "
+      }
+    ],
+    "konteks_memuat_acuan": true,
+    "prompt_terisi": "Jawab pertanyaan hanya berdasarkan konteks di bawah ini. Apabila konteks tidak memuat informasi yang ditanyakan, nyatakan bahwa informasi tersebut tidak tersedia.\n\nKonteks:\n[1] 2.2.2. PYMS (Pediatric Yorkhill Malnutrition Score)\nGambar 2.2 Form PYMS\nKesimpulan:\nPada tahap screening, dilakukan screening menggunakan 2 screening tools,\nyaitu StrongKidz yang merupakan screening tools yang digunakan untuk anak di rumah\nsakit dan Paediatrics Yorkhill Malnutrition Score (PYMS) sebagai pembanding. Dengan\nform StrongKidz, didapatkan hasil bahwa pasien berisiko tinggi malnutrisi. Hasil\nscreening menggunakan PYMS, pasien mendapatkan skor >1 yang berarti pasien\nberisiko tinggi malnutrisi. Kelebihan dari skrining tools PYMS dinilai mempunyai\nsensitivitas 95.32% dengan spesifisitas 76.92% dan termasuk praktis untuk digunakan.\nSedangkan Strong-kids mempunyai sensitivitas 100% dan spesifisitas hanya sebesar\n7.7%. Pada kedua hasil Strong-Kids dan PYMS dari hasil screening yang telah\ndilakukan, pasien termasuk berisiko tinggi malnutrisi (Wonoputri dkk, 2014).\n\n[2]  baik karena dapat menduga kejadian gizi kurang pada balita dengan diare\nsebesar 96%, hal ini sejalan dengan penelitian yang dilakukan oleh Gerasidimis\n(2011), bahwa PYMS tidak banyak menghasilkan positif palsu. Semakin tinggi nilai\nNDP maka semakin tinggi kemampuan alat skrining menduga kejadian gizi kurang\ndengan benar.\nStrongKidz merupakan alat skrining yang valid untuk skrining risiko gizi pada\nanak-anak yang dirawat di rumah sakit. Sedangkan menurut penelitian dari Lestari\n(2017) bahwa nilai sensitivitas dan spesifisitas StrongKidz lebih kecil dibandingkan\nPYMS, dikarenakan pada StrongKidz tidak terdapat penghitungan antropometri\nsebelum dan sesudah sakit sehingga skrining ini mendapatkan nilai false negative\nyang tinggi yang berakibat pada nilai sensitivitas dan spesifisitas. Namun, nilai NDP\npada skrining StrongKidz tergolong baik karena dapat menduga kejadian gizi kurang\npada balita dengan diare sebesar 68,42% (Hapsari dkk, 2020)\n\n[3] an formulir skrining dari rumah sakit dan formulir Paediatrics Yorkhill\nMalnutrition Score (PYMS) sebagai pembandingnya, dapat disimpulkan bahwa pasien\ntermasuk ke dalam gizi kurang dan risiko tinggi malnutrisi. PYMS sendiri memiliki\nsensitivitas 95,32% dan spesifisitas 76,92% (Wonoputri, 2014). Nilai sensitivitas\nmemberikan gambaran positif pada responden yang benar-benar sakit (gizi\nkurang), sedangkan nilai spesifisitas memberikan gambaran negatif pada\nresponden yang benar-benar tidak sakit (tidak gizi kurang). Kemampuan suatu\nalat skrining dikatakan baik bila nilai sensitivitas dan spesivisitas mendekati nilai 100%\n(Hapsari dkk, 2020). Nilai Duga Positif (NDP) dan Nilai Duga Negatif (NDN) dikatakan\nbaik bila nilai mendekati nilai 100%, yang artinya pada skrining PYMS nilai NDP\ntergolong baik karena dapat menduga kejadian gizi kurang pada balita dengan diare\nsebesar 96%, hal ini sejalan dengan penelitian yang dilakukan oleh Gerasidimis\n(2011), bahwa PYMS tidak banyak menghasilkan pos\n\n[4] Lampiran 6. Dokumentasi Skrining Gizi\n\n[TABLE 0]\nTanggal | Nama Pasien | No.\nRegistrasi | Hasil Skrining Gizi |  | Tindakan Lanjut\n--------------------------------------------------------------------------------\n |  |  | Tidak\nberisiko\nmalnutrisi | Berisiko\nmalnutrisi | \n<TGL> | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet, monev asupan\nsetiap hari\n | <NAMA> | <NO_REG> |  | V | Intervensi diet\n\n[5] BAB 4\nPEMBAHASAN\nPasien merupakan pasien tumor angiofibroma selama kurang lebih 1 tahun yang telah\ndilakukan eksisi luas dan maxilectomy kanan pada tanggal <TGL>, dan telah dipasang\nNGT sejak saat itu. Pasien datang ke IGD untuk rekonstruksi dengan bedah plastik. Pada hari\nRabu, <TGL>, dilakukan pemasangan NGT guide wire, dan pasien tidak ada keluhan\nnyeri saat pemasangan. Satu hari setelah pemasangan, pasien megeluhkan nyeri perut yang\nberulang di bagian ulu hati sehingga diduga adanya gastritis dd ulkus gaster. Pada waktu\ndilakukan pengkajian awal, pasien sudah tidak merasakan sakit di ulu hati dan tidak ada mual\nmuntah. Cairan NGT yang diberikan juga dapat masuk semua melalui selang NGT.\n4.1. Skrining\nBerdasarkan skrining yang telah dilakukan pada pengkajian awal\nmenggunakan formulir skrining dari rumah sakit dan formulir Paediatrics Yorkhill\nMalnutrition Score (PYMS) sebagai pembandingnya, dapat disimpulkan bahwa pasien\ntermasuk ke dalam gizi kurang dan risiko tinggi \n\nPertanyaan: Apa metode skrining status gizi yang direkomendasikan?\nJawaban:",
+    "panjang_prompt_karakter": 5065,
+    "catatan": "Lapisan generasi belum dijalankan pada penelitian ini; yang ditelusuri adalah masukan yang dibentuk untuknya."
+  },
+  "lengkap": {
+    "dataset": {
+      "dokumen": 120,
+      "chunk": 13737,
+      "qa_mentah": 911,
+      "qa": 858,
+      "qa_duplikat": 53,
+      "chunk_per_dokumen": {
+        "min": 32,
+        "maks": 256,
+        "median": 109.0,
+        "rata": 114.475
+      },
+      "qa_per_tipe": {
+        "skrining": 120,
+        "status_gizi": 120,
+        "biokimia": 119,
+        "pes": 120,
+        "tujuan_diet": 120,
+        "prinsip_diet": 119,
+        "syarat_diet": 119,
+        "pedoman": 21
+      },
+      "kolom_qa": [
+        "id",
+        "report_title",
+        "file",
+        "page_number",
+        "chunk_index",
+        "anthropometric_assessment",
+        "medical_diagnosis",
+        "context",
+        "question",
+        "answer"
+      ],
+      "contoh_qa": {
+        "id": 63,
+        "page_number": 8,
+        "chunk_index": 0,
+        "question": "Apa metode skrining status gizi yang direkomendasikan?",
+        "answer": {
+          "text": [
+            "Strong Kids dan PYMS"
+          ],
+          "answer_start": [
+            751
+          ]
+        }
+      },
+      "kolom_chunk": [
+        "pdf_name",
+        "page_number",
+        "chunk_index",
+        "text"
+      ],
+      "contoh_chunk": {
+        "page_number": 8,
+        "chunk_index": 0,
+        "chunk_id": "D029:P0008:C000"
+      }
     },
-    "RM3+LSA": {
-      "peringkat_gold": 1,
-      "RR": 1.0,
-      "Recall@1": 1,
-      "Recall@3": 1,
-      "Recall@5": 1,
-      "nDCG@10": 1.0
+    "normalisasi": {
+      "jumlah": {
+        "nfkc": 984,
+        "hash_u": 0,
+        "word_joiner": 52
+      },
+      "contoh": {
+        "nfkc": {
+          "chunk_id": "D001:P0006:C000",
+          "sebelum": "Gizi BB/U (z-score)\n𝑁𝑖𝑙𝑎𝑖 𝐼𝑛𝑑𝑖𝑣𝑖𝑑𝑢 𝑆𝑢𝑏𝑗𝑒𝑘−𝑁𝑖𝑙𝑎𝑖 𝑀𝑒𝑑𝑖𝑎𝑛 𝐵𝑎𝑘𝑢 ",
+          "sesudah": "Gizi BB/U (z-score)\nNilai Individu Subjek−Nilai Median Baku ",
+          "token_sebelum": [
+            "gizi",
+            "bb",
+            "u",
+            "z",
+            "score",
+            "𝑁𝑖𝑙𝑎𝑖",
+            "𝐼𝑛𝑑𝑖𝑣𝑖𝑑𝑢",
+            "𝑆𝑢𝑏𝑗𝑒𝑘",
+            "𝑁𝑖𝑙𝑎𝑖",
+            "𝑀𝑒𝑑𝑖𝑎𝑛",
+            "𝐵𝑎𝑘𝑢"
+          ],
+          "token_sesudah": [
+            "gizi",
+            "bb",
+            "u",
+            "z",
+            "score",
+            "nilai",
+            "individu",
+            "subjek",
+            "nilai",
+            "median",
+            "baku"
+          ],
+          "karakter": [
+            {
+              "karakter": "𝑁",
+              "kode": "U+1D441",
+              "nama": "MATHEMATICAL ITALIC CAPITAL N",
+              "menjadi": "N"
+            },
+            {
+              "karakter": "𝑖",
+              "kode": "U+1D456",
+              "nama": "MATHEMATICAL ITALIC SMALL I",
+              "menjadi": "i"
+            },
+            {
+              "karakter": "𝑙",
+              "kode": "U+1D459",
+              "nama": "MATHEMATICAL ITALIC SMALL L",
+              "menjadi": "l"
+            },
+            {
+              "karakter": "𝑎",
+              "kode": "U+1D44E",
+              "nama": "MATHEMATICAL ITALIC SMALL A",
+              "menjadi": "a"
+            },
+            {
+              "karakter": "𝐼",
+              "kode": "U+1D43C",
+              "nama": "MATHEMATICAL ITALIC CAPITAL I",
+              "menjadi": "I"
+            },
+            {
+              "karakter": "𝑛",
+              "kode": "U+1D45B",
+              "nama": "MATHEMATICAL ITALIC SMALL N",
+              "menjadi": "n"
+            }
+          ]
+        },
+        "word_joiner": {
+          "chunk_id": "D006:P0034:C001",
+          "sebelum": " Distress napas ok pneumonia,\n<U+2060>PDA sedang, TR mild,\nPulmonar",
+          "sesudah": " Distress napas ok pneumonia,\nPDA sedang, TR mild,\nPulmonar",
+          "token_sebelum": [
+            "distress",
+            "napas",
+            "ok",
+            "pneumonia",
+            "pda",
+            "sedang",
+            "tr",
+            "mild",
+            "pulmonar"
+          ],
+          "token_sesudah": [
+            "distress",
+            "napas",
+            "ok",
+            "pneumonia",
+            "pda",
+            "sedang",
+            "tr",
+            "mild",
+            "pulmonar"
+          ],
+          "pecah": false
+        }
+      }
+    },
+    "pembagian": {
+      "seed": 1,
+      "attempt": 0,
+      "seed_acak": 1000003,
+      "bagian": {
+        "koleksi": {
+          "dokumen": 72,
+          "chunk": 8128,
+          "qa": 511,
+          "tipe_tercakup": 8,
+          "dokumen_pedoman": 9
+        },
+        "validasi": {
+          "dokumen": 24,
+          "chunk": 2848,
+          "qa": 174,
+          "tipe_tercakup": 8,
+          "dokumen_pedoman": 6
+        },
+        "pengujian": {
+          "dokumen": 24,
+          "chunk": 2761,
+          "qa": 173,
+          "tipe_tercakup": 8,
+          "dokumen_pedoman": 6
+        }
+      },
+      "validasi": [
+        "D062",
+        "D065",
+        "D071",
+        "D026",
+        "D083",
+        "D012",
+        "D014",
+        "D105",
+        "D068",
+        "D051",
+        "D100",
+        "D015",
+        "D036",
+        "D049",
+        "D072",
+        "D104",
+        "D029",
+        "D004",
+        "D035",
+        "D045",
+        "D059",
+        "D009",
+        "D110",
+        "D099"
+      ],
+      "pengujian": [
+        "D097",
+        "D063",
+        "D003",
+        "D064",
+        "D030",
+        "D042",
+        "D081",
+        "D102",
+        "D095",
+        "D008",
+        "D109",
+        "D056",
+        "D019",
+        "D073",
+        "D060",
+        "D116",
+        "D106",
+        "D108",
+        "D066",
+        "D023",
+        "D120",
+        "D041",
+        "D085",
+        "D067"
+      ],
+      "d029_di": "dev",
+      "parafrasa_indeks": 3,
+      "parafrasa_teks": "Instrumen apa yang dipakai untuk menapis status gizi?",
+      "sha256_awal": "3ba88302e3808a05"
+    },
+    "praproses_acuan": {
+      "teks_mentah_berubah": false,
+      "panjang_token": 120,
+      "token_unik": 66,
+      "token_awal": [
+        "2",
+        "2",
+        "2",
+        "pyms",
+        "pediatric",
+        "yorkhill",
+        "malnutrition",
+        "score",
+        "gambar",
+        "2",
+        "2",
+        "form",
+        "pyms",
+        "kesimpulan",
+        "pada",
+        "tahap",
+        "screening",
+        "dilakukan",
+        "screening",
+        "menggunakan",
+        "2",
+        "screening",
+        "tools",
+        "yaitu",
+        "strongkidz"
+      ],
+      "tf": [
+        [
+          "2",
+          6,
+          false
+        ],
+        [
+          "pyms",
+          6,
+          false
+        ],
+        [
+          "screening",
+          6,
+          false
+        ],
+        [
+          "dan",
+          4,
+          true
+        ],
+        [
+          "hasil",
+          4,
+          false
+        ],
+        [
+          "pasien",
+          4,
+          true
+        ],
+        [
+          "yang",
+          4,
+          true
+        ],
+        [
+          "berisiko",
+          3,
+          false
+        ],
+        [
+          "malnutrisi",
+          3,
+          false
+        ],
+        [
+          "tinggi",
+          3,
+          false
+        ],
+        [
+          "tools",
+          3,
+          false
+        ],
+        [
+          "7",
+          2,
+          false
+        ],
+        [
+          "dari",
+          2,
+          true
+        ],
+        [
+          "dengan",
+          2,
+          true
+        ],
+        [
+          "digunakan",
+          2,
+          true
+        ],
+        [
+          "dilakukan",
+          2,
+          true
+        ],
+        [
+          "form",
+          2,
+          false
+        ],
+        [
+          "kids",
+          2,
+          false
+        ],
+        [
+          "malnutrition",
+          2,
+          false
+        ],
+        [
+          "mempunyai",
+          2,
+          true
+        ],
+        [
+          "menggunakan",
+          2,
+          true
+        ],
+        [
+          "pada",
+          2,
+          true
+        ],
+        [
+          "score",
+          2,
+          false
+        ],
+        [
+          "sensitivitas",
+          2,
+          false
+        ],
+        [
+          "spesifisitas",
+          2,
+          false
+        ],
+        [
+          "strong",
+          2,
+          false
+        ],
+        [
+          "strongkidz",
+          2,
+          false
+        ],
+        [
+          "termasuk",
+          2,
+          true
+        ],
+        [
+          "untuk",
+          2,
+          true
+        ],
+        [
+          "yorkhill",
+          2,
+          false
+        ],
+        [
+          "1",
+          1,
+          false
+        ],
+        [
+          "100",
+          1,
+          false
+        ],
+        [
+          "2014",
+          1,
+          false
+        ],
+        [
+          "32",
+          1,
+          false
+        ],
+        [
+          "76",
+          1,
+          false
+        ],
+        [
+          "92",
+          1,
+          false
+        ],
+        [
+          "95",
+          1,
+          false
+        ],
+        [
+          "anak",
+          1,
+          false
+        ],
+        [
+          "bahwa",
+          1,
+          true
+        ],
+        [
+          "berarti",
+          1,
+          true
+        ],
+        [
+          "di",
+          1,
+          true
+        ],
+        [
+          "didapatkan",
+          1,
+          false
+        ],
+        [
+          "dinilai",
+          1,
+          false
+        ],
+        [
+          "dkk",
+          1,
+          false
+        ],
+        [
+          "gambar",
+          1,
+          false
+        ],
+        [
+          "hanya",
+          1,
+          true
+        ],
+        [
+          "kedua",
+          1,
+          true
+        ],
+        [
+          "kelebihan",
+          1,
+          false
+        ],
+        [
+          "kesimpulan",
+          1,
+          false
+        ],
+        [
+          "mendapatkan",
+          1,
+          true
+        ],
+        [
+          "merupakan",
+          1,
+          true
+        ],
+        [
+          "paediatrics",
+          1,
+          false
+        ],
+        [
+          "pediatric",
+          1,
+          false
+        ],
+        [
+          "pembanding",
+          1,
+          false
+        ],
+        [
+          "praktis",
+          1,
+          false
+        ],
+        [
+          "rumah",
+          1,
+          false
+        ],
+        [
+          "sakit",
+          1,
+          false
+        ],
+        [
+          "sebagai",
+          1,
+          true
+        ],
+        [
+          "sebesar",
+          1,
+          true
+        ],
+        [
+          "sedangkan",
+          1,
+          true
+        ],
+        [
+          "skor",
+          1,
+          false
+        ],
+        [
+          "skrining",
+          1,
+          false
+        ],
+        [
+          "tahap",
+          1,
+          false
+        ],
+        [
+          "telah",
+          1,
+          true
+        ],
+        [
+          "wonoputri",
+          1,
+          false
+        ],
+        [
+          "yaitu",
+          1,
+          true
+        ]
+      ],
+      "panjang_tanpa_stopword": 78,
+      "unik_tanpa_stopword": 42,
+      "stopword_terbuang": 42
+    },
+    "bm25": {
+      "jumlah_panjang": 12791,
+      "N": 115,
+      "avgdl": 111.2261,
+      "panjang_min": 20,
+      "panjang_maks": 191,
+      "jumlah_term_unik": 1743,
+      "rata_idf": 3.5494,
+      "epsilon": 0.25,
+      "nilai_pengganti": 0.8874,
+      "jumlah_idf_negatif": 7,
+      "contoh_negatif": {
+        "term": "1",
+        "df": 79,
+        "idf_mentah": -0.7784,
+        "idf_pakai": 0.8874
+      },
+      "term": [
+        {
+          "term": "metode",
+          "df": 6,
+          "idf": 2.8241
+        },
+        {
+          "term": "skrining",
+          "df": 8,
+          "idf": 2.5374
+        },
+        {
+          "term": "status",
+          "df": 7,
+          "idf": 2.6718
+        },
+        {
+          "term": "gizi",
+          "df": 37,
+          "idf": 0.7388
+        },
+        {
+          "term": "direkomendasikan",
+          "df": 0,
+          "idf": null
+        },
+        {
+          "term": "malnutrisi",
+          "df": 8,
+          "idf": 2.5374
+        },
+        {
+          "term": "alat",
+          "df": 2,
+          "idf": 3.8155
+        },
+        {
+          "term": "anak",
+          "df": 17,
+          "idf": 1.7279
+        },
+        {
+          "term": "strongkids",
+          "df": 0,
+          "idf": null
+        },
+        {
+          "term": "pyms",
+          "df": 4,
+          "idf": 3.2099
+        },
+        {
+          "term": "berdasarkan",
+          "df": 8,
+          "idf": 2.5374
+        },
+        {
+          "term": "kondisi",
+          "df": 11,
+          "idf": 2.2068
+        },
+        {
+          "term": "pembanding",
+          "df": 1,
+          "idf": 4.3351
+        },
+        {
+          "term": "hasil",
+          "df": 30,
+          "idf": 1.0308
+        },
+        {
+          "term": "divalidasi",
+          "df": 0,
+          "idf": null
+        }
+      ],
+      "teratas": [
+        {
+          "peringkat": 1,
+          "chunk_id": "D029:P0007:C000",
+          "panjang": 20,
+          "penyebut": 0.5773,
+          "acuan": false,
+          "tf": [
+            0,
+            2,
+            0,
+            1,
+            0
+          ],
+          "bm25": [
+            0.0,
+            4.9227,
+            0.0,
+            1.1709,
+            0.0
+          ],
+          "skor": 6.0936
+        },
+        {
+          "peringkat": 2,
+          "chunk_id": "D029:P0031:C002",
+          "panjang": 131,
+          "penyebut": 1.7,
+          "acuan": false,
+          "tf": [
+            0,
+            5,
+            0,
+            4,
+            0
+          ],
+          "bm25": [
+            0.0,
+            4.734,
+            0.0,
+            1.2961,
+            0.0
+          ],
+          "skor": 6.0301
+        },
+        {
+          "peringkat": 3,
+          "chunk_id": "D029:P0032:C000",
+          "panjang": 153,
+          "penyebut": 1.9225,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            3,
+            6,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            4.0708,
+            1.3987,
+            0.0
+          ],
+          "skor": 5.4696
+        },
+        {
+          "peringkat": 4,
+          "chunk_id": "D029:P0031:C001",
+          "panjang": 139,
+          "penyebut": 1.7809,
+          "acuan": false,
+          "tf": [
+            0,
+            3,
+            0,
+            4,
+            0
+          ],
+          "bm25": [
+            0.0,
+            3.9805,
+            0.0,
+            1.2779,
+            0.0
+          ],
+          "skor": 5.2585
+        },
+        {
+          "peringkat": 5,
+          "chunk_id": "D029:P0045:C001",
+          "panjang": 57,
+          "penyebut": 0.9515,
+          "acuan": false,
+          "tf": [
+            1,
+            0,
+            0,
+            3,
+            0
+          ],
+          "bm25": [
+            3.6178,
+            0.0,
+            0.0,
+            1.4022,
+            0.0
+          ],
+          "skor": 5.02
+        },
+        {
+          "peringkat": 6,
+          "chunk_id": "D029:P0010:C000",
+          "panjang": 135,
+          "penyebut": 1.7405,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            2,
+            6,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            3.5715,
+            1.4316,
+            0.0
+          ],
+          "skor": 5.0032
+        },
+        {
+          "peringkat": 7,
+          "chunk_id": "D029:P0055:C000",
+          "panjang": 109,
+          "penyebut": 1.4775,
+          "acuan": false,
+          "tf": [
+            0,
+            2,
+            0,
+            2,
+            0
+          ],
+          "bm25": [
+            0.0,
+            3.6484,
+            0.0,
+            1.0622,
+            0.0
+          ],
+          "skor": 4.7106
+        },
+        {
+          "peringkat": 8,
+          "chunk_id": "D029:P0031:C000",
+          "panjang": 145,
+          "penyebut": 1.8416,
+          "acuan": false,
+          "tf": [
+            0,
+            3,
+            0,
+            1,
+            0
+          ],
+          "bm25": [
+            0.0,
+            3.9307,
+            0.0,
+            0.6499,
+            0.0
+          ],
+          "skor": 4.5806
+        },
+        {
+          "peringkat": 9,
+          "chunk_id": "D029:P0005:C001",
+          "panjang": 78,
+          "penyebut": 1.1639,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            1,
+            4,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            3.0868,
+            1.4306,
+            0.0
+          ],
+          "skor": 4.5174
+        },
+        {
+          "peringkat": 10,
+          "chunk_id": "D029:P0019:C001",
+          "panjang": 36,
+          "penyebut": 0.7391,
+          "acuan": false,
+          "tf": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bm25": [
+            4.0597,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "skor": 4.0597
+        },
+        {
+          "peringkat": 11,
+          "chunk_id": "D029:P0017:C001",
+          "panjang": 108,
+          "penyebut": 1.4674,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            1,
+            4,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            2.7072,
+            1.3512,
+            0.0
+          ],
+          "skor": 4.0584
+        },
+        {
+          "peringkat": 12,
+          "chunk_id": "D029:P0063:C000",
+          "panjang": 128,
+          "penyebut": 1.6697,
+          "acuan": false,
+          "tf": [
+            1,
+            0,
+            0,
+            5,
+            0
+          ],
+          "bm25": [
+            2.6446,
+            0.0,
+            0.0,
+            1.3845,
+            0.0
+          ],
+          "skor": 4.0292
+        },
+        {
+          "peringkat": 13,
+          "chunk_id": "D029:P0039:C001",
+          "panjang": 105,
+          "penyebut": 1.437,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            2.7409,
+            1.0747,
+            0.0
+          ],
+          "skor": 3.8156
+        },
+        {
+          "peringkat": 14,
+          "chunk_id": "D029:P0005:C000",
+          "panjang": 131,
+          "penyebut": 1.7,
+          "acuan": false,
+          "tf": [
+            0,
+            1,
+            0,
+            6,
+            0
+          ],
+          "bm25": [
+            0.0,
+            2.3495,
+            0.0,
+            1.4391,
+            0.0
+          ],
+          "skor": 3.7886
+        },
+        {
+          "peringkat": 15,
+          "chunk_id": "D029:P0040:C000",
+          "panjang": 134,
+          "penyebut": 1.7303,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            1,
+            3,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            2.4464,
+            1.1713,
+            0.0
+          ],
+          "skor": 3.6177
+        },
+        {
+          "peringkat": 16,
+          "chunk_id": "D029:P0039:C000",
+          "panjang": 153,
+          "penyebut": 1.9225,
+          "acuan": false,
+          "tf": [
+            0,
+            0,
+            1,
+            3,
+            0
+          ],
+          "bm25": [
+            0.0,
+            0.0,
+            2.2856,
+            1.1256,
+            0.0
+          ],
+          "skor": 3.4111
+        },
+        {
+          "peringkat": 17,
+          "chunk_id": "D029:P0037:C001",
+          "panjang": 50,
+          "penyebut": 0.8807,
+          "acuan": false,
+          "tf": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "bm25": [
+            0.0,
+            3.3729,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "skor": 3.3729
+        },
+        {
+          "peringkat": 18,
+          "chunk_id": "D029:P0020:C000",
+          "panjang": 152,
+          "penyebut": 1.9124,
+          "acuan": false,
+          "tf": [
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "bm25": [
+            2.4242,
+            0.0,
+            0.0,
+            0.9441,
+            0.0
+          ],
+          "skor": 3.3683
+        },
+        {
+          "peringkat": 19,
+          "chunk_id": "D029:P0022:C001",
+          "panjang": 144,
+          "penyebut": 1.8315,
+          "acuan": false,
+          "tf": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bm25": [
+            2.4935,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "skor": 2.4935
+        },
+        {
+          "peringkat": 20,
+          "chunk_id": "D029:P0008:C000",
+          "panjang": 120,
+          "penyebut": 1.5887,
+          "acuan": true,
+          "tf": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "bm25": [
+            0.0,
+            2.4504,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "skor": 2.4504
+        }
+      ],
+      "seri": 74,
+      "chunk_skor_nol": 73
+    },
+    "lsa": {
+      "dokumen": 8128,
+      "token": 729195,
+      "term_unik": 22753,
+      "term_df1": 8564,
+      "term_digit": 1464,
+      "kosakata": 12725,
+      "term": [
+        {
+          "term": "metode",
+          "df": 587,
+          "idf": 2.628
+        },
+        {
+          "term": "skrining",
+          "df": 617,
+          "idf": 2.5782
+        },
+        {
+          "term": "status",
+          "df": 1210,
+          "idf": 1.9047
+        },
+        {
+          "term": "gizi",
+          "df": 3833,
+          "idf": 0.7517
+        },
+        {
+          "term": "direkomendasikan",
+          "df": 100,
+          "idf": 4.3979
+        },
+        {
+          "term": "malnutrisi",
+          "df": 795,
+          "idf": 2.3247
+        },
+        {
+          "term": "alat",
+          "df": 323,
+          "idf": 3.2254
+        },
+        {
+          "term": "anak",
+          "df": 2072,
+          "idf": 1.3668
+        },
+        {
+          "term": "strongkids",
+          "df": 246,
+          "idf": 3.4977
+        },
+        {
+          "term": "pyms",
+          "df": 304,
+          "idf": 3.286
+        },
+        {
+          "term": "berdasarkan",
+          "df": 1422,
+          "idf": 1.7433
+        },
+        {
+          "term": "kondisi",
+          "df": 1892,
+          "idf": 1.4577
+        },
+        {
+          "term": "pembanding",
+          "df": 49,
+          "idf": 5.1112
+        },
+        {
+          "term": "hasil",
+          "df": 2476,
+          "idf": 1.1887
+        },
+        {
+          "term": "divalidasi",
+          "df": 19,
+          "idf": 6.0586
+        }
+      ],
+      "submatriks": [
+        {
+          "chunk_id": "D117:P0033:C002",
+          "panjang": 79,
+          "tf": {
+            "metode": 0,
+            "skrining": 7,
+            "status": 0,
+            "gizi": 5,
+            "direkomendasikan": 1,
+            "malnutrisi": 3,
+            "alat": 4,
+            "anak": 1,
+            "strongkids": 1,
+            "pyms": 0,
+            "berdasarkan": 1,
+            "kondisi": 0,
+            "pembanding": 1,
+            "hasil": 1,
+            "divalidasi": 1
+          },
+          "bobot": {
+            "metode": 0.0,
+            "skrining": 7.5951,
+            "status": 0.0,
+            "gizi": 1.9614,
+            "direkomendasikan": 4.3979,
+            "malnutrisi": 4.8787,
+            "alat": 7.6968,
+            "anak": 1.3668,
+            "strongkids": 3.4977,
+            "pyms": 0.0,
+            "berdasarkan": 1.7433,
+            "kondisi": 0.0,
+            "pembanding": 5.1112,
+            "hasil": 1.1887,
+            "divalidasi": 6.0586
+          }
+        },
+        {
+          "chunk_id": "D017:P0031:C001",
+          "panjang": 87,
+          "tf": {
+            "metode": 0,
+            "skrining": 7,
+            "status": 2,
+            "gizi": 3,
+            "direkomendasikan": 1,
+            "malnutrisi": 1,
+            "alat": 2,
+            "anak": 2,
+            "strongkids": 4,
+            "pyms": 3,
+            "berdasarkan": 1,
+            "kondisi": 0,
+            "pembanding": 0,
+            "hasil": 1,
+            "divalidasi": 0
+          },
+          "bobot": {
+            "metode": 0.0,
+            "skrining": 7.5951,
+            "status": 3.2249,
+            "gizi": 1.5775,
+            "direkomendasikan": 4.3979,
+            "malnutrisi": 2.3247,
+            "alat": 5.4611,
+            "anak": 2.3142,
+            "strongkids": 8.3466,
+            "pyms": 6.8961,
+            "berdasarkan": 1.7433,
+            "kondisi": 0.0,
+            "pembanding": 0.0,
+            "hasil": 1.1887,
+            "divalidasi": 0.0
+          }
+        },
+        {
+          "chunk_id": "D038:P0027:C001",
+          "panjang": 93,
+          "tf": {
+            "metode": 0,
+            "skrining": 5,
+            "status": 2,
+            "gizi": 3,
+            "direkomendasikan": 1,
+            "malnutrisi": 2,
+            "alat": 2,
+            "anak": 3,
+            "strongkids": 4,
+            "pyms": 3,
+            "berdasarkan": 1,
+            "kondisi": 0,
+            "pembanding": 0,
+            "hasil": 1,
+            "divalidasi": 0
+          },
+          "bobot": {
+            "metode": 0.0,
+            "skrining": 6.7277,
+            "status": 3.2249,
+            "gizi": 1.5775,
+            "direkomendasikan": 4.3979,
+            "malnutrisi": 3.9361,
+            "alat": 5.4611,
+            "anak": 2.8684,
+            "strongkids": 8.3466,
+            "pyms": 6.8961,
+            "berdasarkan": 1.7433,
+            "kondisi": 0.0,
+            "pembanding": 0.0,
+            "hasil": 1.1887,
+            "divalidasi": 0.0
+          }
+        },
+        {
+          "chunk_id": "D013:P0067:C001",
+          "panjang": 85,
+          "tf": {
+            "metode": 0,
+            "skrining": 8,
+            "status": 1,
+            "gizi": 4,
+            "direkomendasikan": 0,
+            "malnutrisi": 4,
+            "alat": 3,
+            "anak": 1,
+            "strongkids": 2,
+            "pyms": 5,
+            "berdasarkan": 1,
+            "kondisi": 1,
+            "pembanding": 0,
+            "hasil": 8,
+            "divalidasi": 0
+          },
+          "bobot": {
+            "metode": 0.0,
+            "skrining": 7.9394,
+            "status": 1.9047,
+            "gizi": 1.7937,
+            "direkomendasikan": 0.0,
+            "malnutrisi": 5.5475,
+            "alat": 6.7689,
+            "anak": 1.3668,
+            "strongkids": 5.9222,
+            "pyms": 8.5747,
+            "berdasarkan": 1.7433,
+            "kondisi": 1.4577,
+            "pembanding": 0.0,
+            "hasil": 3.6604,
+            "divalidasi": 0.0
+          }
+        }
+      ],
+      "singular_awal": [
+        476.001,
+        307.2192,
+        284.4383,
+        260.4212,
+        250.9347,
+        239.9236,
+        220.0175,
+        218.2272,
+        211.1883,
+        207.2809
+      ],
+      "singular_akhir": [
+        71.7179,
+        71.541,
+        71.2972,
+        71.2239,
+        71.0811
+      ],
+      "energi_k": 0.4156,
+      "frobenius_kuadrat": 8689125.9783,
+      "vektor_mentah": {
+        "term": "skrining",
+        "tiga_dimensi": [
+          32.3635,
+          -45.6938,
+          26.1054
+        ],
+        "norma": 110.7587,
+        "ternormalisasi": [
+          0.2922,
+          -0.4126,
+          0.2357
+        ]
+      }
+    },
+    "qe": {
+      "vektor_query": {
+        "metode": [
+          0.3574,
+          -0.0263,
+          -0.1111
+        ],
+        "skrining": [
+          0.2922,
+          -0.4126,
+          0.2357
+        ],
+        "status": [
+          0.4835,
+          -0.3106,
+          0.0465
+        ],
+        "gizi": [
+          0.7784,
+          -0.234,
+          0.0912
+        ],
+        "direkomendasikan": [
+          0.2798,
+          -0.1281,
+          0.0873
+        ]
+      },
+      "jumlah": [
+        2.1912,
+        -1.1115,
+        0.3495
+      ],
+      "centroid": [
+        0.4382,
+        -0.2223,
+        0.0699
+      ],
+      "norma": 0.6627,
+      "jumlah_kuadrat_norma": 0.4392,
+      "centroid_unit": [
+        0.6613,
+        -0.3354,
+        0.1055
+      ],
+      "cosine_contoh": {
+        "term": "malnutrisi",
+        "vektor": [
+          0.354,
+          -0.3476,
+          0.1466
+        ],
+        "hasil_kali": [
+          0.234085,
+          0.116603,
+          0.015464
+        ],
+        "jumlah_tiga": 0.366151,
+        "jumlah_300": 0.5798
+      },
+      "kandidat20": [
+        {
+          "peringkat": 1,
+          "term": "malnutrisi",
+          "cosine": 0.5798,
+          "terpilih": true
+        },
+        {
+          "peringkat": 2,
+          "term": "alat",
+          "cosine": 0.5586,
+          "terpilih": true
+        },
+        {
+          "peringkat": 3,
+          "term": "anak",
+          "cosine": 0.5335,
+          "terpilih": true
+        },
+        {
+          "peringkat": 4,
+          "term": "strongkids",
+          "cosine": 0.5024,
+          "terpilih": true
+        },
+        {
+          "peringkat": 5,
+          "term": "pyms",
+          "cosine": 0.4945,
+          "terpilih": true
+        },
+        {
+          "peringkat": 6,
+          "term": "berdasarkan",
+          "cosine": 0.4926,
+          "terpilih": true
+        },
+        {
+          "peringkat": 7,
+          "term": "kondisi",
+          "cosine": 0.4869,
+          "terpilih": true
+        },
+        {
+          "peringkat": 8,
+          "term": "pembanding",
+          "cosine": 0.4837,
+          "terpilih": true
+        },
+        {
+          "peringkat": 9,
+          "term": "hasil",
+          "cosine": 0.4785,
+          "terpilih": true
+        },
+        {
+          "peringkat": 10,
+          "term": "divalidasi",
+          "cosine": 0.4551,
+          "terpilih": true
+        },
+        {
+          "peringkat": 11,
+          "term": "berisiko",
+          "cosine": 0.4452,
+          "terpilih": false
+        },
+        {
+          "peringkat": 12,
+          "term": "membandingkan",
+          "cosine": 0.4429,
+          "terpilih": false
+        },
+        {
+          "peringkat": 13,
+          "term": "mengidentifikasi",
+          "cosine": 0.4415,
+          "terpilih": false
+        },
+        {
+          "peringkat": 14,
+          "term": "tinggi",
+          "cosine": 0.437,
+          "terpilih": false
+        },
+        {
+          "peringkat": 15,
+          "term": "valid",
+          "cosine": 0.4362,
+          "terpilih": false
+        },
+        {
+          "peringkat": 16,
+          "term": "pembahasan",
+          "cosine": 0.4313,
+          "terpilih": false
+        },
+        {
+          "peringkat": 17,
+          "term": "menilai",
+          "cosine": 0.429,
+          "terpilih": false
+        },
+        {
+          "peringkat": 18,
+          "term": "badan",
+          "cosine": 0.425,
+          "terpilih": false
+        },
+        {
+          "peringkat": 19,
+          "term": "dinilai",
+          "cosine": 0.4241,
+          "terpilih": false
+        },
+        {
+          "peringkat": 20,
+          "term": "tools",
+          "cosine": 0.4237,
+          "terpilih": false
+        }
+      ],
+      "skala": 10.0,
+      "bobot_akhir": [
+        {
+          "term": "metode",
+          "count": 1,
+          "e": 0.0,
+          "tambahan": 0.0,
+          "w": 1.0
+        },
+        {
+          "term": "skrining",
+          "count": 1,
+          "e": 0.0,
+          "tambahan": 0.0,
+          "w": 1.0
+        },
+        {
+          "term": "status",
+          "count": 1,
+          "e": 0.0,
+          "tambahan": 0.0,
+          "w": 1.0
+        },
+        {
+          "term": "gizi",
+          "count": 1,
+          "e": 0.0,
+          "tambahan": 0.0,
+          "w": 1.0
+        },
+        {
+          "term": "direkomendasikan",
+          "count": 1,
+          "e": 0.0,
+          "tambahan": 0.0,
+          "w": 1.0
+        },
+        {
+          "term": "malnutrisi",
+          "count": 0,
+          "e": 0.1144,
+          "tambahan": 1.1445,
+          "w": 1.1445
+        },
+        {
+          "term": "alat",
+          "count": 0,
+          "e": 0.1103,
+          "tambahan": 1.1027,
+          "w": 1.1027
+        },
+        {
+          "term": "anak",
+          "count": 0,
+          "e": 0.1053,
+          "tambahan": 1.0532,
+          "w": 1.0532
+        },
+        {
+          "term": "strongkids",
+          "count": 0,
+          "e": 0.0992,
+          "tambahan": 0.9917,
+          "w": 0.9917
+        },
+        {
+          "term": "pyms",
+          "count": 0,
+          "e": 0.0976,
+          "tambahan": 0.9763,
+          "w": 0.9763
+        },
+        {
+          "term": "berdasarkan",
+          "count": 0,
+          "e": 0.0972,
+          "tambahan": 0.9725,
+          "w": 0.9725
+        },
+        {
+          "term": "kondisi",
+          "count": 0,
+          "e": 0.0961,
+          "tambahan": 0.9612,
+          "w": 0.9612
+        },
+        {
+          "term": "pembanding",
+          "count": 0,
+          "e": 0.0955,
+          "tambahan": 0.9548,
+          "w": 0.9548
+        },
+        {
+          "term": "hasil",
+          "count": 0,
+          "e": 0.0945,
+          "tambahan": 0.9447,
+          "w": 0.9447
+        },
+        {
+          "term": "divalidasi",
+          "count": 0,
+          "e": 0.0898,
+          "tambahan": 0.8985,
+          "w": 0.8985
+        }
+      ],
+      "jumlah_w": 15.0
+    },
+    "lsa_qe": {
+      "pesaing": {
+        "chunk_id": "D029:P0007:C000",
+        "panjang": 20,
+        "rincian": [
+          {
+            "term": "anak",
+            "bobot": 1.0532,
+            "tf": 1,
+            "bm25": 2.7386,
+            "kontribusi": 2.8842
+          },
+          {
+            "term": "skrining",
+            "bobot": 1.0,
+            "tf": 2,
+            "bm25": 4.9227,
+            "kontribusi": 4.9227
+          },
+          {
+            "term": "gizi",
+            "bobot": 1.0,
+            "tf": 1,
+            "bm25": 1.1709,
+            "kontribusi": 1.1709
+          }
+        ],
+        "skor": 8.9778,
+        "peringkat": 6
+      },
+      "teratas10": [
+        {
+          "peringkat": 1,
+          "chunk_id": "D029:P0008:C000",
+          "skor": 20.8881,
+          "peringkat_b1": 20,
+          "acuan": true
+        },
+        {
+          "peringkat": 2,
+          "chunk_id": "D029:P0031:C002",
+          "skor": 18.4095,
+          "peringkat_b1": 2,
+          "acuan": false
+        },
+        {
+          "peringkat": 3,
+          "chunk_id": "D029:P0031:C001",
+          "skor": 17.0723,
+          "peringkat_b1": 4,
+          "acuan": false
+        },
+        {
+          "peringkat": 4,
+          "chunk_id": "D029:P0055:C000",
+          "skor": 9.8687,
+          "peringkat_b1": 7,
+          "acuan": false
+        },
+        {
+          "peringkat": 5,
+          "chunk_id": "D029:P0031:C000",
+          "skor": 9.5086,
+          "peringkat_b1": 8,
+          "acuan": false
+        },
+        {
+          "peringkat": 6,
+          "chunk_id": "D029:P0007:C000",
+          "skor": 8.9778,
+          "peringkat_b1": 1,
+          "acuan": false
+        },
+        {
+          "peringkat": 7,
+          "chunk_id": "D029:P0032:C000",
+          "skor": 8.8217,
+          "peringkat_b1": 3,
+          "acuan": false
+        },
+        {
+          "peringkat": 8,
+          "chunk_id": "D029:P0063:C000",
+          "skor": 7.4396,
+          "peringkat_b1": 12,
+          "acuan": false
+        },
+        {
+          "peringkat": 9,
+          "chunk_id": "D029:P0017:C000",
+          "skor": 7.2408,
+          "peringkat_b1": 23,
+          "acuan": false
+        },
+        {
+          "peringkat": 10,
+          "chunk_id": "D029:P0040:C000",
+          "skor": 7.1684,
+          "peringkat_b1": 15,
+          "acuan": false
+        }
+      ]
+    },
+    "rm3": {
+      "softmax": [
+        {
+          "chunk_id": "D029:P0007:C000",
+          "skor": 6.0936,
+          "geser": 0.0,
+          "exp": 1.0,
+          "alpha": 0.3077,
+          "panjang_tanpa_sw": 18
+        },
+        {
+          "chunk_id": "D029:P0031:C002",
+          "skor": 6.0301,
+          "geser": -0.0635,
+          "exp": 0.938452,
+          "alpha": 0.2888,
+          "panjang_tanpa_sw": 73
+        },
+        {
+          "chunk_id": "D029:P0032:C000",
+          "skor": 5.4696,
+          "geser": -0.624,
+          "exp": 0.535786,
+          "alpha": 0.1649,
+          "panjang_tanpa_sw": 80
+        },
+        {
+          "chunk_id": "D029:P0031:C001",
+          "skor": 5.2585,
+          "geser": -0.8351,
+          "exp": 0.433825,
+          "alpha": 0.1335,
+          "panjang_tanpa_sw": 83
+        },
+        {
+          "chunk_id": "D029:P0045:C001",
+          "skor": 5.02,
+          "geser": -1.0736,
+          "exp": 0.341779,
+          "alpha": 0.1052,
+          "panjang_tanpa_sw": 37
+        }
+      ],
+      "jumlah_exp": 3.249841,
+      "contoh_term": "skrining",
+      "contoh": [
+        {
+          "chunk_id": "D029:P0007:C000",
+          "alpha": 0.3077,
+          "tf": 2,
+          "panjang": 18,
+          "rasio": 0.111111,
+          "kontribusi": 0.03419
+        },
+        {
+          "chunk_id": "D029:P0031:C002",
+          "alpha": 0.2888,
+          "tf": 5,
+          "panjang": 73,
+          "rasio": 0.068493,
+          "kontribusi": 0.019779
+        },
+        {
+          "chunk_id": "D029:P0032:C000",
+          "alpha": 0.1649,
+          "tf": 0,
+          "panjang": 80,
+          "rasio": 0.0,
+          "kontribusi": 0.0
+        },
+        {
+          "chunk_id": "D029:P0031:C001",
+          "alpha": 0.1335,
+          "tf": 3,
+          "panjang": 83,
+          "rasio": 0.036145,
+          "kontribusi": 0.004825
+        },
+        {
+          "chunk_id": "D029:P0045:C001",
+          "alpha": 0.1052,
+          "tf": 0,
+          "panjang": 37,
+          "rasio": 0.0,
+          "kontribusi": 0.0
+        }
+      ],
+      "contoh_jumlah": 0.058793,
+      "jumlah_term_kandidat": 144,
+      "massa_30": 0.6529,
+      "model30": [
+        {
+          "peringkat": 1,
+          "term": "2",
+          "p": 0.087535,
+          "p_norm": 0.1341,
+          "w": 0.067
+        },
+        {
+          "peringkat": 2,
+          "term": "gizi",
+          "p": 0.060243,
+          "p_norm": 0.0923,
+          "w": 0.1461
+        },
+        {
+          "peringkat": 3,
+          "term": "skrining",
+          "p": 0.058793,
+          "p_norm": 0.0901,
+          "w": 0.145
+        },
+        {
+          "peringkat": 4,
+          "term": "strongkidz",
+          "p": 0.050013,
+          "p_norm": 0.0766,
+          "w": 0.0383
+        },
+        {
+          "peringkat": 5,
+          "term": "1",
+          "p": 0.039874,
+          "p_norm": 0.0611,
+          "w": 0.0305
+        },
+        {
+          "peringkat": 6,
+          "term": "nilai",
+          "p": 0.034254,
+          "p_norm": 0.0525,
+          "w": 0.0262
+        },
+        {
+          "peringkat": 7,
+          "term": "sakit",
+          "p": 0.029831,
+          "p_norm": 0.0457,
+          "w": 0.0228
+        },
+        {
+          "peringkat": 8,
+          "term": "anak",
+          "p": 0.025006,
+          "p_norm": 0.0383,
+          "w": 0.0192
+        },
+        {
+          "peringkat": 9,
+          "term": "rumah",
+          "p": 0.022659,
+          "p_norm": 0.0347,
+          "w": 0.0174
+        },
+        {
+          "peringkat": 10,
+          "term": "tinggi",
+          "p": 0.019658,
+          "p_norm": 0.0301,
+          "w": 0.0151
+        },
+        {
+          "peringkat": 11,
+          "term": "form",
+          "p": 0.017095,
+          "p_norm": 0.0262,
+          "w": 0.0131
+        },
+        {
+          "peringkat": 12,
+          "term": "gambar",
+          "p": 0.017095,
+          "p_norm": 0.0262,
+          "w": 0.0131
+        },
+        {
+          "peringkat": 13,
+          "term": "tools",
+          "p": 0.017095,
+          "p_norm": 0.0262,
+          "w": 0.0131
+        },
+        {
+          "peringkat": 14,
+          "term": "pyms",
+          "p": 0.014345,
+          "p_norm": 0.022,
+          "w": 0.011
+        },
+        {
+          "peringkat": 15,
+          "term": "kejadian",
+          "p": 0.013476,
+          "p_norm": 0.0206,
+          "w": 0.0103
+        },
+        {
+          "peringkat": 16,
+          "term": "menduga",
+          "p": 0.013476,
+          "p_norm": 0.0206,
+          "w": 0.0103
+        },
+        {
+          "peringkat": 17,
+          "term": "sensitivitas",
+          "p": 0.012736,
+          "p_norm": 0.0195,
+          "w": 0.0098
+        },
+        {
+          "peringkat": 18,
+          "term": "badan",
+          "p": 0.012365,
+          "p_norm": 0.0189,
+          "w": 0.0095
+        },
+        {
+          "peringkat": 19,
+          "term": "antropometri",
+          "p": 0.012199,
+          "p_norm": 0.0187,
+          "w": 0.0093
+        },
+        {
+          "peringkat": 20,
+          "term": "ndp",
+          "p": 0.011128,
+          "p_norm": 0.017,
+          "w": 0.0085
+        },
+        {
+          "peringkat": 21,
+          "term": "spesifisitas",
+          "p": 0.011128,
+          "p_norm": 0.017,
+          "w": 0.0085
+        },
+        {
+          "peringkat": 22,
+          "term": "alat",
+          "p": 0.00952,
+          "p_norm": 0.0146,
+          "w": 0.0073
+        },
+        {
+          "peringkat": 23,
+          "term": "balita",
+          "p": 0.00952,
+          "p_norm": 0.0146,
+          "w": 0.0073
+        },
+        {
+          "peringkat": 24,
+          "term": "diare",
+          "p": 0.00952,
+          "p_norm": 0.0146,
+          "w": 0.0073
+        },
+        {
+          "peringkat": 25,
+          "term": "penelitian",
+          "p": 0.00952,
+          "p_norm": 0.0146,
+          "w": 0.0073
+        },
+        {
+          "peringkat": 26,
+          "term": "dkk",
+          "p": 0.007625,
+          "p_norm": 0.0117,
+          "w": 0.0058
+        },
+        {
+          "peringkat": 27,
+          "term": "tergolong",
+          "p": 0.007625,
+          "p_norm": 0.0117,
+          "w": 0.0058
+        },
+        {
+          "peringkat": 28,
+          "term": "positif",
+          "p": 0.007172,
+          "p_norm": 0.011,
+          "w": 0.0055
+        },
+        {
+          "peringkat": 29,
+          "term": "berat",
+          "p": 0.006182,
+          "p_norm": 0.0095,
+          "w": 0.0047
+        },
+        {
+          "peringkat": 30,
+          "term": "didapatkan",
+          "p": 0.006182,
+          "p_norm": 0.0095,
+          "w": 0.0047
+        }
+      ],
+      "bobot_query": [
+        {
+          "term": "metode",
+          "bagian_query": 0.1,
+          "bagian_model": 0.0,
+          "w": 0.1
+        },
+        {
+          "term": "skrining",
+          "bagian_query": 0.1,
+          "bagian_model": 0.045,
+          "w": 0.145
+        },
+        {
+          "term": "status",
+          "bagian_query": 0.1,
+          "bagian_model": 0.0,
+          "w": 0.1
+        },
+        {
+          "term": "gizi",
+          "bagian_query": 0.1,
+          "bagian_model": 0.0461,
+          "w": 0.1461
+        },
+        {
+          "term": "direkomendasikan",
+          "bagian_query": 0.1,
+          "bagian_model": 0.0,
+          "w": 0.1
+        }
+      ],
+      "jumlah_w": 1.0,
+      "rincian_gold": [
+        {
+          "term": "skrining",
+          "bobot": 0.145,
+          "tf": 1,
+          "bm25": 2.4504,
+          "kontribusi": 0.3554
+        },
+        {
+          "term": "2",
+          "bobot": 0.067,
+          "tf": 6,
+          "bm25": 1.7539,
+          "kontribusi": 0.1176
+        },
+        {
+          "term": "strongkidz",
+          "bobot": 0.0383,
+          "tf": 2,
+          "bm25": 4.8348,
+          "kontribusi": 0.1852
+        },
+        {
+          "term": "1",
+          "bobot": 0.0305,
+          "tf": 1,
+          "bm25": 0.8569,
+          "kontribusi": 0.0262
+        },
+        {
+          "term": "sakit",
+          "bobot": 0.0228,
+          "tf": 1,
+          "bm25": 1.8052,
+          "kontribusi": 0.0412
+        },
+        {
+          "term": "anak",
+          "bobot": 0.0192,
+          "tf": 1,
+          "bm25": 1.6686,
+          "kontribusi": 0.032
+        },
+        {
+          "term": "rumah",
+          "bobot": 0.0174,
+          "tf": 1,
+          "bm25": 1.8792,
+          "kontribusi": 0.0326
+        },
+        {
+          "term": "tinggi",
+          "bobot": 0.0151,
+          "tf": 3,
+          "bm25": 2.5149,
+          "kontribusi": 0.0379
+        },
+        {
+          "term": "form",
+          "bobot": 0.0131,
+          "tf": 2,
+          "bm25": 4.8348,
+          "kontribusi": 0.0633
+        },
+        {
+          "term": "gambar",
+          "bobot": 0.0131,
+          "tf": 1,
+          "bm25": 3.3512,
+          "kontribusi": 0.0439
+        },
+        {
+          "term": "tools",
+          "bobot": 0.0131,
+          "tf": 3,
+          "bm25": 5.6718,
+          "kontribusi": 0.0743
+        },
+        {
+          "term": "pyms",
+          "bobot": 0.011,
+          "tf": 6,
+          "bm25": 6.3448,
+          "kontribusi": 0.0697
+        },
+        {
+          "term": "sensitivitas",
+          "bobot": 0.0098,
+          "tf": 2,
+          "bm25": 4.8348,
+          "kontribusi": 0.0472
+        },
+        {
+          "term": "spesifisitas",
+          "bobot": 0.0085,
+          "tf": 2,
+          "bm25": 4.8348,
+          "kontribusi": 0.0412
+        },
+        {
+          "term": "dkk",
+          "bobot": 0.0058,
+          "tf": 1,
+          "bm25": 2.2282,
+          "kontribusi": 0.013
+        },
+        {
+          "term": "didapatkan",
+          "bobot": 0.0047,
+          "tf": 1,
+          "bm25": 2.4504,
+          "kontribusi": 0.0116
+        }
+      ],
+      "skor_gold": 1.1921,
+      "teratas": [
+        {
+          "peringkat": 1,
+          "chunk_id": "D029:P0031:C002",
+          "skor": 1.9103,
+          "acuan": false
+        },
+        {
+          "peringkat": 2,
+          "chunk_id": "D029:P0007:C000",
+          "skor": 1.7185,
+          "acuan": false
+        },
+        {
+          "peringkat": 3,
+          "chunk_id": "D029:P0031:C001",
+          "skor": 1.4344,
+          "acuan": false
+        },
+        {
+          "peringkat": 4,
+          "chunk_id": "D029:P0008:C000",
+          "skor": 1.1921,
+          "acuan": true
+        },
+        {
+          "peringkat": 5,
+          "chunk_id": "D029:P0032:C000",
+          "skor": 0.8442,
+          "acuan": false
+        }
+      ]
+    },
+    "agregasi": {
+      "aturan": "10 unit pertama menurut qid pada dev seed 1 skenario TPL",
+      "unit": [
+        {
+          "qid": 14,
+          "doc_id": "D035",
+          "tipe": "skrining",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 6,
+            "RM3": 4,
+            "LSA-QE": 2
+          }
+        },
+        {
+          "qid": 15,
+          "doc_id": "D035",
+          "tipe": "status_gizi",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 5,
+            "RM3": 4,
+            "LSA-QE": 3
+          }
+        },
+        {
+          "qid": 16,
+          "doc_id": "D035",
+          "tipe": "biokimia",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 73,
+            "RM3": 30,
+            "LSA-QE": 26
+          }
+        },
+        {
+          "qid": 17,
+          "doc_id": "D035",
+          "tipe": "pes",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 11,
+            "RM3": 8,
+            "LSA-QE": 13
+          }
+        },
+        {
+          "qid": 18,
+          "doc_id": "D035",
+          "tipe": "tujuan_diet",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 1,
+            "RM3": 1,
+            "LSA-QE": 1
+          }
+        },
+        {
+          "qid": 19,
+          "doc_id": "D035",
+          "tipe": "prinsip_diet",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 136,
+            "RM3": 59,
+            "LSA-QE": 100
+          }
+        },
+        {
+          "qid": 20,
+          "doc_id": "D035",
+          "tipe": "syarat_diet",
+          "chunk": 140,
+          "rank": {
+            "Baseline": 45,
+            "RM3": 18,
+            "LSA-QE": 66
+          }
+        },
+        {
+          "qid": 21,
+          "doc_id": "D036",
+          "tipe": "skrining",
+          "chunk": 109,
+          "rank": {
+            "Baseline": 76,
+            "RM3": 108,
+            "LSA-QE": 93
+          }
+        },
+        {
+          "qid": 22,
+          "doc_id": "D036",
+          "tipe": "status_gizi",
+          "chunk": 109,
+          "rank": {
+            "Baseline": 7,
+            "RM3": 8,
+            "LSA-QE": 7
+          }
+        },
+        {
+          "qid": 23,
+          "doc_id": "D036",
+          "tipe": "biokimia",
+          "chunk": 109,
+          "rank": {
+            "Baseline": 47,
+            "RM3": 27,
+            "LSA-QE": 25
+          }
+        }
+      ],
+      "metrik": {
+        "Baseline": {
+          "RR": [
+            0.1667,
+            0.2,
+            0.0137,
+            0.0909,
+            1.0,
+            0.0074,
+            0.0222,
+            0.0132,
+            0.1429,
+            0.0213
+          ],
+          "nDCG": [
+            0.3562,
+            0.3869,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3333,
+            0.0
+          ],
+          "MRR": 0.1678,
+          "nDCG@10": 0.2076,
+          "Recall@1": 0.1,
+          "Recall@5": 0.2,
+          "Recall@10": 0.4,
+          "median": 28.0,
+          "gagal": 0.6,
+          "jumlah_RR": 1.6781,
+          "jumlah_nDCG": 2.0764
+        },
+        "RM3": {
+          "RR": [
+            0.25,
+            0.25,
+            0.0333,
+            0.125,
+            1.0,
+            0.0169,
+            0.0556,
+            0.0093,
+            0.125,
+            0.037
+          ],
+          "nDCG": [
+            0.4307,
+            0.4307,
+            0.0,
+            0.3155,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3155,
+            0.0
+          ],
+          "MRR": 0.1902,
+          "nDCG@10": 0.2492,
+          "Recall@1": 0.1,
+          "Recall@5": 0.3,
+          "Recall@10": 0.5,
+          "median": 13.0,
+          "gagal": 0.5,
+          "jumlah_RR": 1.9021,
+          "jumlah_nDCG": 2.4923
+        },
+        "LSA-QE": {
+          "RR": [
+            0.5,
+            0.3333,
+            0.0385,
+            0.0769,
+            1.0,
+            0.01,
+            0.0152,
+            0.0108,
+            0.1429,
+            0.04
+          ],
+          "nDCG": [
+            0.6309,
+            0.5,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3333,
+            0.0
+          ],
+          "MRR": 0.2167,
+          "nDCG@10": 0.2464,
+          "Recall@1": 0.1,
+          "Recall@5": 0.3,
+          "Recall@10": 0.4,
+          "median": 19.0,
+          "gagal": 0.6,
+          "jumlah_RR": 2.1675,
+          "jumlah_nDCG": 2.4643
+        }
+      },
+      "ketahanan": {
+        "RM3": {
+          "n": 10,
+          "improved": 7,
+          "unchanged": 1,
+          "worsened": 2,
+          "pct_improved": 0.7,
+          "pct_unchanged": 0.1,
+          "pct_worsened": 0.2,
+          "robustness_index": 0.5,
+          "entered_top10": 1,
+          "left_top10": 0,
+          "big_drops": 0,
+          "mean_delta_rr": 0.0224
+        },
+        "LSA-QE": {
+          "n": 10,
+          "improved": 5,
+          "unchanged": 2,
+          "worsened": 3,
+          "pct_improved": 0.5,
+          "pct_unchanged": 0.2,
+          "pct_worsened": 0.3,
+          "robustness_index": 0.2,
+          "entered_top10": 0,
+          "left_top10": 0,
+          "big_drops": 0,
+          "mean_delta_rr": 0.0489
+        }
+      },
+      "uji": [
+        {
+          "a": "RM3",
+          "b": "Baseline",
+          "selisih": [
+            0.0833,
+            0.05,
+            0.0196,
+            0.0341,
+            0.0,
+            0.0096,
+            0.0333,
+            -0.0039,
+            -0.0179,
+            0.0158
+          ],
+          "delta": 0.0224,
+          "tak_nol": [
+            {
+              "qid": 14,
+              "d": 0.0833,
+              "abs": 0.0833,
+              "peringkat": 9.0,
+              "tanda": 1
+            },
+            {
+              "qid": 15,
+              "d": 0.05,
+              "abs": 0.05,
+              "peringkat": 8.0,
+              "tanda": 1
+            },
+            {
+              "qid": 16,
+              "d": 0.0196,
+              "abs": 0.0196,
+              "peringkat": 5.0,
+              "tanda": 1
+            },
+            {
+              "qid": 17,
+              "d": 0.0341,
+              "abs": 0.0341,
+              "peringkat": 7.0,
+              "tanda": 1
+            },
+            {
+              "qid": 19,
+              "d": 0.0096,
+              "abs": 0.0096,
+              "peringkat": 2.0,
+              "tanda": 1
+            },
+            {
+              "qid": 20,
+              "d": 0.0333,
+              "abs": 0.0333,
+              "peringkat": 6.0,
+              "tanda": 1
+            },
+            {
+              "qid": 21,
+              "d": -0.0039,
+              "abs": 0.0039,
+              "peringkat": 1.0,
+              "tanda": -1
+            },
+            {
+              "qid": 22,
+              "d": -0.0179,
+              "abs": 0.0179,
+              "peringkat": 4.0,
+              "tanda": -1
+            },
+            {
+              "qid": 23,
+              "d": 0.0158,
+              "abs": 0.0158,
+              "peringkat": 3.0,
+              "tanda": 1
+            }
+          ],
+          "W_plus": 40.0,
+          "W_minus": 5.0,
+          "statistik": 5.0,
+          "p": 0.039062,
+          "n_tak_nol": 9,
+          "ci": [
+            0.0062,
+            0.0402
+          ],
+          "p_holm": 0.117186
+        },
+        {
+          "a": "LSA-QE",
+          "b": "Baseline",
+          "selisih": [
+            0.3333,
+            0.1333,
+            0.0248,
+            -0.014,
+            0.0,
+            0.0026,
+            -0.0071,
+            -0.0024,
+            0.0,
+            0.0187
+          ],
+          "delta": 0.0489,
+          "tak_nol": [
+            {
+              "qid": 14,
+              "d": 0.3333,
+              "abs": 0.3333,
+              "peringkat": 8.0,
+              "tanda": 1
+            },
+            {
+              "qid": 15,
+              "d": 0.1333,
+              "abs": 0.1333,
+              "peringkat": 7.0,
+              "tanda": 1
+            },
+            {
+              "qid": 16,
+              "d": 0.0248,
+              "abs": 0.0248,
+              "peringkat": 6.0,
+              "tanda": 1
+            },
+            {
+              "qid": 17,
+              "d": -0.014,
+              "abs": 0.014,
+              "peringkat": 4.0,
+              "tanda": -1
+            },
+            {
+              "qid": 19,
+              "d": 0.0026,
+              "abs": 0.0026,
+              "peringkat": 2.0,
+              "tanda": 1
+            },
+            {
+              "qid": 20,
+              "d": -0.0071,
+              "abs": 0.0071,
+              "peringkat": 3.0,
+              "tanda": -1
+            },
+            {
+              "qid": 21,
+              "d": -0.0024,
+              "abs": 0.0024,
+              "peringkat": 1.0,
+              "tanda": -1
+            },
+            {
+              "qid": 23,
+              "d": 0.0187,
+              "abs": 0.0187,
+              "peringkat": 5.0,
+              "tanda": 1
+            }
+          ],
+          "W_plus": 28.0,
+          "W_minus": 8.0,
+          "statistik": 8.0,
+          "p": 0.195312,
+          "n_tak_nol": 8,
+          "ci": [
+            0.0001,
+            0.1176
+          ],
+          "p_holm": 0.390624
+        },
+        {
+          "a": "LSA-QE",
+          "b": "RM3",
+          "selisih": [
+            0.25,
+            0.0833,
+            0.0051,
+            -0.0481,
+            0.0,
+            -0.0069,
+            -0.0404,
+            0.0015,
+            0.0179,
+            0.003
+          ],
+          "delta": 0.0265,
+          "tak_nol": [
+            {
+              "qid": 14,
+              "d": 0.25,
+              "abs": 0.25,
+              "peringkat": 9.0,
+              "tanda": 1
+            },
+            {
+              "qid": 15,
+              "d": 0.0833,
+              "abs": 0.0833,
+              "peringkat": 8.0,
+              "tanda": 1
+            },
+            {
+              "qid": 16,
+              "d": 0.0051,
+              "abs": 0.0051,
+              "peringkat": 3.0,
+              "tanda": 1
+            },
+            {
+              "qid": 17,
+              "d": -0.0481,
+              "abs": 0.0481,
+              "peringkat": 7.0,
+              "tanda": -1
+            },
+            {
+              "qid": 19,
+              "d": -0.0069,
+              "abs": 0.0069,
+              "peringkat": 4.0,
+              "tanda": -1
+            },
+            {
+              "qid": 20,
+              "d": -0.0404,
+              "abs": 0.0404,
+              "peringkat": 6.0,
+              "tanda": -1
+            },
+            {
+              "qid": 21,
+              "d": 0.0015,
+              "abs": 0.0015,
+              "peringkat": 1.0,
+              "tanda": 1
+            },
+            {
+              "qid": 22,
+              "d": 0.0179,
+              "abs": 0.0179,
+              "peringkat": 5.0,
+              "tanda": 1
+            },
+            {
+              "qid": 23,
+              "d": 0.003,
+              "abs": 0.003,
+              "peringkat": 2.0,
+              "tanda": 1
+            }
+          ],
+          "W_plus": 28.0,
+          "W_minus": 17.0,
+          "statistik": 17.0,
+          "p": 0.570312,
+          "n_tak_nol": 9,
+          "ci": [
+            -0.014,
+            0.0816
+          ],
+          "p_holm": 0.570312
+        }
+      ],
+      "holm": [
+        {
+          "urutan": 1,
+          "pasangan": "RM3 - Baseline",
+          "p": 0.039062,
+          "pengali": 3,
+          "hasil_kali": 0.117186,
+          "p_holm": 0.117186
+        },
+        {
+          "urutan": 2,
+          "pasangan": "LSA-QE - Baseline",
+          "p": 0.195312,
+          "pengali": 2,
+          "hasil_kali": 0.390624,
+          "p_holm": 0.390624
+        },
+        {
+          "urutan": 3,
+          "pasangan": "LSA-QE - RM3",
+          "p": 0.570312,
+          "pengali": 1,
+          "hasil_kali": 0.570312,
+          "p_holm": 0.570312
+        }
+      ],
+      "bootstrap": {
+        "seed": 20261019,
+        "ulangan": 10000,
+        "contoh": [
+          {
+            "ulangan": 1,
+            "indeks": [
+              4,
+              3,
+              7,
+              8,
+              5,
+              2,
+              1,
+              6,
+              3,
+              5
+            ],
+            "rata": 0.0495
+          },
+          {
+            "ulangan": 2,
+            "indeks": [
+              2,
+              10,
+              7,
+              10,
+              4,
+              3,
+              2,
+              8,
+              9,
+              4
+            ],
+            "rata": 0.0291
+          },
+          {
+            "ulangan": 3,
+            "indeks": [
+              10,
+              5,
+              1,
+              2,
+              9,
+              4,
+              10,
+              4,
+              7,
+              6
+            ],
+            "rata": 0.0472
+          }
+        ],
+        "ci": [
+          0.0001,
+          0.1176
+        ]
+      }
     }
   }
 }
