@@ -1,6 +1,6 @@
 # Audit Kesesuaian Implementasi terhadap Bab 4
 
-Tanggal: 2026-11-11 · Status: **menunggu keputusan (Titik Periksa 0)**
+Tanggal: 2026-11-11 · Status: **keputusan diambil — lihat `reports/DECISIONS.md` (A1 barisan token, A2 redaksional, B1 parafrasa asli, B3 tetap, C1–C3 eksploratif)**
 
 ## Catatan awal
 
@@ -13,7 +13,7 @@ File bukti:
 
 | File | Isi |
 |---|---|
-| `results/fase0_reproduce_4_12_eq29_set.txt` | Kode sesuai Persamaan 2.9 (centroid atas himpunan term) |
+| `results/fase0_reproduce_4_12_eq29_set.txt` | Varian Persamaan 2.9 (centroid atas himpunan term; kode lama sebelum keputusan A1) |
 | `results/fase0_reproduce_4_12_token_centroid.txt` | Varian centroid atas barisan token (Gambar 4.18) |
 | `results/fase0_checks.txt` | Normalisasi, pembagian data, tumpang tindih tuning–pengujian |
 
