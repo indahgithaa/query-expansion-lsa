@@ -1,0 +1,38 @@
+stopwords 810 | QA raw 911 | QA 858 | chunks 13737
+attempt 0 | dev ['D062', 'D065', 'D071', 'D026', 'D083'] | test ['D097', 'D063', 'D003', 'D064', 'D030']
+collection 72 chunks 8128 QA 511
+dev 24 chunks 2848 QA 174
+test 24 chunks 2761 QA 173
+LSA stats {'n_tokens': 729195, 'n_unique': 22753, 'n_df1': 8564, 'n_numeric_removed': 1464, 'n_vocab': 12725, 'shape': (8128, 12725), 'nnz': 350401, 'density': 0.0034, 'frobenius_sq': 8689125.9783, 'energy': 0.4156}
+sv top5 [476.001  307.2192 284.4383 260.4212 250.9347] last 71.0811
+v_skrining[:3] [ 0.2922 -0.4126  0.2357]
+
+qid63 D029 D029:P0008:C000 q ['metode', 'skrining', 'status', 'gizi', 'direkomendasikan'] n_chunks 115 avgdl 111.2261 mean_idf 3.5494 len_ref 120
+idf skrining 2.5374 idf gizi 0.7388 idf '1' 0.8874
+Baseline: ref score 2.4504 rank 20; top [('P0007:C000', 6.0936), ('P0031:C002', 6.0301), ('P0032:C000', 5.4696)]
+LSA exp [('malnutrisi', 0.5798, 1.1445), ('alat', 0.5586, 1.1027), ('anak', 0.5335, 1.0532), ('strongkids', 0.5024, 0.9917), ('pyms', 0.4945, 0.9763), ('berdasarkan', 0.4926, 0.9725), ('kondisi', 0.4869, 0.9612), ('pembanding', 0.4837, 0.9548), ('hasil', 0.4785, 0.9447), ('divalidasi', 0.4551, 0.8985)]
+LSA-QE: ref score 20.8881 rank 1; top [('P0008:C000', 20.8881), ('P0031:C002', 18.4095), ('P0031:C001', 17.0723), ('P0055:C000', 9.8687), ('P0031:C000', 9.5086), ('P0007:C000', 8.9778), ('P0032:C000', 8.8217), ('P0063:C000', 7.4396), ('P0017:C000', 7.2408), ('P0040:C000', 7.1684)]
+RM3 alpha [0.4042 0.3793 0.2165] mass 0.660935 w_skrining 0.1536
+RM3 terms [('2', np.float64(0.114975)), ('skrining', np.float64(0.070886)), ('strongkidz', np.float64(0.06569)), ('gizi', np.float64(0.059478)), ('1', np.float64(0.044907)), ('anak', np.float64(0.032845)), ('sakit', np.float64(0.032845)), ('rumah', np.float64(0.027649)), ('nilai', np.float64(0.025979)), ('tinggi', np.float64(0.023708)), ('form', np.float64(0.022454)), ('gambar', np.float64(0.022454)), ('tools', np.float64(0.022454)), ('badan', np.float64(0.016241)), ('antropometri', np.float64(0.016023)), ('kejadian', np.float64(0.015587)), ('menduga', np.float64(0.015587)), ('alat', np.float64(0.010391)), ('balita', np.float64(0.010391)), ('diare', np.float64(0.010391))]
+RM3: ref score 1.2045 rank 3; top [('P0007:C000', 1.9785), ('P0031:C002', 1.7982), ('P0008:C000', 1.2045), ('P0031:C001', 1.1942), ('P0031:C000', 0.8579)]
+
+Sepuluh unit dev seed 1 TPL
+14 D035 Skrining [6, 4, 2]
+15 D035 Status gizi [5, 4, 3]
+16 D035 Biokimia [73, 30, 26]
+17 D035 PES [11, 11, 13]
+18 D035 Tujuan diet [1, 1, 1]
+19 D035 Prinsip diet [136, 56, 100]
+20 D035 Syarat diet [45, 16, 49]
+21 D036 Skrining [76, 106, 93]
+22 D036 Status gizi [7, 10, 7]
+23 D036 Biokimia [47, 19, 25]
+Baseline {'n': 10, 'mrr': 0.1678, 'r@1': 0.1, 'r@3': 0.1, 'r@5': 0.2, 'r@10': 0.4, 'r@20': 0.5, 'ndcg10': 0.2076, 'median_rank': 28.0, 'fail_rate': 0.6}
+RM3 {'n': 10, 'mrr': 0.1867, 'r@1': 0.1, 'r@3': 0.1, 'r@5': 0.3, 'r@10': 0.4, 'r@20': 0.7, 'ndcg10': 0.215, 'median_rank': 13.5, 'fail_rate': 0.6}
+LSA-QE {'n': 10, 'mrr': 0.2173, 'r@1': 0.1, 'r@3': 0.3, 'r@5': 0.3, 'r@10': 0.4, 'r@20': 0.5, 'ndcg10': 0.2464, 'median_rank': 19.0, 'fail_rate': 0.6}
+RM3 vs Baseline {'n_nonzero': 8, 'w_plus': 29.0, 'w_minus': 7.0, 'statistic': 7.0, 'p': 0.1484375}
+LSA-QE vs Baseline {'n_nonzero': 8, 'w_plus': 29.0, 'w_minus': 7.0, 'statistic': 7.0, 'p': 0.1484375}
+LSA-QE vs RM3 {'n_nonzero': 9, 'w_plus': 27.0, 'w_minus': 18.0, 'statistic': 18.0, 'p': 0.65234375}
+Holm [0.445312 0.445312 0.652344]
+CI 0.0008 0.1179 first draws (1-based) [[np.int64(4), np.int64(3), np.int64(7), np.int64(8), np.int64(5), np.int64(2), np.int64(1), np.int64(6), np.int64(3), np.int64(5)], [np.int64(2), np.int64(10), np.int64(7), np.int64(10), np.int64(4), np.int64(3), np.int64(2), np.int64(8), np.int64(9), np.int64(4)], [np.int64(10), np.int64(5), np.int64(1), np.int64(2), np.int64(9), np.int64(4), np.int64(10), np.int64(4), np.int64(7), np.int64(6)]]
+elapsed 7.9s
