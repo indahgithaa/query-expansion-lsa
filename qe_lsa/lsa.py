@@ -72,7 +72,9 @@ def build_lsa(docs_tokens: list[list[str]], k: int = config.LSA_K) -> LSAModel:
 
 def expand(model: LSAModel, query_tokens: list[str], n_terms: int = config.LSAQE_N_TERMS):
     """Subbab 4.7.1–4.7.2. Mengembalikan daftar (term, cosine) terpilih."""
-    q_terms = sorted({t for t in query_tokens if t in model.term_index})  # q ∩ V (Persamaan 2.9)
+    # Gambar 4.18: setiap token pertanyaan yang ada di kosakata dijumlahkan (token ganda dihitung ganda),
+    # lalu dibagi banyaknya token tersebut. Lihat DECISIONS.md (A1).
+    q_terms = [t for t in query_tokens if t in model.term_index]
     if not q_terms:
         return []
     centroid = model.vectors[[model.term_index[t] for t in q_terms]].mean(axis=0)

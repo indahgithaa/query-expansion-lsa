@@ -25,11 +25,23 @@ def split_documents(corpus: Corpus, seed: int) -> dict[str, list[str]]:
         attempt += 1
 
 
+PARAPHRASE_KEYS = {"skrining": "Skrining", "status_gizi": "Status gizi", "biokimia": "Biokimia", "pes": "PES",
+                   "tujuan_diet": "Tujuan diet", "prinsip_diet": "Prinsip diet", "syarat_diet": "Syarat diet",
+                   "pedoman": "Pedoman"}
+
+
 def load_paraphrases() -> dict:
-    """Format: {"dev": {tipe: [6 kalimat]}, "test": {tipe: [6 kalimat]}}."""
-    if not config.PARAPHRASE_PATH.exists():
-        raise FileNotFoundError(f"Daftar parafrasa belum tersedia: {config.PARAPHRASE_PATH}")
-    return json.loads(config.PARAPHRASE_PATH.read_text(encoding="utf-8"))
+    """Berkas asli: {kunci_tipe: {"dev": [6], "test": [6]}} -> {"dev": {tipe: [6]}, "test": {tipe: [6]}}."""
+    raw = json.loads(config.PARAPHRASE_PATH.read_text(encoding="utf-8"))
+    out = {"dev": {}, "test": {}}
+    for key, qtype in PARAPHRASE_KEYS.items():
+        for part in ("dev", "test"):
+            sentences = raw[key][part]
+            assert len(sentences) == config.N_PARAPHRASES
+            out[part][qtype] = sentences
+        assert not set(raw[key]["dev"]) & set(raw[key]["test"]), "parafrasa dev dan test harus tidak beririsan"
+    assert set(out["dev"]) == set(QTYPES)
+    return out
 
 
 def paraphrase_index(seed: int, qid: int) -> int:

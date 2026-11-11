@@ -21,12 +21,13 @@ class SeedContext:
     nosw: dict[str, list[str]]
 
 
-def prepare_seed(corpus: Corpus, seed: int, k: int = config.LSA_K) -> SeedContext:
+def prepare_seed(corpus: Corpus, seed: int, k: int = config.LSA_K,
+                 index_parts: tuple[str, ...] = ("dev", "test")) -> SeedContext:
     parts = split_documents(corpus, seed)
     lsa_docs = [remove_stopwords(c.tokens) for d in parts["collection"] for c in corpus.chunks[d]]
     lsa = build_lsa(lsa_docs, k=k)
     indexes, nosw = {}, {}
-    for d in parts["dev"] + parts["test"]:
+    for d in [d for p in index_parts for d in parts[p]]:
         cs = corpus.chunks[d]
         indexes[d] = BM25Index([c.cid for c in cs], [c.tokens for c in cs])
         for c in cs:
