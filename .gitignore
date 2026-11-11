@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+kaggle/input/prompts.jsonl
+results/02_dev_grid_units.csv
