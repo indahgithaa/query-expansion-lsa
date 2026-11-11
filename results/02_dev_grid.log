@@ -1,0 +1,79 @@
+seed 1: 174 QA x 2 skenario, 315s
+seed 2: 171 QA x 2 skenario, 718s
+seed 3: 168 QA x 2 skenario, 1118s
+{
+  "n_units": 1026,
+  "criterion": "mean(MRR_TPL, MRR_PARA), dev seed 1-3",
+  "baseline": {
+    "TPL": 0.29941321651476616,
+    "PARA": 0.2275920303965701,
+    "criterion": 0.2635026234556681
+  },
+  "selected": {
+    "LSA-QE": {
+      "config": "k=300,n=10,gamma=2.0",
+      "TPL": 0.3414363045081285,
+      "PARA": 0.31477063197351096,
+      "criterion": 0.3281034682408197
+    },
+    "RM3": {
+      "config": "fbDocs=3,fbTerms=20,lambda=0.5",
+      "TPL": 0.3153330764205381,
+      "PARA": 0.235242367761197,
+      "criterion": 0.27528772209086755
+    }
+  },
+  "bab4_table_4_2": {
+    "LSA-QE": "k=300,n=10,gamma=2.0",
+    "RM3": "fbDocs=3,fbTerms=20,lambda=0.5"
+  },
+  "leave_one_seed_out": {
+    "LSA-QE": [
+      {
+        "held_out_seed": 1,
+        "selected_on_other_two": "k=300,n=10,gamma=2.0",
+        "heldout_criterion_selected": 0.29574459732073854,
+        "heldout_criterion_bab4": 0.29574459732073854,
+        "heldout_best_possible": 0.3056413894364838
+      },
+      {
+        "held_out_seed": 2,
+        "selected_on_other_two": "k=300,n=10,gamma=2.0",
+        "heldout_criterion_selected": 0.3613262784108292,
+        "heldout_criterion_bab4": 0.3613262784108292,
+        "heldout_best_possible": 0.36137319272505253
+      },
+      {
+        "held_out_seed": 3,
+        "selected_on_other_two": "k=500,n=5,gamma=1.0",
+        "heldout_criterion_selected": 0.3074312440240717,
+        "heldout_criterion_bab4": 0.3278019384850014,
+        "heldout_best_possible": 0.3278019384850014
+      }
+    ],
+    "RM3": [
+      {
+        "held_out_seed": 1,
+        "selected_on_other_two": "fbDocs=3,fbTerms=20,lambda=0.65",
+        "heldout_criterion_selected": 0.2503907040166068,
+        "heldout_criterion_bab4": 0.25077591145363204,
+        "heldout_best_possible": 0.2576612472918256
+      },
+      {
+        "held_out_seed": 2,
+        "selected_on_other_two": "fbDocs=5,fbTerms=30,lambda=0.65",
+        "heldout_criterion_selected": 0.3097475799110503,
+        "heldout_criterion_bab4": 0.3133358737301268,
+        "heldout_best_possible": 0.3133358737301268
+      },
+      {
+        "held_out_seed": 3,
+        "selected_on_other_two": "fbDocs=5,fbTerms=30,lambda=0.35",
+        "heldout_criterion_selected": 0.2561954294677815,
+        "heldout_criterion_bab4": 0.26194737161804404,
+        "heldout_best_possible": 0.2659091807471765
+      }
+    ]
+  }
+}
+selesai 1120s
