@@ -22,7 +22,7 @@ Prompt sudah disusun lokal (instruksi, konteks [1]–[5], pertanyaan). Notebook 
     ("code", """MODE = "{MODE}"            # "smoke" = 5 unit x 3 metode, "full" = seluruh prompt unik
 MODEL_ID = "{MODEL_ID}"
 MAX_NEW_TOKENS = {MAX_NEW_TOKENS}
-BATCH = 256
+BATCH = 512
 TIME_BUDGET_S = 11 * 3600    # berhenti memulai batch baru setelah 11 jam (batas sesi 12 jam)"""),
     ("code", """!pip install -q -U vllm 2>&1 | tail -2"""),
     ("code", """import glob, json, os, platform, subprocess, time
@@ -52,7 +52,9 @@ print(f"prompt: {len(prompts)}, sudah selesai: {len(done & {p['pid'] for p in pr
     ("code", """from vllm import LLM, SamplingParams
 llm = LLM(model=MODEL_ID, tensor_parallel_size=torch.cuda.device_count(), dtype="float16",
           max_model_len=4096, gpu_memory_utilization=0.92, seed=0, enable_prefix_caching=True,
-          limit_mm_per_prompt={"image": 0, "video": 0})
+          kv_cache_dtype="float16",            # T4 (SM75) tidak mendukung KV cache FP8 bawaan model
+          max_num_batched_tokens=2048, max_num_seqs=32, enforce_eager=True,   # muat di 2x15 GB
+          disable_custom_all_reduce=True, limit_mm_per_prompt={"image": 0, "video": 0})
 sp = SamplingParams(temperature=0.0, max_tokens=MAX_NEW_TOKENS, seed=0)   # greedy
 CHAT_KW = {"enable_thinking": False}                                       # mode berpikir dimatikan"""),
     ("code", """with open(out_path, "a", encoding="utf-8") as f:
@@ -83,10 +85,10 @@ for r in rows[:5]:
 
 def notebook(mode: str) -> dict:
     cells = []
-    for kind, src in CELLS:
+    for i, (kind, src) in enumerate(CELLS):
         src = src.replace("{MODE}", mode).replace("{MODEL_ID}", MODEL_ID) \
                  .replace("{MAX_NEW_TOKENS}", str(config.GEN_MAX_NEW_TOKENS))
-        cell = {"cell_type": kind, "metadata": {}, "source": src.splitlines(keepends=True)}
+        cell = {"cell_type": kind, "id": f"cell-{i}", "metadata": {}, "source": src.splitlines(keepends=True)}
         if kind == "code":
             cell.update({"execution_count": None, "outputs": []})
         cells.append(cell)

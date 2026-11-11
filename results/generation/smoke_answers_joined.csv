@@ -1,0 +1,107 @@
+seed,scenario,qid,qtype,method,pid,rank,answer,n_tok,reference
+1,TPL,77,Skrining,Baseline,073717abd40b6619,3,"Metode skrining status gizi yang direkomendasikan adalah formulir **STRONGkids**. Rekomendasi ini didasarkan pada pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat, sehingga dibutuhkan formulir skrining yang lebih praktis dan cepat.",50,Strong Kids dan PYMS
+1,TPL,77,Skrining,RM3,9b315c26d4467513,2,"Metode skrining status gizi yang direkomendasikan adalah formulir **Strongkids**. Rekomendasi ini didasarkan pada pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat, sehingga dibutuhkan formulir skrining yang lebih praktis dan cepat.",49,Strong Kids dan PYMS
+1,TPL,77,Skrining,LSA-QE,7fb5134545ea7746,2,"Metode skrining status gizi yang direkomendasikan adalah formulir **STRONGkids**. Rekomendasi ini didasarkan pada pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat, sehingga dibutuhkan formulir skrining yang lebih praktis dan cepat.",50,Strong Kids dan PYMS
+1,TPL,78,Status gizi,Baseline,1f0133074f01b08e,3,Status gizi pasien adalah Gizi Buruk Marasmus.,12,Gizi buruK
+1,TPL,78,Status gizi,RM3,b0fe84d9968bdb3d,2,Status gizi pasien adalah Gizi Buruk Marasmus Fase Rehabilitasi H2.,18,Gizi buruK
+1,TPL,78,Status gizi,LSA-QE,1937b4b28cf8e3c6,3,"Berdasarkan konteks yang diberikan, status gizi pasien adalah **Gizi Buruk Marasmus**. Hal ini ditunjukkan oleh nilai Z-score BB/U sebesar -3,5 SD yang dikategorikan sebagai gizi buruk, serta diagnosis spesifik yang tercantum dalam tujuan pelaksanaan asuhan gizi.",58,Gizi buruK
+1,TPL,79,Biokimia,Baseline,9512273bd8ca387a,24,"Berdasarkan konteks yang diberikan, data biokimia/parameter laboratorium pasien yang dinyatakan abnormal (tidak dalam rentang normal) adalah:
+
+1.  **Procalcitonin**: 0,12 ng/mL (Keterangan: Rendah)
+2.  **Natrium**: 133 mmol/L (Keterangan: Rendah)
+3.  **SGOT**: 52 U/L (Keterangan: Tinggi)
+4.  **Hb (Hemoglobin)**: 13,3 g/dL (Keterangan: Rendah)
+5.  **Trombosit**: 445 10³/μl (Nilai normal 142-424 10³/μl, sehingga nilai ini di atas batas normal)
+
+*Catatan: Parameter lain seperti Kalium, Klorida, Kalsium, Fosfor, GDS, Ureum, Kreatinin, SGPT, Albumin, RBC, Leukosit, dan Hematokrit dinyatakan Normal.*",223,"-Procalcitonin rendah 
+-Natrium rendah menunjukkan ketidakseimbangan cairan 
+8 
+-SGOT tinggi menunjukkan peningkatan kerusakan jaringan 
+-Hb dan Hematokrit rendah berkaitan dengan malnutrisi 
+-Trombosit tinggi 
+-Neutrofil tinggi, Limfosit rendah, Monosit tinggi 
+menunjukkan adanya infeksi"
+1,TPL,79,Biokimia,RM3,b1c47337da1686b0,18,"Berdasarkan konteks yang diberikan, data biokimia/parameter laboratorium pasien yang dinyatakan abnormal (tidak dalam rentang nilai normal) adalah:
+
+1.  **Procalcitonin**: 0,12 ng/mL (Keterangan: Rendah)
+2.  **Natrium**: 133 mmol/L (Keterangan: Rendah)
+3.  **SGOT**: 52 U/L (Keterangan: Tinggi)
+4.  **Hb (Hemoglobin)**: 13,3 g/dL (Keterangan: Rendah)
+5.  **Trombosit**: 445 10³/μl (Nilai di atas batas atas nilai normal 142-424 10³/μl)
+6.  **Neutrofil**: 82,10% (Nilai di atas batas atas nilai normal 51–67%)
+7.  **Limfosit**: 10,80% (Nilai di bawah batas bawah nilai normal 25–33%)
+8.  **Monosit**: 6,70% (Nilai di atas batas atas nilai normal 2–5%)
+9.  **RDW**: 14,90% (Nilai di atas batas atas nilai normal 11,5-14,5%)
+
+*Catatan: Parameter lain seperti Kalium, Klorida, Kalsium, Fosfor, GDS, Ureum, Kreatinin, SGPT, Albumin, RBC, MCV, MCH, MCHC, MPV, Eosinofil, dan Basofil dinyatakan Normal atau berada dalam rentang nilai normal.*",369,"-Procalcitonin rendah 
+-Natrium rendah menunjukkan ketidakseimbangan cairan 
+8 
+-SGOT tinggi menunjukkan peningkatan kerusakan jaringan 
+-Hb dan Hematokrit rendah berkaitan dengan malnutrisi 
+-Trombosit tinggi 
+-Neutrofil tinggi, Limfosit rendah, Monosit tinggi 
+menunjukkan adanya infeksi"
+1,TPL,79,Biokimia,LSA-QE,eb87a87d1f342672,7,"Berdasarkan konteks yang diberikan, data biokimia/parameter laboratorium pasien yang dinyatakan abnormal (tidak normal) adalah:
+
+1.  **Procalcitonin**: 0,12 ng/mL (Keterangan: Rendah)
+2.  **Natrium**: 133 mmol/L (Keterangan: Rendah)
+3.  **SGOT**: 52 U/L (Keterangan: Tinggi)
+4.  **Hb (Hemoglobin)**: 13,3 g/dL (Keterangan: Rendah)
+5.  **Neutrofil**: 82,10% (Nilai normal 51–67%, sehingga tergolong tinggi)
+6.  **Limfosit**: 10,80% (Nilai normal 25–33%, sehingga tergolong rendah)
+7.  **Monosit**: 6,70% (Nilai normal 2–5%, sehingga tergolong tinggi)
+8.  **RDW**: 14,90% (Nilai normal 11,5-14,5%, sehingga tergolong tinggi)
+
+*Catatan: Parameter lain seperti Kalium, Klorida, Kalsium, Fosfor, GDS, Ureum, Kreatinin, SGPT, Albumin, RBC, MCV, MCH, MCHC, MPV, Eosinofil, dan Basofil dinyatakan normal.*",308,"-Procalcitonin rendah 
+-Natrium rendah menunjukkan ketidakseimbangan cairan 
+8 
+-SGOT tinggi menunjukkan peningkatan kerusakan jaringan 
+-Hb dan Hematokrit rendah berkaitan dengan malnutrisi 
+-Trombosit tinggi 
+-Neutrofil tinggi, Limfosit rendah, Monosit tinggi 
+menunjukkan adanya infeksi"
+1,TPL,80,PES,Baseline,ec3633bd9b7d8358,10,Informasi tersebut tidak tersedia dalam konteks.,9,"NI 5.2 Malnutrisi berkaitan dengan asupan yang defisit dalam waktu lama dan
+pengobatan kemoterapi ditandai dengan status gizi buruk, Hb dan Hematokrit
+rendah, skor McLaren 2 (marasmus)
+NI 2.1 Asupan makanan dan minuman per oral inadekuat berkaitan dengan
+penurunan nafsu makan dalam 1 tahun terakhir ditandai dengan hasil SQFFQ
+menunjukkan tingkat kecukupan energi dan karbohidrat berada pada kategori
+kurang
+NB 1.1 Kurangnya pengetahuan terkait gizi dan makanan berkaitan dengan
+kurangnya paparan informasi terkait gizi ditandai dengan pemberian F100 dalam
+kurun waktu 1 tahun
+"
+1,TPL,80,PES,RM3,63fffca59d16783f,10,Informasi tersebut tidak tersedia dalam konteks.,9,"NI 5.2 Malnutrisi berkaitan dengan asupan yang defisit dalam waktu lama dan
+pengobatan kemoterapi ditandai dengan status gizi buruk, Hb dan Hematokrit
+rendah, skor McLaren 2 (marasmus)
+NI 2.1 Asupan makanan dan minuman per oral inadekuat berkaitan dengan
+penurunan nafsu makan dalam 1 tahun terakhir ditandai dengan hasil SQFFQ
+menunjukkan tingkat kecukupan energi dan karbohidrat berada pada kategori
+kurang
+NB 1.1 Kurangnya pengetahuan terkait gizi dan makanan berkaitan dengan
+kurangnya paparan informasi terkait gizi ditandai dengan pemberian F100 dalam
+kurun waktu 1 tahun
+"
+1,TPL,80,PES,LSA-QE,ec3633bd9b7d8358,10,Informasi tersebut tidak tersedia dalam konteks.,9,"NI 5.2 Malnutrisi berkaitan dengan asupan yang defisit dalam waktu lama dan
+pengobatan kemoterapi ditandai dengan status gizi buruk, Hb dan Hematokrit
+rendah, skor McLaren 2 (marasmus)
+NI 2.1 Asupan makanan dan minuman per oral inadekuat berkaitan dengan
+penurunan nafsu makan dalam 1 tahun terakhir ditandai dengan hasil SQFFQ
+menunjukkan tingkat kecukupan energi dan karbohidrat berada pada kategori
+kurang
+NB 1.1 Kurangnya pengetahuan terkait gizi dan makanan berkaitan dengan
+kurangnya paparan informasi terkait gizi ditandai dengan pemberian F100 dalam
+kurun waktu 1 tahun
+"
+1,TPL,81,Tujuan diet,Baseline,fdfeea37c0e30be4,1,"Berdasarkan konteks yang diberikan, tujuan diet pada pasien ini adalah:
+1. Memberikan makanan yang adekuat untuk tumbuh kejar.
+2. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah.",45,"a. Memberikan makanan yang adekuat untuk tumbuh kejar 
+b. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah"
+1,TPL,81,Tujuan diet,RM3,2cbab98f04b66d18,1,"Berdasarkan konteks yang diberikan, tujuan diet pada pasien ini adalah:
+1. Memberikan makanan yang adekuat untuk tumbuh kejar.
+2. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah.",45,"a. Memberikan makanan yang adekuat untuk tumbuh kejar 
+b. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah"
+1,TPL,81,Tujuan diet,LSA-QE,c56031fb84548cfa,3,"Tujuan diet pada pasien ini adalah:
+1. Memberikan makanan yang adekuat untuk tumbuh kejar.
+2. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah.",39,"a. Memberikan makanan yang adekuat untuk tumbuh kejar 
+b. Mempersiapkan ibu atau pengasuh untuk perawatan di rumah"

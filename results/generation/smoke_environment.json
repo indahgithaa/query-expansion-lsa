@@ -1,0 +1,12 @@
+{
+  "vllm": "0.33.0",
+  "torch": "2.14.0+cu130",
+  "python": "3.13.16",
+  "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "model_id": "RedHatAI/Qwen3.8-27B-INT4",
+  "model_revision": "e45c27e8f463817db788d141a73a3c235a0a7c0c",
+  "mode": "smoke"
+}
