@@ -1,0 +1,15 @@
+{
+  "id": "indahgithaa/qe-lsa-qwen-generation",
+  "title": "qe-lsa-qwen-generation",
+  "code_file": "generate_qwen.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "indahgithaa/qe-lsa-prompts"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}
