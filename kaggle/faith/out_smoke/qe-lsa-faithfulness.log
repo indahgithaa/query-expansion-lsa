@@ -1,0 +1,133 @@
+[{"stream_name":"stderr","time":8.982215956,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.982270601,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.982275461,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.982278497,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.608949154,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.608985516,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.608989995,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.609006539,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":430.815731061,"data":"google-adk 2.7.1 requires opentelemetry-api\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-api 1.45.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":430.815787231,"data":"google-adk 2.7.1 requires opentelemetry-sdk\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-sdk 1.45.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":447.302315988,"data":"{\n"}
+,{"stream_name":"stdout","time":447.302346633,"data":"  \"vllm\": \"0.33.0\",\n"}
+,{"stream_name":"stdout","time":447.302352875,"data":"  \"torch\": \"2.14.0\",\n"}
+,{"stream_name":"stdout","time":447.302357922,"data":"  \"ragas\": \"0.4.3\",\n"}
+,{"stream_name":"stdout","time":447.302362533,"data":"  \"langchain-community\": \"0.4.1\",\n"}
+,{"stream_name":"stdout","time":447.30236706,"data":"  \"instructor\": \"1.17.0\",\n"}
+,{"stream_name":"stdout","time":447.302371356,"data":"  \"openai\": \"2.54.0\",\n"}
+,{"stream_name":"stdout","time":447.302375502,"data":"  \"pydantic\": \"2.14.1\",\n"}
+,{"stream_name":"stdout","time":447.302379685,"data":"  \"python\": \"3.13.16\",\n"}
+,{"stream_name":"stdout","time":447.302383923,"data":"  \"gpus\": [\n"}
+,{"stream_name":"stdout","time":447.302387938,"data":"    \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":447.302392257,"data":"    \"Tesla T4\"\n"}
+,{"stream_name":"stdout","time":447.302396245,"data":"  ],\n"}
+,{"stream_name":"stdout","time":447.302400218,"data":"  \"model_id\": \"RedHatAI/Qwen3.8-27B-INT4\",\n"}
+,{"stream_name":"stdout","time":447.302404526,"data":"  \"model_revision\": \"e45c27e8f463817db788d141a73a3c235a0a7c0c\",\n"}
+,{"stream_name":"stdout","time":447.302408882,"data":"  \"mode\": \"smoke\"\n"}
+,{"stream_name":"stdout","time":447.302413063,"data":"}\n"}
+,{"stream_name":"stdout","time":1137.4170921,"data":"server siap setelah 11.5 menit\n"}
+,{"stream_name":"stdout","time":1139.212509319,"data":"jawaban: 14, sudah: 0, sisa: 14\n"}
+,{"stream_name":"stdout","time":1831.874196066,"data":"14/14  686s  galat 0  total 23 menit\n"}
+,{"stream_name":"stdout","time":1831.894699918,"data":"baris: 14, bernilai: 14, tanpa pernyataan: 0, galat: 0, rata-rata: 0.9970\n"}
+,{"stream_name":"stdout","time":1831.894778762,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":1831.894802299,"data":"{\n"}
+,{"stream_name":"stdout","time":1831.894806515,"data":" \"pid\": \"073717abd40b6619\",\n"}
+,{"stream_name":"stdout","time":1831.894811567,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":1831.894817147,"data":" \"n_statements\": 3,\n"}
+,{"stream_name":"stdout","time":1831.894839638,"data":" \"n_supported\": 3,\n"}
+,{"stream_name":"stdout","time":1831.89484424,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":1831.894898666,"data":"  \"Metode skrining status gizi yang direkomendasikan adalah formulir STRONGkids.\",\n"}
+,{"stream_name":"stdout","time":1831.894905552,"data":"  \"Rekomendasi metode skrining status gizi STRONGkids didasarkan pada pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat.\",\n"}
+,{"stream_name":"stdout","time":1831.894910333,"data":"  \"Skrining awal di rumah sakit membutuhkan formulir skrining yang lebih praktis dan cepat karena dilakukan oleh tenaga perawat.\"\n"}
+,{"stream_name":"stdout","time":1831.89491527,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.894919303,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":1831.894923466,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.894927558,"data":"   \"statement\": \"Metode skrining status gizi yang direkomendasikan adalah formulir STRONGkids.\",\n"}
+,{"stream_name":"stdout","time":1831.894932183,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.894936611,"data":"   \"reason\": \"The context explicitly states in the 'Kesimpulan' section and the introductory paragraph that STRONGkids is recommended ('direkomendasikan menggunakan formulir Strongkids') over PYMS.\"\n"}
+,{"stream_name":"stdout","time":1831.894943081,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.894947319,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.894951578,"data":"   \"statement\": \"Rekomendasi metode skrining status gizi STRONGkids didasarkan pada pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat.\",\n"}
+,{"stream_name":"stdout","time":1831.895175119,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895180718,"data":"   \"reason\": \"The context states that the recommendation is based on the consideration that initial screening is done by nurses ('pertimbangan bahwa skrining awal di rumah sakit dilakukan oleh tenaga perawat'), which necessitates a more practical form.\"\n"}
+,{"stream_name":"stdout","time":1831.895186358,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.895190305,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895194331,"data":"   \"statement\": \"Skrining awal di rumah sakit membutuhkan formulir skrining yang lebih praktis dan cepat karena dilakukan oleh tenaga perawat.\",\n"}
+,{"stream_name":"stdout","time":1831.89519908,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.89520374,"data":"   \"reason\": \"The context explicitly links the need for a practical and fast form ('dibutuhkan formular skrining yang lenih praktis dan cepat') to the fact that the screening is performed by nursing staff ('dilakukan oleh tenaga perawat').\"\n"}
+,{"stream_name":"stdout","time":1831.89520872,"data":"  }\n"}
+,{"stream_name":"stdout","time":1831.895212962,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.895217239,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":1831.895221372,"data":" \"seconds\": 172.96\n"}
+,{"stream_name":"stdout","time":1831.895245828,"data":"}\n"}
+,{"stream_name":"stdout","time":1831.895250448,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":1831.895255064,"data":"{\n"}
+,{"stream_name":"stdout","time":1831.895259287,"data":" \"pid\": \"1937b4b28cf8e3c6\",\n"}
+,{"stream_name":"stdout","time":1831.895263593,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":1831.895267625,"data":" \"n_statements\": 4,\n"}
+,{"stream_name":"stdout","time":1831.895271843,"data":" \"n_supported\": 4,\n"}
+,{"stream_name":"stdout","time":1831.89528831,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":1831.895292563,"data":"  \"The nutritional status of the patient is Severe Malnutrition Marasmus.\",\n"}
+,{"stream_name":"stdout","time":1831.895297205,"data":"  \"The patient's weight-for-height Z-score is -3.5 standard deviations.\",\n"}
+,{"stream_name":"stdout","time":1831.895327503,"data":"  \"A weight-for-height Z-score of -3.5 standard deviations is categorized as severe malnutrition.\",\n"}
+,{"stream_name":"stdout","time":1831.895332702,"data":"  \"The specific diagnosis of Severe Malnutrition Marasmus is listed in the objectives of the nutritional care plan.\"\n"}
+,{"stream_name":"stdout","time":1831.89533745,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.895341412,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":1831.895345937,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895349908,"data":"   \"statement\": \"The nutritional status of the patient is Severe Malnutrition Marasmus.\",\n"}
+,{"stream_name":"stdout","time":1831.89535451,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895358878,"data":"   \"reason\": \"The context explicitly states in the 'Tujuan Pelaksanaan' section that the patient is 'pasien Gizi Buruk Marasmus' (Severe Malnutrition Marasmus patient). Additionally, the Z-score calculation confirms 'Gizi buruk' (Severe Malnutrition).\"\n"}
+,{"stream_name":"stdout","time":1831.895364012,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.895368084,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895372116,"data":"   \"statement\": \"The patient's weight-for-height Z-score is -3.5 standard deviations.\",\n"}
+,{"stream_name":"stdout","time":1831.89537659,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895380612,"data":"   \"reason\": \"The context provides the calculation for BB/U (Weight-for-Height Z-score) and explicitly states the result as 'BB/U = -3,5 SD'.\"\n"}
+,{"stream_name":"stdout","time":1831.895385491,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.895389742,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895412055,"data":"   \"statement\": \"A weight-for-height Z-score of -3.5 standard deviations is categorized as severe malnutrition.\",\n"}
+,{"stream_name":"stdout","time":1831.895416493,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895421611,"data":"   \"reason\": \"The context shows the calculation 'BB/U = -3,5 SD' followed immediately by the label '(Gizi buruk)', which translates to Severe Malnutrition. This directly links the specific Z-score value to the category of severe malnutrition in this context.\"\n"}
+,{"stream_name":"stdout","time":1831.895426692,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.895430794,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895434898,"data":"   \"statement\": \"The specific diagnosis of Severe Malnutrition Marasmus is listed in the objectives of the nutritional care plan.\",\n"}
+,{"stream_name":"stdout","time":1831.895439515,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895443677,"data":"   \"reason\": \"The section titled '1.1 Tujuan Pelaksanaan' (Objectives of Implementation) explicitly mentions performing care on 'pasien Gizi Buruk Marasmus' (Severe Malnutrition Marasmus patient).\"\n"}
+,{"stream_name":"stdout","time":1831.895448725,"data":"  }\n"}
+,{"stream_name":"stdout","time":1831.895452751,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.895456697,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":1831.895460741,"data":" \"seconds\": 210.99\n"}
+,{"stream_name":"stdout","time":1831.895464822,"data":"}\n"}
+,{"stream_name":"stdout","time":1831.895491154,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":1831.895496051,"data":"{\n"}
+,{"stream_name":"stdout","time":1831.895500267,"data":" \"pid\": \"1f0133074f01b08e\",\n"}
+,{"stream_name":"stdout","time":1831.895504802,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":1831.895508969,"data":" \"n_statements\": 2,\n"}
+,{"stream_name":"stdout","time":1831.895512966,"data":" \"n_supported\": 2,\n"}
+,{"stream_name":"stdout","time":1831.895516979,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":1831.895521902,"data":"  \"The nutritional status of the patient is Severe Malnutrition Marasmus.\",\n"}
+,{"stream_name":"stdout","time":1831.895526366,"data":"  \"The patient is in the rehabilitation phase of Severe Malnutrition Marasmus.\"\n"}
+,{"stream_name":"stdout","time":1831.895530494,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.895534449,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":1831.895538724,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895542691,"data":"   \"statement\": \"The nutritional status of the patient is Severe Malnutrition Marasmus.\",\n"}
+,{"stream_name":"stdout","time":1831.895547331,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895551638,"data":"   \"reason\": \"The context explicitly lists the medical diagnosis as \\\"Gizi buruk marasmus\\\" (Severe Malnutrition Marasmus) in both the problem analysis section and the patient identity section.\"\n"}
+,{"stream_name":"stdout","time":1831.895836404,"data":"  },\n"}
+,{"stream_name":"stdout","time":1831.895841849,"data":"  {\n"}
+,{"stream_name":"stdout","time":1831.895845707,"data":"   \"statement\": \"The patient is in the rehabilitation phase of Severe Malnutrition Marasmus.\",\n"}
+,{"stream_name":"stdout","time":1831.89584944,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":1831.895853166,"data":"   \"reason\": \"The context states the diagnosis as \\\"Gizi Buruk Marasmus F. Rehabilitasi H2\\\", where \\\"F. Rehabilitasi\\\" indicates the Rehabilitation Phase (Fase Rehabilitasi).\"\n"}
+,{"stream_name":"stdout","time":1831.895857774,"data":"  }\n"}
+,{"stream_name":"stdout","time":1831.895861272,"data":" ],\n"}
+,{"stream_name":"stdout","time":1831.895864446,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":1831.895867791,"data":" \"seconds\": 125.55\n"}
+,{"stream_name":"stdout","time":1831.895870996,"data":"}\n"}
+,{"stream_name":"stderr","time":1837.262011878,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1837.262048031,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1837.511908666,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1837.511934531,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1838.49267214,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1838.572178873,"data":"[NbConvertApp] Writing 20384 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1841.619607236,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1842.567095904,"data":"[NbConvertApp] Writing 319061 bytes to __results__.html\n"}
+]

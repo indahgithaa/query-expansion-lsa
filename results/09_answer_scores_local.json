@@ -1,0 +1,12 @@
+{
+  "n_pids": 7343,
+  "bertscore_hash": "bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=5.17.0)",
+  "bertscore_seconds": 891.8,
+  "n_texts_truncated_512": 421,
+  "versions": {
+    "bert-score": "0.3.13",
+    "sacrebleu": "2.6.0",
+    "torch": "2.14.0",
+    "transformers": "5.17.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "indahgithaa/qe-lsa-faithfulness",
+  "title": "qe-lsa-faithfulness",
+  "code_file": "faithfulness_ragas.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "indahgithaa/qe-lsa-faithfulness-inputs"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

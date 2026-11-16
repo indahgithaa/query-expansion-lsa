@@ -3,3 +3,4 @@ __pycache__/
 .ipynb_checkpoints/
 kaggle/input/prompts.jsonl
 results/02_dev_grid_units.csv
+kaggle/faith/input/faith_inputs.jsonl

@@ -1,0 +1,108 @@
+[{"stream_name":"stderr","time":7.373345566,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.373381981,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.37338687,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.373390286,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.954099331,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.954147392,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.954152811,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.954156791,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":247.090583987,"data":"google-adk 2.7.1 requires opentelemetry-api\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-api 1.45.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":247.090634655,"data":"google-adk 2.7.1 requires opentelemetry-sdk\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-sdk 1.45.2 which is incompatible.\r\n"}
+,{"stream_name":"stdout","time":262.378654762,"data":"{\n"}
+,{"stream_name":"stdout","time":262.378683636,"data":"  \"vllm\": \"0.33.0\",\n"}
+,{"stream_name":"stdout","time":262.378688906,"data":"  \"torch\": \"2.14.0\",\n"}
+,{"stream_name":"stdout","time":262.378693208,"data":"  \"ragas\": \"0.4.3\",\n"}
+,{"stream_name":"stdout","time":262.3786976,"data":"  \"langchain-community\": \"0.4.1\",\n"}
+,{"stream_name":"stdout","time":262.378701845,"data":"  \"instructor\": \"1.17.0\",\n"}
+,{"stream_name":"stdout","time":262.37870604,"data":"  \"openai\": \"2.54.0\",\n"}
+,{"stream_name":"stdout","time":262.378710889,"data":"  \"pydantic\": \"2.14.1\",\n"}
+,{"stream_name":"stdout","time":262.378716386,"data":"  \"python\": \"3.13.16\",\n"}
+,{"stream_name":"stdout","time":262.37872123,"data":"  \"gpus\": [\n"}
+,{"stream_name":"stdout","time":262.378725438,"data":"    \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":262.378730095,"data":"    \"Tesla T4\"\n"}
+,{"stream_name":"stdout","time":262.378735582,"data":"  ],\n"}
+,{"stream_name":"stdout","time":262.378740246,"data":"  \"model_id\": \"RedHatAI/Qwen3.8-27B-INT4\",\n"}
+,{"stream_name":"stdout","time":262.378744612,"data":"  \"model_revision\": \"e45c27e8f463817db788d141a73a3c235a0a7c0c\",\n"}
+,{"stream_name":"stdout","time":262.378748955,"data":"  \"mode\": \"full\"\n"}
+,{"stream_name":"stdout","time":262.37875307,"data":"}\n"}
+,{"stream_name":"stdout","time":922.482001688,"data":"server siap setelah 11.0 menit\n"}
+,{"stream_name":"stdout","time":923.411796583,"data":"jawaban: 7343, sudah: 0, sisa: 7343\n"}
+,{"stream_name":"stdout","time":5805.725438636,"data":"256/7343  galat 6  total 92 menit\n"}
+,{"stream_name":"stdout","time":10604.581064248,"data":"512/7343  galat 13  total 172 menit\n"}
+,{"stream_name":"stdout","time":15403.217805473,"data":"768/7343  galat 21  total 252 menit\n"}
+,{"stream_name":"stdout","time":20417.075086604,"data":"1024/7343  galat 31  total 336 menit\n"}
+,{"stream_name":"stdout","time":25051.31235173,"data":"1280/7343  galat 39  total 413 menit\n"}
+,{"stream_name":"stdout","time":29421.895200386,"data":"1536/7343  galat 45  total 486 menit\n"}
+,{"stream_name":"stdout","time":33959.748939727,"data":"1792/7343  galat 52  total 562 menit\n"}
+,{"stream_name":"stdout","time":38336.365713823,"data":"2048/7343  galat 60  total 635 menit\n"}
+,{"stream_name":"stdout","time":40609.969797574,"data":"selesai sesi ini: 2160/7343, galat 62; sisa 5183\n"}
+,{"stream_name":"stdout","time":40610.101682562,"data":"baris: 2160, bernilai: 2098, tanpa pernyataan: 0, galat: 62, rata-rata: 0.9579\n"}
+,{"stream_name":"stdout","time":40610.101709477,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":40610.101715647,"data":"{\n"}
+,{"stream_name":"stdout","time":40610.101721741,"data":" \"pid\": \"ececa692fa2f9944\",\n"}
+,{"stream_name":"stdout","time":40610.101726647,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":40610.101732488,"data":" \"n_statements\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101737531,"data":" \"n_supported\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101743291,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":40610.101748417,"data":"  \"The appropriate diet principle for the patient is High Energy High Protein diet.\"\n"}
+,{"stream_name":"stdout","time":40610.101754124,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.101759056,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":40610.101763551,"data":"  {\n"}
+,{"stream_name":"stdout","time":40610.101768327,"data":"   \"statement\": \"The appropriate diet principle for the patient is High Energy High Protein diet.\",\n"}
+,{"stream_name":"stdout","time":40610.101790415,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101795636,"data":"   \"reason\": \"The context explicitly states under section '2.4.1 Terapi Diet' and 'B. PRINSIP' that the principle is 'Pemberian diet Tinggi Energi Tinggi Protein', which translates to High Energy High Protein diet.\"\n"}
+,{"stream_name":"stdout","time":40610.101802917,"data":"  }\n"}
+,{"stream_name":"stdout","time":40610.101809129,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.101815466,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":40610.101821883,"data":" \"seconds\": 169.58\n"}
+,{"stream_name":"stdout","time":40610.101827089,"data":"}\n"}
+,{"stream_name":"stdout","time":40610.101831911,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":40610.101836582,"data":"{\n"}
+,{"stream_name":"stdout","time":40610.101841388,"data":" \"pid\": \"797b573d937cfb70\",\n"}
+,{"stream_name":"stdout","time":40610.101846276,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":40610.101852074,"data":" \"n_statements\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101858462,"data":" \"n_supported\": 1,\n"}
+,{"stream_name":"stdout","time":40610.10186371,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":40610.101868437,"data":"  \"The screening methods used to assess the risk of malnutrition are Strong Kids and PYMS.\"\n"}
+,{"stream_name":"stdout","time":40610.101873252,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.101878043,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":40610.101882775,"data":"  {\n"}
+,{"stream_name":"stdout","time":40610.101887554,"data":"   \"statement\": \"The screening methods used to assess the risk of malnutrition are Strong Kids and PYMS.\",\n"}
+,{"stream_name":"stdout","time":40610.101893445,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101899952,"data":"   \"reason\": \"The context explicitly states in multiple sections (e.g., '4.1. Skrining Gizi') that the screening was performed using two screening tools, namely Strong Kids and PYMS ('menggunakan 2 skrinin tools, yaitu Strong Kids dan PYMS').\"\n"}
+,{"stream_name":"stdout","time":40610.101916435,"data":"  }\n"}
+,{"stream_name":"stdout","time":40610.101921011,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.10192581,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":40610.101930624,"data":" \"seconds\": 190.45\n"}
+,{"stream_name":"stdout","time":40610.101935388,"data":"}\n"}
+,{"stream_name":"stdout","time":40610.101940387,"data":"--------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":40610.10194515,"data":"{\n"}
+,{"stream_name":"stdout","time":40610.10195,"data":" \"pid\": \"79670bdb7e83f9f5\",\n"}
+,{"stream_name":"stdout","time":40610.10195485,"data":" \"faithfulness\": 1.0,\n"}
+,{"stream_name":"stdout","time":40610.101959587,"data":" \"n_statements\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101964512,"data":" \"n_supported\": 1,\n"}
+,{"stream_name":"stdout","time":40610.101969341,"data":" \"statements\": [\n"}
+,{"stream_name":"stdout","time":40610.101974178,"data":"  \"Neonates Nutrition Risk Screening Tools (NNRST) is recommended for performing nutritional screening of neonatal patients.\"\n"}
+,{"stream_name":"stdout","time":40610.101978976,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.101983927,"data":" \"verdicts\": [\n"}
+,{"stream_name":"stdout","time":40610.101988732,"data":"  {\n"}
+,{"stream_name":"stdout","time":40610.101993587,"data":"   \"statement\": \"Neonates Nutrition Risk Screening Tools (NNRST) is recommended for performing nutritional screening of neonatal patients.\",\n"}
+,{"stream_name":"stdout","time":40610.101998375,"data":"   \"verdict\": 1,\n"}
+,{"stream_name":"stdout","time":40610.102004453,"data":"   \"reason\": \"The context explicitly states: \\\"Oleh karena itu, berdasarkan hasil dua skrining tools tersebut penggunaan NNRST lebih direkomendasikan untuk melakukan skrining gizi pasien neonatus\\\" (Therefore, based on the results of those two screening tools, the use of NNRST is more recommended for performing nutritional screening of neonatal patients).\"\n"}
+,{"stream_name":"stdout","time":40610.102009409,"data":"  }\n"}
+,{"stream_name":"stdout","time":40610.102014472,"data":" ],\n"}
+,{"stream_name":"stdout","time":40610.102019299,"data":" \"error\": null,\n"}
+,{"stream_name":"stdout","time":40610.102024103,"data":" \"seconds\": 202.25\n"}
+,{"stream_name":"stdout","time":40610.102028923,"data":"}\n"}
+,{"stream_name":"stdout","time":40610.102033774,"data":"GALAT 3fd3909f78217306 IncompleteOutputException: The output is incomplete due to a max_tokens length limit.\n"}
+,{"stream_name":"stdout","time":40610.102038573,"data":"GALAT ed8ad42e5df6bcf3 IncompleteOutputException: The output is incomplete due to a max_tokens length limit.\n"}
+,{"stream_name":"stdout","time":40610.10204341,"data":"GALAT 7a06a1c0f60da335 IncompleteOutputException: The output is incomplete due to a max_tokens length limit.\n"}
+,{"stream_name":"stderr","time":40615.228799761,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":40615.22882621,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":40615.46398012,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":40615.464004719,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":40616.394943219,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":40616.470602022,"data":"[NbConvertApp] Writing 18312 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":40619.230702545,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":40620.05626894,"data":"[NbConvertApp] Writing 316854 bytes to __results__.html\n"}
+]
