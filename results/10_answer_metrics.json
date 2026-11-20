@@ -2,8 +2,8 @@
   "overall": {
     "Baseline": {
       "n_units": 3444,
-      "faithfulness": null,
-      "faithfulness_n": 0,
+      "faithfulness": 0.961230409807329,
+      "faithfulness_n": 3444,
       "bertscore_f1": 0.6984073894052971,
       "bertscore_f1_n": 3444,
       "bleu": 0.1416871445577116,
@@ -14,8 +14,8 @@
     },
     "RM3": {
       "n_units": 3444,
-      "faithfulness": null,
-      "faithfulness_n": 0,
+      "faithfulness": 0.9542454442672479,
+      "faithfulness_n": 3440,
       "bertscore_f1": 0.6965825498173323,
       "bertscore_f1_n": 3444,
       "bleu": 0.13911264056708897,
@@ -26,8 +26,8 @@
     },
     "LSA-QE": {
       "n_units": 3444,
-      "faithfulness": null,
-      "faithfulness_n": 0,
+      "faithfulness": 0.9638065647942793,
+      "faithfulness_n": 3443,
       "bertscore_f1": 0.7003256600354468,
       "bertscore_f1_n": 3444,
       "bleu": 0.14589691019609125,
@@ -41,8 +41,8 @@
     "TPL": {
       "Baseline": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9641120497301979,
+        "faithfulness_n": 1722,
         "bertscore_f1": 0.7073824879530554,
         "bertscore_f1_n": 1722,
         "bleu": 0.16266489393679828,
@@ -53,8 +53,8 @@
       },
       "RM3": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9543215172025484,
+        "faithfulness_n": 1722,
         "bertscore_f1": 0.7048032789834008,
         "bertscore_f1_n": 1722,
         "bleu": 0.15846761537536522,
@@ -65,8 +65,8 @@
       },
       "LSA-QE": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.966723981091919,
+        "faithfulness_n": 1722,
         "bertscore_f1": 0.7091411579222906,
         "bertscore_f1_n": 1722,
         "bleu": 0.16614317926551378,
@@ -79,8 +79,8 @@
     "PARA": {
       "Baseline": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9583487698844599,
+        "faithfulness_n": 1722,
         "bertscore_f1": 0.6894322908575388,
         "bertscore_f1_n": 1722,
         "bleu": 0.12070939517862496,
@@ -91,8 +91,8 @@
       },
       "RM3": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9541691942121909,
+        "faithfulness_n": 1718,
         "bertscore_f1": 0.6883618206512637,
         "bertscore_f1_n": 1722,
         "bleu": 0.11975766575881272,
@@ -103,8 +103,8 @@
       },
       "LSA-QE": {
         "n_units": 1722,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.960887453309947,
+        "faithfulness_n": 1721,
         "bertscore_f1": 0.6915101621486031,
         "bertscore_f1_n": 1722,
         "bleu": 0.12565064112666866,
@@ -119,8 +119,8 @@
     "Skrining": {
       "Baseline": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9556779100529099,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6519922283788522,
         "bertscore_f1_n": 480,
         "bleu": 0.035516417760349035,
@@ -131,8 +131,8 @@
       },
       "RM3": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9409871031746031,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6511851880699396,
         "bertscore_f1_n": 480,
         "bleu": 0.03529290702982764,
@@ -143,8 +143,8 @@
       },
       "LSA-QE": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9526111849180743,
+        "faithfulness_n": 479,
         "bertscore_f1": 0.6503991808742284,
         "bertscore_f1_n": 480,
         "bleu": 0.03200172124913478,
@@ -157,8 +157,8 @@
     "Status gizi": {
       "Baseline": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9794004028379029,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6965666577219963,
         "bertscore_f1_n": 480,
         "bleu": 0.10208406330555686,
@@ -169,8 +169,8 @@
       },
       "RM3": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9753731667977991,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6949723490824302,
         "bertscore_f1_n": 480,
         "bleu": 0.0978197466909315,
@@ -181,8 +181,8 @@
       },
       "LSA-QE": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9781459108021607,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6993078347295523,
         "bertscore_f1_n": 480,
         "bleu": 0.10594159912489566,
@@ -195,8 +195,8 @@
     "Biokimia": {
       "Baseline": {
         "n_units": 474,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9614848793778653,
+        "faithfulness_n": 474,
         "bertscore_f1": 0.6353764398188531,
         "bertscore_f1_n": 474,
         "bleu": 0.03125712117345195,
@@ -207,8 +207,8 @@
       },
       "RM3": {
         "n_units": 474,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9809043853946097,
+        "faithfulness_n": 471,
         "bertscore_f1": 0.6339375156642012,
         "bertscore_f1_n": 474,
         "bleu": 0.03368033810306817,
@@ -219,8 +219,8 @@
       },
       "LSA-QE": {
         "n_units": 474,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9798743203844399,
+        "faithfulness_n": 474,
         "bertscore_f1": 0.6349353052141294,
         "bertscore_f1_n": 474,
         "bleu": 0.03152863999490545,
@@ -233,8 +233,8 @@
     "PES": {
       "Baseline": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9474288003003715,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6795857388526201,
         "bertscore_f1_n": 480,
         "bleu": 0.16768093381476828,
@@ -245,8 +245,8 @@
       },
       "RM3": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9332157889657922,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6738701593130827,
         "bertscore_f1_n": 480,
         "bleu": 0.15430946709117677,
@@ -257,8 +257,8 @@
       },
       "LSA-QE": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.948630764128433,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.6753981097290913,
         "bertscore_f1_n": 480,
         "bleu": 0.15788455431958795,
@@ -271,8 +271,8 @@
     "Tujuan diet": {
       "Baseline": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9634290824915825,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.8105985291302205,
         "bertscore_f1_n": 480,
         "bleu": 0.38199991111356035,
@@ -283,8 +283,8 @@
       },
       "RM3": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.965551948051948,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.8055371137956778,
         "bertscore_f1_n": 480,
         "bleu": 0.375562169061543,
@@ -295,8 +295,8 @@
       },
       "LSA-QE": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9647786472786472,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.8171037858972947,
         "bertscore_f1_n": 480,
         "bleu": 0.3967117441872529,
@@ -309,8 +309,8 @@
     "Prinsip diet": {
       "Baseline": {
         "n_units": 476,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9722109377139037,
+        "faithfulness_n": 476,
         "bertscore_f1": 0.7081443642367836,
         "bertscore_f1_n": 476,
         "bleu": 0.13754025770512918,
@@ -321,8 +321,8 @@
       },
       "RM3": {
         "n_units": 476,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9645258123185477,
+        "faithfulness_n": 476,
         "bertscore_f1": 0.7130490140754635,
         "bertscore_f1_n": 476,
         "bleu": 0.14546200438911286,
@@ -333,8 +333,8 @@
       },
       "LSA-QE": {
         "n_units": 476,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9745317244544877,
+        "faithfulness_n": 476,
         "bertscore_f1": 0.715020570559662,
         "bertscore_f1_n": 476,
         "bleu": 0.15309588609790986,
@@ -347,8 +347,8 @@
     "Syarat diet": {
       "Baseline": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.963345536803596,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.713741310685873,
         "bertscore_f1_n": 480,
         "bleu": 0.1530715262043539,
@@ -359,8 +359,8 @@
       },
       "RM3": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9443210346486788,
+        "faithfulness_n": 479,
         "bertscore_f1": 0.7087413659940164,
         "bertscore_f1_n": 480,
         "bleu": 0.148705399697936,
@@ -371,8 +371,8 @@
       },
       "LSA-QE": {
         "n_units": 480,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9542743807781056,
+        "faithfulness_n": 480,
         "bertscore_f1": 0.7153901672611634,
         "bertscore_f1_n": 480,
         "bleu": 0.16177895400086123,
@@ -385,8 +385,8 @@
     "Pedoman": {
       "Baseline": {
         "n_units": 94,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.8883623468729851,
+        "faithfulness_n": 94,
         "bertscore_f1": 0.6582697465064677,
         "bertscore_f1_n": 94,
         "bleu": 0.04591615635721945,
@@ -397,8 +397,8 @@
       },
       "RM3": {
         "n_units": 94,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.8286474164133738,
+        "faithfulness_n": 94,
         "bertscore_f1": 0.6666555728049989,
         "bertscore_f1_n": 94,
         "bleu": 0.04562222094365055,
@@ -409,8 +409,8 @@
       },
       "LSA-QE": {
         "n_units": 94,
-        "faithfulness": null,
-        "faithfulness_n": 0,
+        "faithfulness": 0.9335048816431795,
+        "faithfulness_n": 94,
         "bertscore_f1": 0.6698392471100422,
         "bertscore_f1_n": 94,
         "bleu": 0.04870028289272615,
@@ -422,7 +422,65 @@
     }
   },
   "significance": {
-    "faithfulness": [],
+    "faithfulness": [
+      {
+        "pair": "RM3 vs Baseline",
+        "n": 3440,
+        "delta": -0.00699273874387403,
+        "ci95": [
+          -0.01288094925862459,
+          -0.0010001436042529866
+        ],
+        "wins": 348,
+        "losses": 370,
+        "ties": 2722,
+        "n_nonzero": 718,
+        "w_plus": 121121.0,
+        "w_minus": 137000.0,
+        "statistic": 121121.0,
+        "p": 0.15313732216338025,
+        "p_holm": 0.4594119664901407,
+        "significant": false
+      },
+      {
+        "pair": "LSA-QE vs Baseline",
+        "n": 3443,
+        "delta": 0.0025874153965327797,
+        "ci95": [
+          -0.0026721512500874206,
+          0.007964148928313614
+        ],
+        "wins": 360,
+        "losses": 370,
+        "ties": 2713,
+        "n_nonzero": 730,
+        "w_plus": 134279.5,
+        "w_minus": 132535.5,
+        "statistic": 132535.5,
+        "p": 0.8783660468847889,
+        "p_holm": 0.8783660468847889,
+        "significant": false
+      },
+      {
+        "pair": "LSA-QE vs RM3",
+        "n": 3439,
+        "delta": 0.009520211584967775,
+        "ci95": [
+          0.0035457212897362666,
+          0.015735020516007805
+        ],
+        "wins": 399,
+        "losses": 393,
+        "ties": 2647,
+        "n_nonzero": 792,
+        "w_plus": 164539.0,
+        "w_minus": 149489.0,
+        "statistic": 149489.0,
+        "p": 0.24250738132207017,
+        "p_holm": 0.48501476264414034,
+        "significant": false
+      }
+    ],
     "bertscore_f1": [
       {
         "pair": "RM3 vs Baseline",

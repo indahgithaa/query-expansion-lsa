@@ -4,3 +4,5 @@ __pycache__/
 kaggle/input/prompts.jsonl
 results/02_dev_grid_units.csv
 kaggle/faith/input/faith_inputs.jsonl
+kaggle/faith/input/faithfulness.jsonl
+kaggle/faith/out_*/

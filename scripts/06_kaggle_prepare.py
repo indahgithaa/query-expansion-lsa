@@ -24,7 +24,7 @@ MODEL_ID = "{MODEL_ID}"
 MAX_NEW_TOKENS = {MAX_NEW_TOKENS}
 BATCH = 512
 TIME_BUDGET_S = 11 * 3600    # berhenti memulai batch baru setelah 11 jam (batas sesi 12 jam)"""),
-    ("code", """!pip install -q -U vllm 2>&1 | tail -2"""),
+    ("code", """!pip install -q vllm==0.33.0 2>&1 | tail -2"""),
     ("code", """import glob, json, os, platform, subprocess, time
 import torch, vllm
 from huggingface_hub import model_info

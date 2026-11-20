@@ -33,9 +33,9 @@ MODEL_ID = "{MODEL_ID}"
 MODEL_REVISION = "{MODEL_REVISION}"
 CONCURRENCY = 32            # KV cache T4x2 ~75 ribu token; ~25-30 permintaan ~3 ribu token muat bersamaan
 PRINT_EVERY = 256
-MAX_TOKENS = 2048
+MAX_TOKENS = 4096            # 2048 memotong 62 keluaran NLI di sesi 1; greedy -> keluaran < 2048 token tidak berubah
 TIME_BUDGET_S = 11 * 3600"""),
-    ("code", """!pip install -q -U vllm 2>&1 | tail -2
+    ("code", """!pip install -q vllm==0.33.0 2>&1 | tail -2   # dipin: 0.34.0 gagal build flashinfer di T4 (ld: cannot find -lcuda)
 !pip install -q ragas==0.4.3 langchain-community==0.4.1 2>&1 | tail -2   # 0.4.2 menghapus chat_models.vertexai yang diimpor ragas 0.4.3"""),
     ("code", """import asyncio, glob, json, math, os, platform, subprocess, time, urllib.request
 os.environ["RAGAS_DO_NOT_TRACK"] = "true"
@@ -50,7 +50,7 @@ json.dump(env, open("/kaggle/working/environment.json", "w"), indent=2)"""),
     ("code", """server_log = open("/kaggle/working/vllm_server.log", "w")
 server = subprocess.Popen(
     ["vllm", "serve", MODEL_ID, "--revision", MODEL_REVISION, "--served-model-name", "qwen", "--port", "8000",
-     "--tensor-parallel-size", str(torch.cuda.device_count()), "--dtype", "float16", "--max-model-len", "8192",
+     "--tensor-parallel-size", str(torch.cuda.device_count()), "--dtype", "float16", "--max-model-len", "12288",
      "--gpu-memory-utilization", "0.92", "--seed", "0", "--enable-prefix-caching", "--kv-cache-dtype", "float16",
      "--max-num-batched-tokens", "2048", "--max-num-seqs", "32", "--enforce-eager", "--disable-custom-all-reduce",
      "--limit-mm-per-prompt", '{"image": 0, "video": 0}'],
@@ -72,7 +72,7 @@ if MODE == "smoke":
 out_path = "/kaggle/working/faithfulness.jsonl"
 done = set()
 for path in find("faithfulness.jsonl") + ([out_path] if os.path.exists(out_path) else []):
-    done |= {json.loads(l)["pid"] for l in open(path, encoding="utf-8")}
+    done |= {r["pid"] for r in map(json.loads, open(path, encoding="utf-8")) if r["error"] is None}   # galat dinilai ulang
 todo = sorted((r for r in items if r["pid"] not in done), key=lambda r: r["pid"])
 print(f"jawaban: {len(items)}, sudah: {len(done & {r['pid'] for r in items})}, sisa: {len(todo)}")"""),
     ("code", """from openai import AsyncOpenAI
